@@ -1,0 +1,97 @@
+.header{
+   padding-bottom: 55px;
+   background-color: #800484;
+}
+.header__top {
+   display: flex;
+   align-items: center;
+   
+}
+.phone {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 160px !important;
+   margin-right: 30px;
+   background-image: url('../../images/telefon.svg');
+   background-position: 0 center;
+   background-repeat: no-repeat;
+}
+.phone__number {
+   margin: 0;
+   margin-left: 30px;
+   padding: 0;
+   font-style: normal;
+   font-weight: 400 ;
+   font-size: 1rem;
+   line-height: 1rem;
+   color: #FFFFFF;
+}
+
+.email__address {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 180px !important;
+   margin-right: 30px;
+   background-image: url('../../images/message.svg');
+   background-repeat: no-repeat;
+   background-position: 0 center;
+}
+.email{
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1rem;
+   color: #FFFFFF;
+   margin-left: 30px;
+}
+.work__time {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 150px;
+   height: 20px;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1rem;
+   color: #FFFFFF;
+   vertical-align: middle;
+   background-image: url('../../images/oclock.svg');
+   background-repeat: no-repeat;
+   background-position: 0;
+   margin-right: 60px;
+}
+.time__info {
+   margin-left: 27px;
+}
+
+.lang__list {
+   display: flex;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+}
+.lang__item {
+   position: relative;
+   margin-left: 20px;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1rem;
+   color: #FFFFFF;
+   cursor: pointer;
+}
+
+.under_line {
+   display: none;
+   position: absolute;
+   top: 20px;
+   width: 100%;
+   height: 2px;
+   background-color: #fff;
+}
+.lang__item--active .under_line{
+   display: block;
+}
