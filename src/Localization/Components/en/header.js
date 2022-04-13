@@ -2,6 +2,7 @@ const header = {
    for_blinders: 'for the visually impaired',
    search: "what are you searching ...",
    heading: "STATE SERVICE OF THE REPUBLIC OF UZBEKISTAN FOR MONITORING HAZARDOUS GEOLOGICAL PROCESSES",
+   address: "100011, Tashkent city, Abdulla Qodiri Street, 11",
    home: "Home",
    about: "About US",
    courses: "Special courses",

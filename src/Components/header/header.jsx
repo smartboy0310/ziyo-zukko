@@ -5,7 +5,7 @@ import Content from '../../Localization/Content';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
-import Logo from '../../Assets/images/logo.jpg';
+import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
 
 
@@ -39,9 +39,9 @@ const Header = () => {
 					<div className="phone">
 						<a
 							className="phone__number"
-							href="tel:+998998760310"
+							href="tel:+998712443581"
 						>
-							+99899 876-03-10
+							+998 (71) 2443581
 						</a>
 					</div>
 					<div className="email__address">
@@ -85,24 +85,24 @@ const Header = () => {
 					</div>
 					<div className="header__address">
 						<a href="https://2gis.uz/uz/tashkent/firm/70000001036919062" target="_blank" className="header__address--link">
+							<div className="location__img">
 							<Image
-								className="location__img"
+								
 								src={LocationImg}
 								alt="Location icon"
 								width={40}
 								height={40}
 								objectFit="contain"
 							/>
+							</div>
 							<p className="location__discription">
-								100011, Toshkent shahar, Abdulla Qodiriy
-								ko’chasi, 11-uy
+								{h.address}
 							</p>
 						</a>
 					</div>
 				</div>
 				<div className="header__bottom">
-					<div className="header__info">
-						<div className="logo">
+					<div className="header__logo__info">				
 							<Link href="/">
 								<a className="logo__link">
 									<div className="logo__box">
@@ -110,14 +110,16 @@ const Header = () => {
 											className="logo__img"
 											src={Logo}
 											alt="Ministry logo"
-											width={80}
-											height={80}
+											width={90}
+											height={90}
+											objectFit = 'cover'
 										/>
 									</div>
+									<p className="header__heading">{h.heading}</p>
 								</a>
 							</Link>
-						</div>
-						<p className="header__heading">{h.heading}</p>
+						
+						
 					</div>
 
 					<nav className="header__navbar">
