@@ -12,7 +12,7 @@
    align-items: center;
    width: 100%;
    max-width: 160px !important;
-   margin-right: 30px;
+   margin-right: 25px;
    background-image: url('../../images/telefon.svg');
    background-position: 0 center;
    background-repeat: no-repeat;
@@ -33,7 +33,7 @@
    align-items: center;
    width: 100%;
    max-width: 180px !important;
-   margin-right: 30px;
+   margin-right: 25px;
    background-image: url('../../images/message.svg');
    background-repeat: no-repeat;
    background-position: 0 center;
@@ -61,7 +61,7 @@
    background-image: url('../../images/oclock.svg');
    background-repeat: no-repeat;
    background-position: 0;
-   margin-right: 330px;
+   margin-right: 340px;
 }
 .time__info {
    margin-left: 27px;
@@ -80,7 +80,7 @@
    font-style: normal;
    font-weight: 400;
    font-size: 1rem;
-   line-height: 1rem;
+   line-height: 1.2rem;
    color: #FFFFFF;
    cursor: pointer;
 }

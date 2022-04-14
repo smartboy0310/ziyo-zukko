@@ -5,7 +5,7 @@ const header = {
    address: "100011, Toshkent shahar,  Abdulla Qodiriy ko’chasi, 11-uy",
    home: "Bosh sahifa",
    about: "Biz haqimizda",
-   courses: "Maxsus kurslar",
+   gallery: "Fotogalereya",
    news: "Yangliklar",
    contact: "Kontaktlar",
    sub_list_one: {

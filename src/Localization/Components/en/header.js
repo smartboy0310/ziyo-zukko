@@ -5,7 +5,7 @@ const header = {
    address: "100011, Tashkent city, Abdulla Qodiri Street, 11",
    home: "Home",
    about: "About US",
-   courses: "Special courses",
+   gallery: "Photo Gallery",
    news: "News",
    contact: "Contact", 
    sub_list_one: {

@@ -1,15 +1,14 @@
-.hero {
-   position: relative;
+.hero {  
    top: -10px;  
-   
-}
+   }
 .hero .container {
+   position: relative;
    padding: 0;
-   width: 100%;
    height: 700px;
    background-image: url('../../images/home_bg.jpg');
    background-repeat: no-repeat;
    background-size: cover;
+   
 }
 .hero__info {
    position: absolute;
@@ -47,18 +46,97 @@
    border-bottom-right-radius: 10px;
 }
 
-.homeabout {
-   position: relative;
-}
 .homeabout .container {
-   
+   position: relative;
    padding: 0;
 }
 .homeabout__top {
    position: absolute;
-   top: -150px;
+   top: -160px;
 }
 .homeabout__info{
-   position: absolute;
+   position: relative;
    z-index: 2;
+   width: 100%;
+   max-width: 1440px;
+   margin: 0 auto;
+   padding-bottom: 150px;
+   padding-top: 50px;
+   text-align: center;
+}
+.homeabout__heading {
+   font-size: 3rem;
+   line-height: 4rem;   
+   margin-bottom: 40px;
+}
+.homeabout__list {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.homeabout__item {
+   position: relative;
+   width: 100%;
+   max-width: 300px;
+   height: 300px;
+
+}
+.homeabout__item:nth-child(1) {
+   background-image: url('../../images/school_baybay.jpg');
+   background-repeat: no-repeat;
+   background-size: 300px 300px;
+}
+.homeabout__item:nth-child(2) {
+   background-image: url('../../images/classroom.jpg');
+   border-radius: 10px;
+   background-repeat: no-repeat;
+   background-size: 300px 300px;
+}
+.homeabout__item:nth-child(3) {
+   background-image: url('../../images/school_teach.jpg');
+   background-repeat: no-repeat;
+   background-size: 300px 300px;
+}
+
+.item__info {
+   position: absolute;
+   top: 103%;
+   width: 100%;
+   max-width: 250px;
+   margin: 0;
+   padding: 0;
+}
+.homeabout__item:nth-child(1) .item__info {
+  left: -10px;
+}
+
+.item__heading {
+   font-weight: 500;
+   font-size: 1.5rem;
+   line-height: 2rem; 
+}
+
+.homeabout__item:nth-child(1) .item__count {
+   color: #0e9188
+   
+}
+.homeabout__item:nth-child(2) .item__count{
+   color: #6b0d6e;
+}
+.homeabout__item:nth-child(3) .item__count{
+   color: #e71f83;
+}
+.homeabout__item:nth-child(1) .item__heading {
+   color: #c92c2c;
+   
+}
+.homeabout__item:nth-child(2) .item__heading{
+   color: #3f2bb3;
+}
+.homeabout__item:nth-child(3) .item__heading{
+   color: #054946
+}
+
+.home-ad .container {
+   position: relative;
 }

@@ -161,7 +161,7 @@ const Header = () => {
 												: ''
 										}`}
 									>
-										{h.courses}
+										{h.gallery}
 									</a>
 								</Link>
 								<span className="navbar_line"></span>
