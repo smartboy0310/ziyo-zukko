@@ -65,6 +65,8 @@
    text-align: center;
 }
 .homeabout__heading {
+   margin: 0;
+   padding: 0;
    font-size: 3rem;
    line-height: 4rem;   
    margin-bottom: 40px;
@@ -107,8 +109,11 @@
    padding: 0;
 }
 .homeabout__item:nth-child(1) .item__info {
-  left: -10px;
-}
+   left: 15px;
+ }
+ .homeabout__item:nth-child(3) .item__info {
+   left: 20px;
+ }
 
 .item__heading {
    font-weight: 500;
@@ -139,4 +144,10 @@
 
 .home-ad .container {
    position: relative;
+   text-align: center;
+   height: 500px;
+   background-image: url('../../images/home_kid.jpg');
+   background-repeat: no-repeat;
+   background-size: 300px 400px;
+   background-position:  calc(50% - 450px);
 }
