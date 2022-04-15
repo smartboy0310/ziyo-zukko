@@ -149,18 +149,21 @@
 .homeabout__item:nth-child(3) .item__heading{
    color: #054946
 }
-
+.home-ad {
+   padding-bottom: 50px;
+}
 .home-ad .container {
    position: relative;
-   text-align: center;
    height: 450px;
-   background-image: url('../../images/home_kid.jpg');
+   background-image: url('../../images/home_kid.png');
    background-repeat: no-repeat;
    background-size: 300px 350px;
-   background-position:  calc(50% - 350px) 80px;
+   background-position:  calc(50% - 400px) 80px;
 }
 .home-ad__heading {
-   margin: 0;
+   width: 100%;
+   max-width: 200px;
+   margin: 0 auto;
    margin-bottom: 20px;
    padding: 0;
    font-size: 3em;
@@ -170,9 +173,12 @@
 .home-ad__img {
    margin-right: 36px;
 }
+.ad__img {
+   border-radius: 5px;
+}
 .home-ad__box {
    position: absolute;
-   right: 130px;
+   right: 180px;
    display: flex;
    align-items: flex-start;
 }
@@ -182,4 +188,62 @@
    font-size: 1.5em;
    line-height: 1.4em; 
    text-align: justify;
+   margin-bottom: 50px;
+}
+.home-ad {
+   padding-bottom: 50px;
+   background-color: #e7ecec;
+}
+.back__btn, 
+.next__btn{
+   position: relative;
+   top: 150px;
+   cursor: pointer;
+}
+.next__btn {
+   left: 20px;
+}
+.back__btn {
+   transform: rotateY(180deg);
+   right: 20px;
+}
+.next__btn:hover path, .back__btn:hover path{
+   fill: #FE7EB1
+}
+.home-ad__link {
+   display: inline-block;
+   width: 100%;
+   max-width: 120px;
+   margin: 0;
+   padding: 10px 15px;
+   font-size: 1.4em;
+   font-weight: 1em;
+   text-align: center;
+   border: 2px solid #054946;
+   text-decoration: none;
+   color: #054946;
+   border-radius: 10px;
+}
+
+.home-ad__link:hover {
+   border: 2px solid #074e42;
+   background-color: #62f1ce;
+   color: #000;
+}
+
+
+.home-chouse .container{
+   height: 700px;
+   padding: 30px 0;
+   background-image: url('../../images/home_chouse_bg.png');
+   background-size: cover;
+}
+.home-chouse__heading {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   margin-bottom: 20px;
+   padding: 0;
+   font-size: 3em;
+   line-height: 1em;
 }

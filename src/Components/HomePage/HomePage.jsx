@@ -2,6 +2,7 @@ import React from 'react'
 import HomeAbout from './HomeAbout'
 import HomeAd from './HomeAd'
 import HomeHero from './HomeHero'
+import HomeChouse from './HomeChouse'
 
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HomeHero />
       <HomeAbout />
       <HomeAd />
+      <HomeChouse />
     </>
   )
 }
