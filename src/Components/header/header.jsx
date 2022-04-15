@@ -21,7 +21,7 @@ const Header = () => {
 	} = useSelector((state) => state);
 
 	function getLang() {
-		dispatch({ type: window.localStorage.getItem('lang') || 'ru' });
+		dispatch({ type: window.localStorage.getItem('lang') || 'uz' });
 	}
 
 	langValue.current = getLang;
@@ -87,11 +87,11 @@ const Header = () => {
 						<a href="https://2gis.uz/uz/tashkent/firm/70000001036919062" target="_blank" className="header__address--link">
 							<div className="location__img">
 							<Image
-								
+								className='header__loc__img'
 								src={LocationImg}
 								alt="Location icon"
-								width={40}
-								height={40}
+								maxwidth={40}
+								maxheight={40}
 								objectFit="contain"
 							/>
 							</div>
