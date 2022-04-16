@@ -3,6 +3,7 @@ import HomeAbout from './HomeAbout'
 import HomeAd from './HomeAd'
 import HomeHero from './HomeHero'
 import HomeChouse from './HomeChouse'
+import HomeGallery from './HomeGallery'
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <HomeAbout />
       <HomeAd />
       <HomeChouse />
+      <HomeGallery />
     </>
   )
 }

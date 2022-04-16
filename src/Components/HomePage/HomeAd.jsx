@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const data = [
 	{
 		title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
-		img: 'https://picsum.photos/300/350'
+		img: 'https://via.placeholder.com/300X350'
 	},
 	{
 		title: 'Assalomu alaykum. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
@@ -34,22 +34,21 @@ function HomeAd() {
 				<h2 className="home-ad__heading">E'lon</h2>
 				<div className="home-ad__box">
 				<div className="back__btn" >
-						<svg onClick={back} width="56" height="69" viewBox="0 0 56 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g filter="url(#filter0_d_400_2178)">
-									<path d="M56 29.4401C56 16.2213 46.9275 4.73078 34.0705 1.66602L30.0119 0.698569C14.1416 -3.08448 -1.29698 8.97961 0.0865113 25.2378V25.2378C0.238657 27.0257 0.312557 28.9995 0.325815 31.0818C0.435047 48.2378 13.8563 63.1466 30.9672 61.9304V61.9304C45.0706 60.928 56 49.1928 56 35.0521V29.4401Z" fill="#B4B4B4" />
-								</g>
-								<path d="M22 40L31 31L22 22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								<defs>
-									<filter id="filter0_d_400_2178" x="0" y="0" width="56" height="69" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix" />
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-										<feOffset dy="7" />
-										<feColorMatrix type="matrix" values="0 0 0 0 0.819608 0 0 0 0 0.811765 0 0 0 0 0.839216 0 0 0 0.75 0" />
-										<feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_400_2178" />
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_400_2178" result="shape" />
-									</filter>
-								</defs>
-							</svg>
+				<svg onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g filter="url(#a)">
+                        <path d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z" fill="#B4B4B4" /></g>
+                     <path d="m24 40 9-9-9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                     <defs>
+                        <filter id="a" x="0" y="0" width="56" height="69" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                           <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                           <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                           <feOffset dy="7" />
+                           <feColorMatrix values="0 0 0 0 0.819608 0 0 0 0 0.811765 0 0 0 0 0.839216 0 0 0 0.75 0" />
+                           <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_38_217" />
+                           <feBlend in="SourceGraphic" in2="effect1_dropShadow_38_217" result="shape" />
+                        </filter>
+                     </defs>
+                  </svg>
 						</div>
 					<div className="home-ad__img">
 						<img
@@ -72,22 +71,21 @@ function HomeAd() {
 					</div>
 					
 						<div className="next__btn">
-							<svg onClick={next} width="56" height="69" viewBox="0 0 56 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g filter="url(#filter0_d_400_2178)">
-									<path d="M56 29.4401C56 16.2213 46.9275 4.73078 34.0705 1.66602L30.0119 0.698569C14.1416 -3.08448 -1.29698 8.97961 0.0865113 25.2378V25.2378C0.238657 27.0257 0.312557 28.9995 0.325815 31.0818C0.435047 48.2378 13.8563 63.1466 30.9672 61.9304V61.9304C45.0706 60.928 56 49.1928 56 35.0521V29.4401Z" fill="#B4B4B4" />
-								</g>
-								<path d="M22 40L31 31L22 22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								<defs>
-									<filter id="filter0_d_400_2178" x="0" y="0" width="56" height="69" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix" />
-										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-										<feOffset dy="7" />
-										<feColorMatrix type="matrix" values="0 0 0 0 0.819608 0 0 0 0 0.811765 0 0 0 0 0.839216 0 0 0 0.75 0" />
-										<feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_400_2178" />
-										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_400_2178" result="shape" />
-									</filter>
-								</defs>
-							</svg>
+						<svg onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g filter="url(#a)">
+                        <path d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z" fill="#B4B4B4" /></g>
+                     <path d="m24 40 9-9-9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                     <defs>
+                        <filter id="a" x="0" y="0" width="56" height="69" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                           <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                           <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                           <feOffset dy="7" />
+                           <feColorMatrix values="0 0 0 0 0.819608 0 0 0 0 0.811765 0 0 0 0 0.839216 0 0 0 0.75 0" />
+                           <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_38_217" />
+                           <feBlend in="SourceGraphic" in2="effect1_dropShadow_38_217" result="shape" />
+                        </filter>
+                     </defs>
+                  </svg>
 
 						</div>
 				</div>

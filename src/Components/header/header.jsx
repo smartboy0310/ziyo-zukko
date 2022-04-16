@@ -90,8 +90,8 @@ const Header = () => {
 								className='header__loc__img'
 								src={LocationImg}
 								alt="Location icon"
-								maxwidth={40}
-								maxheight={40}
+								maxwidth={25}
+								maxheight={25}
 								objectFit="contain"
 							/>
 							</div>

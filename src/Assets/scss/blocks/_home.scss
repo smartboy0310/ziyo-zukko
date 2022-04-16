@@ -2,7 +2,7 @@
    position: relative;
    top: -5px; 
    z-index: -1; 
-   }
+}
 .hero .container {
    position: relative;
    padding: 0;
@@ -73,6 +73,7 @@
    font-size: 3em;
    line-height: 1.5em;   
    margin-bottom: 40px;
+   color: #333333;
 }
 .homeabout__list {
    display: flex;
@@ -84,7 +85,7 @@
    width: 100%;
    max-width: 300px;
    height: 300px;
-
+   
 }
 .homeabout__item:nth-child(1) {
    background-image: url('../../images/school_baybay.jpg');
@@ -113,10 +114,10 @@
 }
 .homeabout__item:nth-child(1) .item__info {
    left: 15px;
- }
- .homeabout__item:nth-child(3) .item__info {
+}
+.homeabout__item:nth-child(3) .item__info {
    left: 20px;
- }
+}
 
 .item__heading {
    font-weight: 500;
@@ -168,7 +169,8 @@
    padding: 0;
    font-size: 3em;
    line-height: 1.5em; 
-  
+   color: #333333;
+   
 }
 .home-ad__img {
    margin-right: 36px;
@@ -189,6 +191,7 @@
    line-height: 1.4em; 
    text-align: justify;
    margin-bottom: 50px;
+   color: #333333;
 }
 .home-ad {
    padding-bottom: 50px;
@@ -226,15 +229,18 @@
 }
 
 .home-ad__link:hover {
-   border: 2px solid #074e42;
+   border: 2px solid #0da189;
    background-color: #62f1ce;
-   color: #000;
+   color: #333333;
 }
 
+.home-chouse {
+   padding: 30px 0;
+}
 
 .home-chouse .container{
+   position: relative;
    height: 700px;
-   padding: 30px 0;
    background-image: url('../../images/home_chouse_bg.png');
    background-size: cover;
 }
@@ -246,4 +252,65 @@
    padding: 0;
    font-size: 3em;
    line-height: 1em;
+   color: #333333;
+
+}
+.home__chouse__list {
+   position: absolute;
+   top: 250px;
+   left: 50px;
+   display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 40px;
+   grid-row-gap: 80px;
+	list-style: none;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.home__chouse__item {
+   display: flex;
+   align-items: center;
+}
+.chouse__title {
+   margin-left: 20px;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.4em;
+   line-height: 1.9em;   
+   color: #333333;
+}
+
+.home-gallery {
+   padding: 30px 0;
+}
+.home-gallery .container {
+   position: relative;
+   height: 600px;
+   background-image: url('../../images/home_gallery_bg.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+.home-gallery__heading {
+   width: 100%;
+   max-width: 480px;
+   margin: 0 auto;
+   margin-bottom: 20px;
+   padding: 0;
+   font-size: 3em;
+   line-height: 1em;
+   color: #333333;
+
+}
+
+.home-gallery__box {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.gallery__img {
+   border-radius: 80px;
+   width: 250px;
+   height: 350px;
+   object-fit: cover;
 }
