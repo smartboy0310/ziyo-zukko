@@ -131,7 +131,7 @@ function HomeGallery() {
 				</div>
 
 				<button className="gallery__all-btn">
-					<Link href="">
+					<Link href="/">
 						<a className="gallery__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>

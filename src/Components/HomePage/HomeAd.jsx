@@ -71,7 +71,7 @@ function HomeAd() {
 					</div>
 					
 						<div className="next__btn">
-						<svg onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg onClick={next} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g filter="url(#a)">
                         <path d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z" fill="#B4B4B4" /></g>
                      <path d="m24 40 9-9-9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

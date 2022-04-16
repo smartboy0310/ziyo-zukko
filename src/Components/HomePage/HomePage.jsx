@@ -4,6 +4,8 @@ import HomeAd from './HomeAd'
 import HomeHero from './HomeHero'
 import HomeChouse from './HomeChouse'
 import HomeGallery from './HomeGallery'
+import HomeAchievements from './HomeAchievements'
+import HomeNews from './HomeNews'
 
 
 const HomePage = () => {
@@ -13,7 +15,9 @@ const HomePage = () => {
       <HomeAbout />
       <HomeAd />
       <HomeChouse />
+      <HomeAchievements />
       <HomeGallery />
+      <HomeNews />
     </>
   )
 }

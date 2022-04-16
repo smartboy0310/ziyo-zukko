@@ -294,7 +294,7 @@
 }
 .home-gallery__heading {
    margin: 0 auto;
-   margin-bottom: 60px;
+   margin-bottom: 50px;
    padding: 0;
    font-size: 3em;
    line-height: 1em;
@@ -306,7 +306,7 @@
    display: flex;
    align-items: center;
    justify-content: space-around;
-   margin-bottom: 60px;
+   margin-bottom: 50px;
 }
 .home-gallery__img {
 
@@ -390,5 +390,107 @@
    height: 45px;
    border: none;
    border-radius: 45%;
+   cursor: pointer;
+}
+
+
+
+
+.home-achievements .container {
+   padding: 30px 0;
+   text-align: center;
+   background-image: url('../../images/home_win_bg.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: calc(50% + 50px);
+}
+.home-achievements__heading {
+   margin: 0 auto;
+   margin-bottom: 40px;
+   padding: 0;
+   font-size: 3em;
+   line-height: 1em;
+   color: #333333;
+}
+.home-achievements__box {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-bottom: 60px;
+}
+.home-achievements__img {
+   position: relative;
+   width: 100%;
+   max-width: 300px;
+   height: 400px !important;
+   overflow: hidden;
+   
+}
+.achievements__img {
+   width: 100%;
+   max-width: 300px;
+   height: 400px;
+   margin-bottom: 10px;
+   object-fit: cover;
+   transition: ease-in-out 0.7s all;
+}
+.achievements__img:hover {
+   transform: scale(1.1);
+   transition: ease-in-out 0.7s all;
+}
+.home-achievements__img__info {
+   position: absolute;
+   top: 280px;
+   left: 10px;
+   text-align: start;
+}
+.home-achievements__img__heading {
+   width: 100%;
+   max-width: 300px;
+   margin: 0;
+   margin-bottom: 10px;
+   padding: 0;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.4em;
+   line-height: 1em;   
+   color: #333333;
+}
+.home-achievements__img__discription {
+   width: 100%;
+   max-width: 280px;
+   margin: 0;
+   padding: 0;
+   text-align: justify;
+   font-size: 1em;
+   line-height: 1em;   
+   color: #333333;
+}
+.achievements__link {
+   font-family: 'Quicksand';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.2em;
+   line-height: 1em;
+   text-align: center;
+   letter-spacing: -0.05em;
+   color: #fff; 
+   border: none;  
+   padding: 10px 15px;
+   background-color: #422774;
+   border-radius: 8px;
+   cursor: pointer;
+}
+.achievements__all-btn {
+   border: none;
+}
+
+.achievements__back__btn {
+   transform: rotateY(180deg);
+}
+.achievements__back__btn:hover path,
+.achievements__next__btn:hover path {
+   fill: #FE7EB1;
    cursor: pointer;
 }
