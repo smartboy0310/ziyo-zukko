@@ -1,0 +1,104 @@
+.footer .container {
+   position: relative;
+   left: -12px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 250px;
+   background-image: url('../../images/footer_bg.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   z-index: -1;
+}
+.footer__logo__link {
+   display: flex;
+   align-items: center;
+   margin-left: 20px   
+}
+.footer__bottom {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 80px;
+}
+.footer__logo__img {
+   background-color: #FFFFFF;
+   border-radius: 50%;
+}
+.footer__heading {
+   width: 100%;
+   max-width: 380px;
+   margin: 0;
+   margin-left: 20px;
+   margin-right: 40px;
+   padding: 0;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.5em;
+   line-height: 1.5em; 
+   text-transform: uppercase;        
+   color: #FFFFFF;      
+}
+
+.footer__navbar__list{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 708px;
+   margin: 0;
+   margin-right: 20px;
+   padding: 0;
+}
+.footer__navbar__item {
+   position: relative;
+   padding: 5px 0;
+   cursor: pointer !important;
+}
+.footer__navbar__item + .footer__navbar__item {
+   margin-left: 20px;
+   
+}
+.footer__navbar__item-link {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.5em;
+   line-height: 1em;
+   color: #fff;
+}
+
+.footer__social__list {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   max-width: 140px;
+   display: flex;
+   align-items: center;
+}
+.footer__social__item + .footer__social__item {
+   margin-left: 10px;
+}
+
+.footer__social__item {
+   width: 40px;
+   height: 40px;
+   background-color: #fff;
+   text-align: center;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.footer__social__item:nth-child(1) {
+   background-image: url('../../images/facebook.svg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+.footer__social__item:nth-child(2) {
+   background-image: url('../../images/instagram.svg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+.footer__social__item:nth-child(3) {
+   background-image: url('../../images/telegram.svg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}

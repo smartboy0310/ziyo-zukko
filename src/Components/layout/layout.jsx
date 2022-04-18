@@ -1,3 +1,4 @@
+import Footer from "../footer/footer";
 import Header from "../header/header";
 
 
@@ -10,8 +11,8 @@ const layout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer className="footer">
-
-      </footer>
+        <Footer />
+      </footer >
     </>
   );
 };

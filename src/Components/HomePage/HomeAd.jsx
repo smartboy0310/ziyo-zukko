@@ -2,14 +2,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 const data = [
 	{
+		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
 		title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
-		img: 'https://via.placeholder.com/300X350'
+		img: 'https://via.placeholder.com/300X400',
+		create_at: '18.04.2022',
 	},
 	{
+		name: 'Lorem ipsum dolor sit',
 		title: 'Assalomu alaykum. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
-		img: 'https://via.placeholder.com/300X350'
-	}
-]
+		img: 'https://via.placeholder.com/300X400',
+		create_at: '15.04.2022',
+	},
+];
 
 function HomeAd() {
 	const [adIndex, setAdIndex] = useState(0)
@@ -50,25 +54,36 @@ function HomeAd() {
                      </defs>
                   </svg>
 						</div>
-					<div className="home-ad__img">
-						<img
-							className="ad__img"
-							src={data[adIndex].img}
-							alt="Ad info"
-							width={300}
-							height={350}
-						/>
-					</div>
-					<div className="home-ad__info">
-						
-						<h2 className="home-ad__title">
-						{data[adIndex].title}
-						</h2>
-						<Link href="/">
-							<a className="home-ad__link">batafsil...</a>
-						</Link>
-						
-					</div>
+						<div className="home-ad__img">
+								<img
+									className="ad__img"
+									src={data[adIndex].img}
+									alt="new info"
+									maxwidth={300}
+									maxheight={400}
+								/>
+							</div>
+							<div className="home-ad__info">
+								<h2 className="home-ad__title">
+									{data[adIndex].name}
+								</h2>
+								<div className="new__created">
+									<time
+										datatime={data[adIndex].create_at}
+										className="new__created__time"
+									>
+										{data[adIndex].create_at}
+									</time>
+								</div>
+								<p className="new__discription">
+									{data[adIndex].title}
+								</p>
+								<Link href="/">
+									<a className="home-ad__link">
+										batafsil...
+									</a>
+								</Link>
+							</div>
 					
 						<div className="next__btn">
 						<svg onClick={next} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">

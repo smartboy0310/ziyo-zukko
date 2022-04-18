@@ -5,9 +5,8 @@ import Content from '../../Localization/Content';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
-
 import Logo from '../../Assets/images/logo.svg';
-import Flag from '../../Assets/images/flag.svg';
+
 
 const Footer = () => {
 	const router = useRouter();
@@ -21,7 +20,7 @@ const Footer = () => {
 	} = useSelector((state) => state);
 
 	function getLang() {
-		dispatch({ type: window.localStorage.getItem('lang') || 'ru' });
+		dispatch({ type: window.localStorage.getItem('lang') || 'uz' });
 	}
 
 	langValue.current = getLang;
@@ -34,161 +33,110 @@ const Footer = () => {
 
 	return (
 		<>
-			<footer className="footer">
+			<footer id="footer">
 				<div className="container">
-					<div className="footer__top">
-						<div className="footer__info">
+				<div className="footer__bottom">
+				<div className="footer__logo__info">				
 							<Link href="/">
-								<a className="footer__logo--link">
+								<a className="footer__logo__link">
 									<div className="footer__logo__box">
 										<Image
-											className="footer__logo"
+											className="footer__logo__img"
 											src={Logo}
 											alt="Ministry logo"
-											maxwidth={100}
-											maxheight={76}
-											objectFit="cover"
+											width={90}
+											height={90}
+											objectFit = 'cover'
 										/>
 									</div>
+									<p className="footer__heading">{h.heading}</p>
 								</a>
 							</Link>
-							<div className="footer__flag__box">
-								<Image
-									className="flag"
-									src={Flag}
-									alt="flag"
-									maxwidth={3}
-									maxheight={76}
-								/>
-							</div>
-							<p className="footer__heading">
-								{h.heading}
-							</p>
-						</div>
-
-						<nav className="footer__navbar">
-							<ul className="footer__navbar__list">
-								<li className="footer__navbar__item">
-									<Link href="/">
-										<a className="footer__navbar__item-link">
-											{h.about}
-										</a>
-									</Link>
-								</li>
-								<li className="footer__navbar__item">
-									<Link href="/">
-										<a className="footer__navbar__item-link">
-											{h.news}
-										</a>
-									</Link>
-								</li>
-								<li className="footer__navbar__item">
-									<Link href="/">
-										<a className="footer__navbar__item-link">
-											{h.active}
-										</a>
-									</Link>
-								</li>
-								<li className="footer__navbar__item">
-									<Link href="/">
-										<a className="footer__navbar__item-link">
-											{h.service}
-										</a>
-									</Link>
-								</li>
-								<li className="footer__navbar__item">
-									<Link href="/">
-										<a className="footer__navbar__item-link">
-											{h.contact}
-										</a>
-									</Link>
-								</li>
-							</ul>
-						</nav>
-						<div className="footer__social">
-							<ul className="footer__social__list">
-								<li className="footer__social__item">
-									<a
-										className="footer__social__link"
-										href="https://www.facebook.com/"
-									></a>
-								</li>
-								<li className="footer__social__item">
-									<a
-										className="footer__social__link"
-										href="https://www.instagram.com/"
-									></a>
-								</li>
-								<li className="footer__social__item">
-									<a
-										className="footer__social__link"
-										href="https://web.telegram.org/"
-									></a>
-								</li>
-							</ul>
-						</div>
+						
+						
 					</div>
-					<div className="footer__bottom">
-						<div className="footer__contact">
-							<div className="footer__address__email">
-								<div className="footer__address">
-									<h3 className="footer__address__title">
-										{h.footer.address}
-									</h3>
-									<p className="footer__address__paragraph">
-										{h.footer.address_title}
-									</p>
-								</div>
-								<div className="footer__address">
-									<h3 className="footer__address__title">
-										Е-mail:
-									</h3>
+
+					<nav className="footer__navbar">
+						<ul className="footer__navbar__list">
+							<li className="footer__navbar__item">
+								<Link href="/">
 									<a
-										href="mailto:gosslujbauz@inbox.uz"
-										className="footer__address__paragraph"
+										className={`footer__navbar__item-link ${
+											router.pathname == '/'
+												? 'footer__navbar__item-link--active'
+												: ''
+										}`}
 									>
-										gosslujbauz@inbox.uz;
+										{h.about}
 									</a>
+								</Link>
+							</li>
+							<li className="footer__navbar__item">
+								<Link href="/">
 									<a
-										href="mailto:gssogp@exat.uz"
-										className="footer__address__paragraph"
+										className={`footer__navbar__item-link ${
+											router.pathname == '/'
+												? 'footer__navbar__item-link--active'
+												: ''
+										}`}
 									>
-										gssogp@exat.uz
+										{h.gallery}
 									</a>
+								</Link>
+							</li>
+							<li className="footer__navbar__item">
+								<Link href="/">
 									<a
-										href="mailto:Priyomnayagss@gosslujba.uz"
-										className="footer__address__paragraph"
+										className={`footer__navbar__item-link ${
+											router.pathname == '/'
+												? 'footer__navbar__item-link--active'
+												: ''
+										}`}
 									>
-										Priyomnayagss@gosslujba.uz
+										{h.news}
 									</a>
-								</div>
-							</div>
-							<div className="footer__phone__faks">
-								<div className="footer__phone">
-									<h3 className="footer__address__title">
-										{h.footer.phone}
-									</h3>
+								</Link>
+								
+							</li>
+
+							<li className="footer__navbar__item">
+								<Link href="/">
 									<a
-										href="tel:+998712415470"
-										className="footer__address__paragraph"
+										className={`footer__navbar__item-link ${
+											router.pathname == '/'
+												? 'footer__navbar__item-link--active'
+												: ''
+										}`}
 									>
-										+99871 2415470
+										{h.contact}
 									</a>
-								</div>
-								<div className="footer__address">
-									<h3 className="footer__address__title">
-										{h.footer.faks}
-									</h3>
-									<a
-										href="tel:+998712415470"
-										className="footer__address__paragraph"
-									>
-										+99871 2415470
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="footer__branch"></div>
+								</Link>
+								
+							</li>
+						</ul>
+					</nav>
+					<div className="footer__social">
+						<ul className="footer__social__list">
+							<li className="footer__social__item">
+								<a
+									className="footer__social__link"
+									href="https://www.facebook.com/"
+								></a>
+							</li>
+							<li className="footer__social__item">
+								<a
+									className="footer__social__link"
+									href="https://www.instagram.com/"
+								></a>
+							</li>
+							<li className="footer__social__item">
+								<a
+									className="footer__social__link"
+									href="https://web.telegram.org/"
+								></a>
+							</li>
+						</ul>
+					</div>
 					</div>
 				</div>
 			</footer>
