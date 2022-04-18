@@ -8,7 +8,6 @@ import { useRouter } from 'next/router';
 import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
 
-
 const Header = () => {
 	const router = useRouter();
 
@@ -35,12 +34,9 @@ const Header = () => {
 	return (
 		<>
 			<div className="container">
-				<div className="header__top">					
+				<div className="header__top">
 					<div className="phone">
-						<a
-							className="phone__number"
-							href="tel:+998712443581"
-						>
+						<a className="phone__number" href="tel:+998712443581">
 							+998 (71) 2443581
 						</a>
 					</div>
@@ -52,7 +48,7 @@ const Header = () => {
 					<div className="work__time">
 						<time className="time__info">Du-Sha 8:00 - 18:00</time>
 					</div>
-					
+
 					<div className="lang__box">
 						<ul className="lang__list">
 							<li
@@ -84,42 +80,42 @@ const Header = () => {
 						</ul>
 					</div>
 					<div className="header__address">
-						<a href="https://2gis.uz/uz/tashkent/firm/70000001036919062" target="_blank" className="header__address--link">
+						<a
+							href="https://2gis.uz/uz/tashkent/firm/70000001036919062"
+							target="_blank"
+							className="header__address--link"
+						>
 							<div className="location__img">
-							<Image
-								className='header__loc__img'
-								src={LocationImg}
-								alt="Location icon"
-								maxwidth={25}
-								maxheight={25}
-								objectFit="contain"
-							/>
+								<Image
+									className="header__loc__img"
+									src={LocationImg}
+									alt="Location icon"
+									maxwidth={25}
+									maxheight={25}
+									objectFit="contain"
+								/>
 							</div>
-							<p className="location__discription">
-								{h.address}
-							</p>
+							<p className="location__discription">{h.address}</p>
 						</a>
 					</div>
 				</div>
 				<div className="header__bottom">
-					<div className="header__logo__info">				
-							<Link href="/">
-								<a className="logo__link">
-									<div className="logo__box">
-										<Image
-											className="logo__img"
-											src={Logo}
-											alt="Ministry logo"
-											width={90}
-											height={90}
-											objectFit = 'cover'
-										/>
-									</div>
-									<p className="header__heading">{h.heading}</p>
-								</a>
-							</Link>
-						
-						
+					<div className="header__logo__info">
+						<Link href="/">
+							<a className="logo__link">
+								<div className="logo__box">
+									<Image
+										className="logo__img"
+										src={Logo}
+										alt="Ministry logo"
+										width={90}
+										height={90}
+										objectFit="cover"
+									/>
+								</div>
+								<p className="header__heading">{h.heading}</p>
+							</a>
+						</Link>
 					</div>
 
 					<nav className="header__navbar">
@@ -203,19 +199,28 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://www.facebook.com/"
-								></a>
+									target="_blank"
+								>
+									<div className="social__content"></div>
+								</a>
 							</li>
 							<li className="social__item">
 								<a
 									className="social__link"
 									href="https://www.instagram.com/"
-								></a>
+									target="_blank"
+								>
+									<div className="social__content"></div>
+								</a>
 							</li>
 							<li className="social__item">
 								<a
 									className="social__link"
 									href="https://web.telegram.org/"
-								></a>
+									target="_blank"
+								>
+									<div className="social__content"></div>
+								</a>
 							</li>
 						</ul>
 					</div>

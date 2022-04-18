@@ -204,17 +204,23 @@
    cursor: pointer;
 }
 
-.social__item:nth-child(1) {
+.social__item:nth-child(1) .social__content{
+   width: 40px;
+   height: 40px;
    background-image: url('../../images/facebook.svg');
    background-repeat: no-repeat;
    background-position: center center;
 }
-.social__item:nth-child(2) {
+.social__item:nth-child(2) .social__content {
+   width: 40px;
+   height: 40px;
    background-image: url('../../images/instagram.svg');
    background-repeat: no-repeat;
    background-position: center center;
 }
-.social__item:nth-child(3) {
+.social__item:nth-child(3) .social__content {
+   width: 40px;
+   height: 40px;
    background-image: url('../../images/telegram.svg');
    background-repeat: no-repeat;
    background-position: center center;

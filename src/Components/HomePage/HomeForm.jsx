@@ -26,7 +26,7 @@ function HomeForm() {
 							placeholder="Telefon raqamingiz"
 						/>
 						<input
-							name="phone"
+							name="class"
 							type="text"
 							className="form__input"
 							placeholder="Farzandingiz sinfi"
