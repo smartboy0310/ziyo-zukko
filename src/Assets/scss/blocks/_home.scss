@@ -151,10 +151,13 @@
    color: #054946
 }
 
+.home-ad {
+   padding-bottom: 50px;
+}
 .home-ad .container {
    position: relative;
-   height: 500px;
-   padding-top: 20px;
+   height: 520px;
+   background-color: #e7ecec;
    text-align: center;
    background-image: url('../../images/home_kid.png');
    background-repeat: no-repeat;
@@ -191,10 +194,7 @@
    margin-bottom: 30px;
    color: #333333;
 }
-.home-ad {
-   padding-bottom: 50px;
-   background-color: #e7ecec;
-}
+
 .back__btn, 
 .next__btn{
    position: relative;
