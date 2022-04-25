@@ -7,6 +7,7 @@ import HomeGallery from './HomeGallery'
 import HomeAchievements from './HomeAchievements'
 import HomeNews from './HomeNews'
 import HomeForm from './HomeForm'
+import HomeVideo from './HomeVideo'
 
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
       <HomeAd />
       <HomeChouse />
       <HomeAchievements />
+      <HomeVideo />
       <HomeGallery />
       <HomeNews />
       <HomeForm />

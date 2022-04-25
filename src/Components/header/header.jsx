@@ -135,7 +135,7 @@ const Header = () => {
 								<span className="navbar_line"></span>
 							</li>
 							<li className="navbar__item">
-								<Link href="/">
+								<Link href="/about">
 									<a
 										className={`navbar__item-link ${
 											router.pathname == '/'
@@ -225,7 +225,11 @@ const Header = () => {
 						</ul>
 					</div>
 				</div>
+				
 			</div>
+			<div className="header__line">
+					
+				</div>
 		</>
 	);
 };
