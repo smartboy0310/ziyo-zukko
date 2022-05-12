@@ -1,13 +1,15 @@
+.footer {
+   background-image: url('../../images/footer_bg.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
 .footer .container {
    position: relative;
-   left: -12px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    height: 250px;
-   background-image: url('../../images/footer_bg.png');
-   background-size: cover;
-   background-repeat: no-repeat;
+   
 }
 .footer__logo__link {
    display: flex;

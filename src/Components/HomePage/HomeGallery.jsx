@@ -76,7 +76,7 @@ function HomeGallery() {
 
    const openModal = (e) => {
       setModalOpen(true)
-      setIndexImg(e.target.dataset.imgId-0)
+      setIndexImg(e.target.dataset.imgId - 0)
    }
    const closeModal = () => {
       setModalOpen(false)
@@ -107,7 +107,7 @@ function HomeGallery() {
 							width={250}
 							height={300}
 						/>
-					</div>{' '}
+					</div>
 					<div className="home-gallery__img" onMouseUp={openModal}>
 						<img
                      data-img-id = {indexImgThree}

@@ -1,4 +1,5 @@
-.hero {  
+.hero { 
+   background-color: #820386; 
    position: relative;
    top: -5px; 
    z-index: -1; 
@@ -55,7 +56,7 @@
 }
 .homeabout__top {
    position: absolute;
-   top: -140px;
+   top: -130px;
 }
 .homeabout__info{
    position: relative;
@@ -151,6 +152,9 @@
    color: #054946
 }
 
+.home-ad {
+   background-color: #e7ecec;
+}
 .home-ad .container {
    position: relative;
    height: 520px;
