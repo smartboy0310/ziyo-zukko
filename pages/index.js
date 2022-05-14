@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Layout from "../src/Components/layout/layout";
+
 import HomePage from '../src/Components/HomePage/HomePage';
 
 export default function Home() {

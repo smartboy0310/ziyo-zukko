@@ -1,10 +1,11 @@
 
 .header  {
+   position: relative;
    background-color: #820386;
 }
 .header .container {
-   padding-top: 20px;
-   
+   position: relative;
+   padding-top: 4px;
 }
 .header__top {
    display: flex;
@@ -121,11 +122,11 @@
 }
 
 .header__bottom {
+   position: sticky;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   margin-top: 20px;
-   padding-bottom: 4px;
+   
 }
 
 .logo__link {

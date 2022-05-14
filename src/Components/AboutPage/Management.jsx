@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import imgBoss from '../../Assets/images/direktor.jpg';
 function Management() {
-	const [openSoc, setOpenSoc] = useState(false)
-	const openSocial = () => {
-			setOpenSoc(!openSoc)
-	}
 	return (
 		<section className="management">
 			<h2 className="management__heading">Rahbariyat</h2>
@@ -20,8 +16,8 @@ function Management() {
 									width={500}
 									height={500}
 								/>
-								<div className={!openSoc ? "social-set__box active__social-set": "social-set__box"}>
-									<ul className={openSoc ? "management__social__list active__social": "management__social__list"}>
+								<div className="social-set__box">
+									<ul className="management__social__list">
 										<li className="management__social__item">
 											<a
 												className="management__social__link"
@@ -87,23 +83,25 @@ function Management() {
 											</a>
 										</li>
 									</ul>
-									<div className="show__social" onClick={openSocial}>
+									<div className="show__social">
 										<svg
-											className={openSoc ? 'show__social__icon active__social-icon' : 'show__social__icon'}
+											className="show__social__icon"
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 1000 1000"
-											width="22"
-											height="22"
+											width="19"
+											height="19"
 										>
-											<path d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
-											fill='#fff' />
+											<path
+												d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
+												fill="#fff"
+											/>
 										</svg>
 									</div>
 								</div>
 							</li>
 							<li className="management__sub-item">
 								<p className="management__discription">
-									<strong>
+									<strong className='management__name'>
 										Ismatova Nargiza Kamaritdinovna
 									</strong>
 									Lorem ipsum dolor sit amet consectetur
@@ -128,8 +126,8 @@ function Management() {
 									width={500}
 									height={500}
 								/>
-								<div className={!openSoc ? "social-set__box active__social-set": "social-set__box"}>
-									<ul className={openSoc ? "management__social__list active__social": "management__social__list"}>
+								<div className="social-set__box">
+									<ul className="management__social__list">
 										<li className="management__social__item">
 											<a
 												className="management__social__link"
@@ -195,23 +193,25 @@ function Management() {
 											</a>
 										</li>
 									</ul>
-									<div className="show__social" onClick={openSocial}>
+									<div className="show__social">
 										<svg
-											className={openSoc ? 'show__social__icon active__social-icon' : 'show__social__icon'}
+											className="show__social__icon"
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 1000 1000"
-											width="22"
-											height="22"
+											width="19"
+											height="19"
 										>
-											<path d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
-											fill='#fff' />
+											<path
+												d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
+												fill="#fff"
+											/>
 										</svg>
 									</div>
 								</div>
 							</li>
 							<li className="management__sub-item">
 								<p className="management__discription">
-									<strong>
+									<strong  className='management__name'>
 										Ismatova Nargiza Kamaritdinovna
 									</strong>
 									Lorem ipsum dolor sit amet consectetur
@@ -236,8 +236,8 @@ function Management() {
 									width={500}
 									height={500}
 								/>
-								<div className={!openSoc ? "social-set__box active__social-set": "social-set__box"}>
-									<ul className={openSoc ? "management__social__list active__social": "management__social__list"}>
+								<div className="social-set__box">
+									<ul className="management__social__list">
 										<li className="management__social__item">
 											<a
 												className="management__social__link"
@@ -303,16 +303,18 @@ function Management() {
 											</a>
 										</li>
 									</ul>
-									<div className="show__social" onClick={openSocial}>
+									<div className="show__social">
 										<svg
-											className={openSoc ? 'show__social__icon active__social-icon' : 'show__social__icon'}
+											className={'show__social__icon'}
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 1000 1000"
-											width="22"
-											height="22"
+											width="19"
+											height="19"
 										>
-											<path d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
-											fill='#fff' />
+											<path
+												d="M911.9 418.3H581.7V88.1C581.7 45 545.2 10 500 10s-81.7 35-81.7 78.1v330.2H88.1C45 418.3 10 454.8 10 500s35 81.7 78.1 81.7h330.2v330.2c0 43.1 36.5 78.1 81.7 78.1s81.7-35 81.7-78.1V581.7h330.2c43.1 0 78.1-36.5 78.1-81.7s-35-81.7-78.1-81.7z"
+												fill="#fff"
+											/>
 										</svg>
 									</div>
 								</div>

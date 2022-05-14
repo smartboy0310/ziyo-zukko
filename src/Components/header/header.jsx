@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
+import GoTop from '../GoTop/GoTop';
 
 const Header = () => {
 	const router = useRouter();
@@ -229,7 +230,7 @@ const Header = () => {
 			</div>
 			<div className="header__line">
 					
-				</div>
+			</div>
 		</>
 	);
 };

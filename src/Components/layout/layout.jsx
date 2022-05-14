@@ -1,4 +1,6 @@
 import Footer from "../footer/footer";
+import GoTop from "../GoTop/GoTop";
+
 import Header from "../header/header";
 
 
@@ -9,7 +11,10 @@ const layout = ({ children }) => {
       <header className="header" id="header">
         <Header />
       </header>
-      <main>{children}</main>
+      <main>
+        {children}
+        <GoTop />
+      </main>
       <footer className="footer">
         <Footer />
       </footer >
