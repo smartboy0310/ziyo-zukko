@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import Image from 'next/image';
 import imgBoss from '../../Assets/images/direktor.jpg';
 import Link from 'next/link';
@@ -24,7 +24,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -33,7 +33,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 4,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -42,7 +42,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 5,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -51,7 +51,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 6,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -60,7 +60,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 7,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -69,7 +69,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 8,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -78,7 +78,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 9,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -87,7 +87,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 10,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -96,7 +96,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 11,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -105,7 +105,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 12,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -114,7 +114,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 13,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -123,7 +123,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 14,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -132,7 +132,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 15,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -141,7 +141,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 16,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -150,7 +150,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 17,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -159,7 +159,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 18,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -168,7 +168,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 19,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -177,7 +177,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 20,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -186,7 +186,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 21,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -195,7 +195,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 22,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -204,7 +204,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 23,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -213,7 +213,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 24,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -222,7 +222,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 25,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -231,7 +231,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 26,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -240,7 +240,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 27,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -249,7 +249,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 28,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -258,7 +258,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 29,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -267,7 +267,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 30,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -276,7 +276,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 31,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -285,7 +285,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 32,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -294,7 +294,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 33,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -303,7 +303,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 34,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -312,7 +312,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 35,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -321,7 +321,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 36,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -330,7 +330,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 37,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -339,7 +339,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 38,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -348,7 +348,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 39,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -357,7 +357,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 40,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -366,7 +366,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 41,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -375,7 +375,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 42,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -384,7 +384,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 43,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -393,7 +393,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 44,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -402,7 +402,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 45,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -411,7 +411,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 1,
+		id: 46,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Ingliz tili o’qituvchisi',
@@ -420,7 +420,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 47,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Matematika o’qituvchisi',
@@ -429,7 +429,7 @@ const data = [
 		instagram_link: 'https://www.instagram.com/',
 	},
 	{
-		id: 2,
+		id: 48,
 		name: 'Ismatova Nargiza Kamaritdinovna',
 		image: imgBoss,
 		rol: 'Tarbiyachi',
@@ -474,7 +474,7 @@ function Employees() {
 					{pageData &&
 						pageData.map((e, i) => (
 							<li key={i} className="employees__item">
-								<Link href="/">
+								<Link href={`about/${e.id}`}>
 									<a className="employees__link">
 										<Image
 											className="employees__img"
@@ -570,7 +570,7 @@ function Employees() {
 									{e.name}
 								</h3>
 								<p className="employees__item__discription">
-									{e.rol} {i}
+									{e.rol} {e.id}
 								</p>
 							</li>
 						))}
@@ -581,7 +581,7 @@ function Employees() {
 							onClick={BackPage}
 							className="employees__pagenation__item"
 						>
-							<button className="employees__pagenation__button">
+							<button className="employees__pagenation__button" >
 								<Image
 									className="employees__btn__img back"
 									src={pageBtn}
@@ -598,7 +598,7 @@ function Employees() {
 							>
 								<button
 									data-page-id={i}
-									className="employees__pagenation__button pagenation"
+									className={page == i ? "employees__pagenation__button pagenation pageClick" : "employees__pagenation__button pagenation" }
 								>
 									{e + 1}
 								</button>

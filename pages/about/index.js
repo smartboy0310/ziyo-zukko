@@ -1,4 +1,4 @@
-import AboutPage from "../src/Components/AboutPage/AboutPage"
+import AboutPage from "../../src/Components/AboutPage/AboutPage"
 import Head from 'next/head';
 
 function About() {
