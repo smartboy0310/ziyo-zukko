@@ -1,243 +1,489 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import imgBoss from '../../Assets/images/direktor.jpg';
+import Link from 'next/link';
+import pageBtn from '../../Assets/images/page_btn.png';
 
 const data = [
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 1,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Ingliz tili o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Matematika o’qituvchisi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   },
-   {
-      id: 2,
-      name: 'Ismatova Nargiza Kamaritdinovna',
-      image: imgBoss,
-      rol: "Tarbiyachi",
-      telegram_link: "https://www.telegram.org/",
-      facebook_link: "https://www.facebook.com/",
-      instagram_link: "https://www.instagram.com/"
-   }
-]
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 1,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Ingliz tili o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Matematika o’qituvchisi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+	{
+		id: 2,
+		name: 'Ismatova Nargiza Kamaritdinovna',
+		image: imgBoss,
+		rol: 'Tarbiyachi',
+		telegram_link: 'https://www.telegram.org/',
+		facebook_link: 'https://www.facebook.com/',
+		instagram_link: 'https://www.instagram.com/',
+	},
+];
 
 function Employees() {
-   return (
-    <section className="employees">
-       <h2 className="employees__heading">
-          O’qituvchilar va xodimlar
-       </h2>
-       <div className="container">
-            <ul className="employees__list">
-               {
-                  data && data.map((e, i) => (
-                     <li key = {i} className="employees__item">
-                        <Image
-									className="employees__img"
-									src={e.image}
-									width={250}
-									height={270}
-								/>
+	const [page, setPage] = useState(0);
+	let pageLeng = Math.ceil((data.length - 1) / 10);
+
+	const pageIndex = [];
+	for (let i = 0; i < pageLeng; i++) [pageIndex.push(i)];
+
+	const BackPage = () => {
+		if (page != 0) {
+			setPage(page - 1);
+		} else {
+			setPage(pageLeng - 1);
+		}
+	};
+	const NextPage = () => {
+		if (page != pageLeng - 1) {
+			setPage(page + 1);
+		} else {
+			setPage(0);
+		}
+	};
+
+	const CheckPage = (e) => {
+		setPage(e.target.dataset.pageId - 0);
+	};
+	let pageData = data.slice((page - 0) * 10, (page + 1) * 10);
+
+	return (
+		<section className="employees">
+			<h2 className="employees__heading">O’qituvchilar va xodimlar</h2>
+			<div className="container">
+				<ul className="employees__list">
+					{pageData &&
+						pageData.map((e, i) => (
+							<li key={i} className="employees__item">
+								<Link href="/">
+									<a className="employees__link">
+										<Image
+											className="employees__img"
+											src={e.image}
+											width={180}
+											height={200}
+										/>
+									</a>
+								</Link>
 								<div className="employees__social-set__box">
 									<ul className="employees__social__list">
 										<li className="employees__social__item">
@@ -320,19 +566,62 @@ function Employees() {
 										</svg>
 									</div>
 								</div>
-                        <h3 className="employees__item__heading">
-                           {e.name}
-                        </h3>
-                        <p className="employees__item__discription">
-                           {e.rol}
-                        </p>
-                     </li>
-                  ))
-               }
-            </ul>
-       </div>
-    </section>
-  )
+								<h3 className="employees__item__heading">
+									{e.name}
+								</h3>
+								<p className="employees__item__discription">
+									{e.rol} {i}
+								</p>
+							</li>
+						))}
+				</ul>
+				<div className="employees__pagenation">
+					<ul className="employees__pagenation__list">
+						<li
+							onClick={BackPage}
+							className="employees__pagenation__item"
+						>
+							<button className="employees__pagenation__button">
+								<Image
+									className="employees__btn__img back"
+									src={pageBtn}
+                           width = {20}
+                           height = {20}
+								/>
+							</button>
+						</li>
+						{pageIndex.map((e, i) => (
+							<li
+								key={i}
+								onClick={CheckPage}
+								className="employees__pagenation__item "
+							>
+								<button
+									data-page-id={i}
+									className="employees__pagenation__button pagenation"
+								>
+									{e + 1}
+								</button>
+							</li>
+						))}
+						<li
+							onClick={NextPage}
+							className="employees__pagenation__item"
+						>
+							<button className="employees__pagenation__button">
+                     <Image
+									className="employees__btn__img"
+									src={pageBtn}
+                           width = {20}
+                           height = {20}
+								/>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	);
 }
 
-export default Employees
+export default Employees;

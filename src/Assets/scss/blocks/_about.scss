@@ -1,6 +1,5 @@
 .about-hero {     
-   position: relative;
-   
+   position: relative;   
    z-index: -1; 
    background: linear-gradient(90deg, #071529 60%, #1E6094 50%);
 }
@@ -218,15 +217,16 @@
    text-align: center;
 }
 .employees__heading {
-   font-size: 3em;
+   font-size: 2.5em;
    line-height: 1em; 
    color: #333333;
-   margin: 20px 0;
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
 
 .employees__list {
    display: grid;
-	grid-template-columns: repeat(4, auto);
+	grid-template-columns: repeat(5, auto);
 	grid-column-gap: 40px;
    grid-row-gap: 10px;
 	list-style: none;
@@ -301,5 +301,38 @@
 .employees__item__discription {
    font-size: 1em;
    line-height: 1em; 
-   color: #1a1515;
+   color: hsl(0, 33%, 51%);
+}
+
+.employees__pagenation__list {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 10px 0;
+}
+.employees__pagenation__item + .employees__pagenation__item{
+   margin-left: 10px;
+}
+.employees__pagenation__button {
+   text-align: center;
+   vertical-align: middle;
+   height: 30px;
+   padding: 2px;
+}
+.employees__pagenation__button.pagenation {
+   text-align: center;
+   vertical-align: middle;
+   height: 30px;
+   padding: 2px 5px ;
+   
+   cursor: pointer;
+}
+.employees__btn__img {
+   object-fit: contain;
+}
+.employees__btn__img.back {
+   transform: rotate(180deg);
+}
+.employees__pagenation__button:hover {
+   transform: scale(1.099);
 }
