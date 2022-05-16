@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import imgOne  from '../../Assets/images/our_one.jpg'
 import imgTwo  from '../../Assets/images/our_two.jpg'
 import imgThree  from '../../Assets/images/our_three.jpg'
 import imgFour  from '../../Assets/images/our_four.jpg'
+
 const data = [
 	imgOne,
 	imgTwo,
@@ -11,6 +12,8 @@ const data = [
 	imgFour
 ];
 function OurActivity() {
+	
+
 	return (
 		<section className="our-activity">
 			<h2 className="our-activity__heading">Bizning faoliyatimiz</h2>

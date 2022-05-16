@@ -1,16 +1,13 @@
-import { useRouter } from 'next/router';
-import React from 'react'
+import EmployeeSingle from "../../../src/Components/AboutPage/EmployeeSingle"
 
-function EmployeeSingle() {
-   const router = useRouter()
-	const {techId} = router.query
-   console.log(techId);
+function EmployeeSinglePage() {
+  
   return (
    
     <>
-      <h2>HSgsdfhsfsjfhsjdf - {techId}</h2>
+      <EmployeeSingle />
     </>
   )
 }
 
-export default EmployeeSingle
+export default EmployeeSinglePage

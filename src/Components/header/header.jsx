@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
-import GoTop from '../GoTop/GoTop';
+
 
 const Header = () => {
 	const router = useRouter();
@@ -16,9 +16,7 @@ const Header = () => {
 
 	const dispatch = useDispatch();
 
-	const {
-		count: { lang },
-	} = useSelector((state) => state);
+	const { count: { lang }} = useSelector((state) => state);
 
 	function getLang() {
 		dispatch({ type: window.localStorage.getItem('lang') || 'uz' });

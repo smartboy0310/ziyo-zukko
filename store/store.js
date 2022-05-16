@@ -3,7 +3,7 @@ import { createWrapper } from "next-redux-wrapper";
 import { useEffect } from "react";
 
 const initialState = {
-  lang: "ru",
+  lang: "uz",
 };
 
 const count = function reducer(state = initialState, action) {

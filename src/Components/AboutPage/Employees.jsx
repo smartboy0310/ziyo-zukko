@@ -1,8 +1,9 @@
-import React, {  useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import imgBoss from '../../Assets/images/direktor.jpg';
 import Link from 'next/link';
 import pageBtn from '../../Assets/images/page_btn.png';
+import { Context } from '../../Context/GlobalState';
 
 const data = [
 	{
@@ -440,6 +441,7 @@ const data = [
 ];
 
 function Employees() {
+	const {setTechSingle } = useContext(Context);
 	const [page, setPage] = useState(0);
 	let pageLeng = Math.ceil((data.length - 1) / 10);
 
@@ -465,6 +467,11 @@ function Employees() {
 		setPage(e.target.dataset.pageId - 0);
 	};
 	let pageData = data.slice((page - 0) * 10, (page + 1) * 10);
+	const SelectTech = (e) => {
+		const foundTechId = e.target.dataset.techId;
+		const foundTech = data.find((e) => e.id == foundTechId);
+		setTechSingle(foundTech)
+	};
 
 	return (
 		<section className="employees">
@@ -473,10 +480,17 @@ function Employees() {
 				<ul className="employees__list">
 					{pageData &&
 						pageData.map((e, i) => (
-							<li key={i} className="employees__item">
+							<li
+								
+								key={i}
+								className="employees__item"
+								
+							>
 								<Link href={`about/${e.id}`}>
 									<a className="employees__link">
 										<Image
+											onClick={SelectTech}
+											data-tech-id={e.id}
 											className="employees__img"
 											src={e.image}
 											width={180}
@@ -581,12 +595,12 @@ function Employees() {
 							onClick={BackPage}
 							className="employees__pagenation__item"
 						>
-							<button className="employees__pagenation__button" >
+							<button className="employees__pagenation__button">
 								<Image
 									className="employees__btn__img back"
 									src={pageBtn}
-                           width = {20}
-                           height = {20}
+									width={20}
+									height={20}
 								/>
 							</button>
 						</li>
@@ -598,7 +612,11 @@ function Employees() {
 							>
 								<button
 									data-page-id={i}
-									className={page == i ? "employees__pagenation__button pagenation pageClick" : "employees__pagenation__button pagenation" }
+									className={
+										page == i
+											? 'employees__pagenation__button pagenation pageClick'
+											: 'employees__pagenation__button pagenation'
+									}
 								>
 									{e + 1}
 								</button>
@@ -609,11 +627,11 @@ function Employees() {
 							className="employees__pagenation__item"
 						>
 							<button className="employees__pagenation__button">
-                     <Image
+								<Image
 									className="employees__btn__img"
 									src={pageBtn}
-                           width = {20}
-                           height = {20}
+									width={20}
+									height={20}
 								/>
 							</button>
 						</li>
