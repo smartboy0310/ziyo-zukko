@@ -10,10 +10,10 @@ const layout = ({ children }) => {
     <>
       <header className="header" id="header">
         <Header />
+        <GoTop />
       </header>
       <main>
-        {children}
-        <GoTop />
+        {children}        
       </main>
       <footer className="footer">
         <Footer />

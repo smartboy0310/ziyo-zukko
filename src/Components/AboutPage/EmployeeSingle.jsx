@@ -3,6 +3,7 @@ import { Context } from '../../Context/GlobalState';
 
 function EmployeeSingle() {
    const {techSingle} = useContext(Context)
+   console.log(techSingle.image);
   return (
     <section className="employee-single">
        <div className="container">

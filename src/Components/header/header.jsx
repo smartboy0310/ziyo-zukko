@@ -177,7 +177,7 @@ const Header = () => {
 							</li>
 
 							<li className="navbar__item">
-								<Link href="/">
+								<Link href="/contact">
 									<a
 										className={`navbar__item-link ${
 											router.pathname == '/'
