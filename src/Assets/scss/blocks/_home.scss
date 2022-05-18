@@ -234,7 +234,7 @@
 }
 
 .home-chouse {
-   padding: 30px 0;
+   padding-top: 30px;
 }
 
 .home-chouse .container{
@@ -247,7 +247,6 @@
    width: 100%;
    max-width: 600px;
    margin: 0 auto;
-   margin-bottom: 20px;
    padding: 0;
    font-size: 3em;
    line-height: 1em;
@@ -285,7 +284,7 @@
 }
 .home-gallery .container {
    position: relative;
-   height: 600px;
+   height: 570px;
    background-image: url('../../images/home_gallery_bg.png');
    background-size: contain;
    background-repeat: no-repeat;
@@ -293,7 +292,7 @@
 }
 .home-gallery__heading {
    margin: 0 auto;
-   margin-bottom: 50px;
+   margin-bottom: 40px;
    padding: 0;
    font-size: 3em;
    line-height: 1em;
@@ -305,7 +304,7 @@
    display: flex;
    align-items: center;
    justify-content: space-around;
-   margin-bottom: 50px;
+   margin-bottom: 60px;
 }
 .home-gallery__img {
 
@@ -392,10 +391,6 @@
    border-radius: 45%;
    cursor: pointer;
 }
-
-
-
-
 .home-achievements .container {
    padding: 30px 0;
    text-align: center;
@@ -406,7 +401,7 @@
 }
 .home-achievements__heading {
    margin: 0 auto;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
    padding: 0;
    font-size: 3em;
    line-height: 1em;
@@ -417,7 +412,7 @@
    display: flex;
    align-items: center;
    justify-content: space-around;
-   margin-bottom: 60px;
+   margin-bottom: 50px;
 }
 .home-achievements__img {
    position: relative;
@@ -513,7 +508,7 @@
    padding: 0;
    font-weight: 700;
    font-size: 3em;
-   line-height: 1.5em; 
+   line-height: 1em; 
    color: #333333;
    
 }
@@ -614,9 +609,7 @@
 }
 
 
-.home-form {
-   padding-top: 80px;
-}
+
 .home-form .container {
    position: relative;
    text-align: center;
@@ -634,7 +627,7 @@
    background-position-y: 10px;
 }
 .home-from__heading {
-   margin-bottom: 50px;
+   margin-bottom: 40px;
    font-weight: 700;
    font-size: 3em;
    line-height: 1em; 

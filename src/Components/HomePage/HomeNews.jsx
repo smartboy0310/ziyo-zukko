@@ -132,7 +132,7 @@ function HomeNews() {
 								<p className="new__discription">
 									{data[newIndexOne].title}
 								</p>
-								<Link href="/">
+								<Link href="/news">
 									<a className="home-new__link">
 										batafsil...
 									</a>
@@ -164,7 +164,7 @@ function HomeNews() {
 								<p className="new__discription">
 									{data[newIndexTwo].title}
 								</p>
-								<Link href="/">
+								<Link href="/news">
 									<a className="home-new__link">
 										batafsil...
 									</a>
@@ -173,7 +173,7 @@ function HomeNews() {
 						</li>
 					</ul>
           <button className="gallery__all-btn">
-					<Link href="/">
+					<Link href="/news">
 						<a className="gallery__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>

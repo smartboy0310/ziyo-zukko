@@ -148,7 +148,7 @@ const Header = () => {
 								<span className="navbar_line"></span>
 							</li>
 							<li className="navbar__item">
-								<Link href="/">
+								<Link href="/gallery">
 									<a
 										className={`navbar__item-link ${
 											router.pathname == '/'
@@ -162,7 +162,7 @@ const Header = () => {
 								<span className="navbar_line"></span>
 							</li>
 							<li className="navbar__item">
-								<Link href="/">
+								<Link href="/news">
 									<a
 										className={`navbar__item-link ${
 											router.pathname == '/'

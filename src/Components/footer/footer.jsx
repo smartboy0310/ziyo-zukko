@@ -58,7 +58,7 @@ const Footer = () => {
 						<nav className="footer__navbar">
 							<ul className="footer__navbar__list">
 								<li className="footer__navbar__item">
-									<Link href="/">
+									<Link href="/about">
 										<a
 											className={`footer__navbar__item-link ${
 												router.pathname == '/'
@@ -71,7 +71,7 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li className="footer__navbar__item">
-									<Link href="/">
+									<Link href="/gallery">
 										<a
 											className={`footer__navbar__item-link ${
 												router.pathname == '/'
@@ -84,7 +84,7 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li className="footer__navbar__item">
-									<Link href="/">
+									<Link href="/news">
 										<a
 											className={`footer__navbar__item-link ${
 												router.pathname == '/'
@@ -98,7 +98,7 @@ const Footer = () => {
 								</li>
 
 								<li className="footer__navbar__item">
-									<Link href="/">
+									<Link href="/contact">
 										<a
 											className={`footer__navbar__item-link ${
 												router.pathname == '/'
