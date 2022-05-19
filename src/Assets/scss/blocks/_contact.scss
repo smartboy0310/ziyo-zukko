@@ -43,10 +43,15 @@
 }
 .contact-location .container {
    position: relative;
+   text-align: center;
+}
+.contact-location__heading {
+   font-size: 3em;
+   line-height: 1.5em; 
+   color: #333333;
 }
 .location__image {
    width: 100%;
-   max-width: 1400px;
    object-fit: cover;
 }
 
