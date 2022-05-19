@@ -217,7 +217,7 @@ function NewsInfo() {
 			<section className="news-info">
 				<div className="news-info__top"></div>
 				<div className="container">
-					<h2 className="news-info__heading">Yangilar</h2>
+					<h2 className="news-info__heading">Yangiliklar</h2>
 					<div className="news-info__box">
 						<ul className="news-info__list">
 							{pageData &&
@@ -443,7 +443,7 @@ function NewsInfo() {
 														className='category-active__active'
 														src={activeCategory}
 														width={10}
-														height={10}
+														height={9}
 														layout='intrinsic'
 													/>)
 												}
@@ -461,7 +461,7 @@ function NewsInfo() {
 														className='category-active__active'
 														src={activeCategory}
 														width={10}
-														height={10}
+														height={9}
 														layout='intrinsic'
 													/>)
 												}
@@ -479,7 +479,7 @@ function NewsInfo() {
 														className='category-active__active'
 														src={activeCategory}
 														width={10}
-														height={10}
+														height={9}
 														layout='intrinsic'
 													/>)
 												}

@@ -78,7 +78,7 @@ function HomeAd() {
 								<p className="new__discription">
 									{data[adIndex].title}
 								</p>
-								<Link href="/">
+								<Link href="/news/single">
 									<a className="home-ad__link">
 										batafsil...
 									</a>

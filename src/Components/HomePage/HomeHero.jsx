@@ -11,7 +11,7 @@ const HomeHero = () => {
 					<p className="hero__discription">
            Sifatli ta'lim | Oʻyin maydonchasi | Foydali mashgʻulotlar 
           </p>
-					<Link href="/">
+					<Link href="/contact">
 						<a className="hero__link">
 							Hoziroq bogʻlaning
 						</a>

@@ -2,6 +2,18 @@
    position: relative;
    background-color: #820386;
 }
+.about_page {
+   background: linear-gradient(90deg, #3853a3, #593694 70%);
+}
+.gallery_page {
+   background: linear-gradient(90deg, #983B67, #983B67 70%);
+}
+.news_page {
+   background: linear-gradient(90deg, #43648E, #6F5D89 80%);
+}
+.contact_page {
+   background: linear-gradient(90deg, #5C0085, #300053 80%);
+}
 .header .container {
    position: relative;
    padding-top: 4px;

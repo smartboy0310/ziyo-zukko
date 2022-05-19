@@ -184,7 +184,7 @@ function HomeAchievements() {
 					</div>
 				</div>
 				<button className="achievements__all-btn">
-					<Link href="/">
+					<Link href="/news">
 						<a className="achievements__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>

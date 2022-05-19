@@ -132,7 +132,7 @@ function HomeNews() {
 								<p className="new__discription">
 									{data[newIndexOne].title}
 								</p>
-								<Link href="/news">
+								<Link href="/news/single">
 									<a className="home-new__link">
 										batafsil...
 									</a>
@@ -164,7 +164,7 @@ function HomeNews() {
 								<p className="new__discription">
 									{data[newIndexTwo].title}
 								</p>
-								<Link href="/news">
+								<Link href="/news/single">
 									<a className="home-new__link">
 										batafsil...
 									</a>

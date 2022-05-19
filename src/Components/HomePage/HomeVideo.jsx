@@ -96,7 +96,7 @@ function HomeVideo() {
 					</div>
 				</div>
 				<button className="gallery__all-btn">
-					<Link href="/">
+					<Link href="/gallery">
 						<a className="gallery__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>

@@ -1,17 +1,15 @@
 .hero { 
    background-color: #820386; 
-   position: relative;
-   top: -5px; 
-   z-index: -1; 
+   position: relative; 
 }
 .hero .container {
    position: relative;
    padding: 0;
-   height: 700px;
+   height: 650px;
    background-image: url('../../images/home_bg.jpg');
    background-repeat: no-repeat;
    background-size: cover;
-   background-position-y: -20px;
+   background-position-y: -80px;
 }
 .hero__info {
    position: absolute;

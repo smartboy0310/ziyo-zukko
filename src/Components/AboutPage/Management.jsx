@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import imgBoss from '../../Assets/images/direktor.jpg';
 function Management() {
 	return (
@@ -10,12 +11,16 @@ function Management() {
 					<li className="management__item">
 						<ul className="management__sub-list">
 							<li className="management__sub-item">
-								<Image
+							<Link href ="/about/management">
+									<a>
+									<Image
 									className="management__img"
 									src={imgBoss}
 									width={500}
 									height={500}
-								/>
+										/>
+									</a>
+							</Link>
 								<div className="social-set__box">
 									<ul className="management__social__list">
 										<li className="management__social__item">
@@ -120,12 +125,16 @@ function Management() {
 					<li className="management__item">
 						<ul className="management__sub-list">
 							<li className="management__sub-item">
-								<Image
+							<Link href ="/about/management">
+									<a>
+									<Image
 									className="management__img"
 									src={imgBoss}
 									width={500}
 									height={500}
-								/>
+										/>
+									</a>
+								</Link>
 								<div className="social-set__box">
 									<ul className="management__social__list">
 										<li className="management__social__item">
@@ -230,12 +239,16 @@ function Management() {
 					<li className="management__item">
 						<ul className="management__sub-list">
 							<li className="management__sub-item">
-								<Image
+								<Link href ="/about/management">
+									<a>
+									<Image
 									className="management__img"
 									src={imgBoss}
 									width={500}
 									height={500}
-								/>
+										/>
+									</a>
+								</Link>
 								<div className="social-set__box">
 									<ul className="management__social__list">
 										<li className="management__social__item">
