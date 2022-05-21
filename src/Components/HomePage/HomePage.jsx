@@ -8,6 +8,7 @@ import HomeAchievements from './HomeAchievements'
 import HomeNews from './HomeNews'
 import HomeForm from './HomeForm'
 import HomeVideo from './HomeVideo'
+import HomePartner from './HomePartner'
 
 
 const HomePage = () => {
@@ -21,6 +22,7 @@ const HomePage = () => {
       <HomeVideo />
       <HomeGallery />
       <HomeNews />
+      <HomePartner />
       <HomeForm />
     </>
   )

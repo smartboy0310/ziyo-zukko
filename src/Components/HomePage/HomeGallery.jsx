@@ -1,37 +1,60 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import closeImg from '../../Assets/images/close_btn.svg'
+import slideImg1 from '../../Assets/images/direktor.jpg'
+import slideImg2 from '../../Assets/images/form_kid.png'
+import slideImg3 from '../../Assets/images/home_kid.png'
+import slideImg4 from '../../Assets/images/home_girl.png'
+import slideImg5 from '../../Assets/images/direktor.jpg'
+import slideImg6 from '../../Assets/images/form_kid.png'
+import slideImg7 from '../../Assets/images/home_kid.png'
+import slideImg8 from '../../Assets/images/home_girl.png'
+import closeImg from '../../Assets/images/close_btn.svg';
 
 const data = [
-	'https://via.placeholder.com/301X350',
-	'https://via.placeholder.com/302X350',
-	'https://via.placeholder.com/303X350',
-	'https://via.placeholder.com/304X350',
-	'https://via.placeholder.com/305X350',
-	'https://via.placeholder.com/306X350',
-	'https://via.placeholder.com/307X350',
-	'https://via.placeholder.com/308X350',
-	'https://via.placeholder.com/309X350',
-	'https://via.placeholder.com/310X350',
-	'https://via.placeholder.com/311X350',
-	'https://via.placeholder.com/312X350',
-	'https://via.placeholder.com/313X350',
-	'https://via.placeholder.com/314X350',
-	'https://via.placeholder.com/315X350',
-	'https://via.placeholder.com/316X350',
+	{
+		id: 1,
+		img: slideImg1,
+	},
+	{
+		id: 2,
+		img: slideImg2,
+	},
+	{
+		id: 3,
+		img: slideImg3,
+	},
+	{
+		id: 4,
+		img: slideImg4,
+	},
+	{
+		id: 5,
+		img: slideImg5,
+	},
+	{
+		id: 6,
+		img: slideImg6,
+	},
+	{
+		id: 7,
+		img: slideImg7,
+	},
+	{
+		id: 8,
+		img: slideImg8,
+	},
 ];
 
 function HomeGallery() {
-   const [modalOpen, setModalOpen] = useState(false)
+	const [modalOpen, setModalOpen] = useState(false);
 	const [indexImg, setIndexImg] = useState(0);
-	const [indexImgOne, setIndexImgOne] = useState(0);
-	const [indexImgTwo, setIndexImgTwo] = useState(1);
-	const [indexImgThree, setIndexImgThree] = useState(2);
-	const [indexImgFour, setIndexImgFour] = useState(3);
-
 	const sizeImg = data.length - 1;
+
 	const next = () => {
 		if (indexImg == sizeImg) {
 			setIndexImg(0);
@@ -46,88 +69,48 @@ function HomeGallery() {
 			setIndexImg(indexImg - 1);
 		}
 	};
-
-	const slider = setTimeout(() => {
-		if (indexImgOne == sizeImg) {
-			setIndexImgOne(0);
-		} else {
-			setIndexImgOne(indexImgOne + 1);
-		}
-		if (indexImgTwo == sizeImg) {
-			setIndexImgTwo(0);
-		} else {
-			setIndexImgTwo(indexImgTwo + 1);
-		}
-		if (indexImgThree == sizeImg) {
-			setIndexImgThree(0);
-		} else {
-			setIndexImgThree(indexImgThree + 1);
-		}
-		if (indexImgFour == sizeImg) {
-			setIndexImgFour(0);
-		} else {
-			setIndexImgFour(indexImgFour + 1);
-		}
-	}, 3000);
-
-	setInterval(() => {
-		slider;
-	}, 100000000);
-
-   const openModal = (e) => {
-      setModalOpen(true)
-      setIndexImg(e.target.dataset.imgId - 0)
-   }
-   const closeModal = () => {
-      setModalOpen(false)
-   }
+	const openModal = (e) => {
+		setModalOpen(true);
+		setIndexImg(e.target.dataset.imgId - 0);
+	};
+	const closeModal = () => {
+		setModalOpen(false);
+	};
 	return (
 		<section className="home-gallery">
 			<div className="container">
 				<h2 className="home-gallery__heading">
 					Bizning foto galereyamiz
 				</h2>
+				
 				<div className="home-gallery__box">
-					<div className="home-gallery__img" onMouseUp={openModal}>
-						<img
-                     data-img-id = {indexImgOne}
-							className="gallery__img"
-							src={data[indexImgOne]}
-							alt="Photo gallery"
-							width={250}
-							height={300}
-						/>
-					</div>
-					<div className="home-gallery__img" onMouseUp={openModal}>
-						<img
-                     data-img-id = {indexImgTwo}
-							className="gallery__img"
-							src={data[indexImgTwo]}
-							alt="Photo gallery"
-							width={250}
-							height={300}
-						/>
-					</div>
-					<div className="home-gallery__img" onMouseUp={openModal}>
-						<img
-                     data-img-id = {indexImgThree}
-							className="gallery__img"
-							src={data[indexImgThree]}
-							alt="Photo gallery"
-							width={250}
-							height={300}
-						/>
-					</div>{' '}
-					<div className="home-gallery__img" onMouseUp={openModal}>
-						<img
-                     data-img-id = {indexImgFour}
-							className="gallery__img"
-							src={data[indexImgFour]}
-							alt="Photo gallery"
-							width={250}
-							height={300}
-						/>
-					</div>
+					<Slider
+						autoplay
+						autoplaySpeed={3000}
+						initialSlide={2}
+						infinite
+						slidesToShow={4}
+					>
+						{
+						data && data?.map((e, i) => (
+								<div
+									key={i}
+									className="home-gallery__slider"
+									
+								>
+									<div className="home-gallery__img">
+									<Image
+										data-img-id={e.id}
+										className="gallery__img"
+										src={e.img}
+										alt="Photo gallery"
+										width={250}
+										height={300}
+									/>
+									</div>
+								</div>
+							))}
+					</Slider>
 				</div>
 
 				<button className="gallery__all-btn">
@@ -135,18 +118,26 @@ function HomeGallery() {
 						<a className="gallery__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>
-				<div className={modalOpen ? 'home-gallery__modal active__gallery__modal' : 'home-gallery__modal' }>
+				<div
+					className={
+						modalOpen
+							? 'home-gallery__modal active__gallery__modal'
+							: 'home-gallery__modal'
+					}
+				>
 					<div className="model__box">
-						<button className="gallery__close__modal" onClick={closeModal} >
-							<Image 
-                        className="gallery__close__img" 
-                        src={closeImg}   
-                        alt = 'Close modal icon'
-                        maxwidth={30}
-                        maxheight={30}
-                        objectFit = 'cover'
-                     />
-                        
+						<button
+							className="gallery__close__modal"
+							onClick={closeModal}
+						>
+							<Image
+								className="gallery__close__img"
+								src={closeImg}
+								alt="Close modal icon"
+								maxwidth={30}
+								maxheight={30}
+								objectFit="cover"
+							/>
 						</button>
 						<div className="gallery__back__btn">
 							<svg

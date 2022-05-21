@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import NewsSingle from '../../../src/Components/NewsPage/NewsSingle';
 
 function singleNew() {
   return (
@@ -11,6 +12,7 @@ function singleNew() {
       />
       <link rel="icon" href="/logo.svg" />
    </Head>
+   <NewsSingle />
 </>
   )
 }

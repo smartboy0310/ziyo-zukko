@@ -177,7 +177,7 @@ const data = [
 ];
 
 function NewsInfo() {
-	const { setTechSingle } = useContext(Context);
+	const { newSingle, setNewSingle } = useContext(Context);
 	const [page, setPage] = useState(0);
 	const [selectCategory, setSelectCategory] = useState();
 	let pageLeng = Math.ceil((data.length - 1) / 5);
@@ -204,14 +204,15 @@ function NewsInfo() {
 		setPage(e.target.dataset.pageId - 0);
 	};
 	let pageData = data.slice((page - 0) * 5, (page + 1) * 5);
-	const SelectTech = (e) => {
-		const foundTechId = e.target.dataset.techId;
-		const foundTech = data.find((e) => e.id == foundTechId);
-		setTechSingle(foundTech);
+	const SelectNew = (e) => {
+		const foundNewId = e.target.dataset.newId;
+		const foundNew = data.find((e) => e.id == foundNewId);
+		setNewSingle(foundNew.id);
 	};
 	const checkCategory = (e) => {
 		setSelectCategory(e.target.dataset.categoryId)
 	}
+	
 	return (
 		<>
 			<section className="news-info">
@@ -222,7 +223,7 @@ function NewsInfo() {
 						<ul className="news-info__list">
 							{pageData &&
 								pageData.map((e, i) => (
-									<li className="news-info__item" key={i}>
+									<li className="news-info__item" key={i} >
 										<div className="news-info__img-box">
 											<img
 												className="news-info__img"
@@ -232,7 +233,9 @@ function NewsInfo() {
 												height={270}
 											/>
 										</div>
-										<div className="news-info__info">
+										<div 
+											data-new-id = {e.id}
+											className="news-info__info">
 											<h2 className="news-info__title">
 												{e.name}
 											</h2>
@@ -247,8 +250,11 @@ function NewsInfo() {
 											<p className="news-info__discription">
 												{e.title}
 											</p>
-											<Link href="/news">
-												<a className="news-info__link">
+											<Link href="/news/single">
+												<a 
+												onClick={SelectNew}
+												data-new-id = {e.id}
+												className="news-info__link">
 													batafsil...
 												</a>
 											</Link>

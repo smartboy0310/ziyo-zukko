@@ -5,7 +5,7 @@ import NewsInfo from './NewsInfo';
 function NewsPage() {
 	return (
 		<>
-      <NewsHero />
+			<NewsHero />
 			<NewsInfo />
 		</>
 	);

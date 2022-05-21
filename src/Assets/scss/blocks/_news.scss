@@ -294,3 +294,21 @@
    line-height: 1.5em;
    color: #797989;
 }
+
+.news-single__info {
+   position: relative;
+}
+.news-single__info .container {
+   position: relative;
+   text-align: center;
+}
+.news-single__box {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+}
+.news-single__img {
+   width: 100%;
+   max-width: 600px;
+   height: 400px;
+}
