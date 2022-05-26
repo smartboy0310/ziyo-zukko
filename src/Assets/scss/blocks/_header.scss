@@ -216,6 +216,10 @@
    margin-top: 20px;
    
 }
+.mobile__navbar__box {
+   display: flex;
+   align-items: center;
+}
 .navbar__list{
    display: flex;
    align-items: center;
@@ -484,7 +488,7 @@
    }
    .active__mobile__navbar {
       width: 100%;
-      max-width: 220px;
+      max-width: 200px;
    }
    .active__mobile__navbar .navbar__item-link {
       font-size: 1.8em;
