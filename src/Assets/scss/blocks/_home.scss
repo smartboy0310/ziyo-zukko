@@ -190,6 +190,11 @@
    }
 }
 @media (max-width: 555px) {
+   .hero .container {
+      height: 370px;
+      background-size: contain;
+      background-position-y: -30px;
+   }
    .hero__info {
       position: absolute;
       top: 30px;
