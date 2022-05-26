@@ -158,18 +158,27 @@
 } 
 @media (max-width: 775px) {
    .footer{
-      height: 250px;
+      height: 240px;
       
    }.footer .container {      
-      top: 40px;
+      top: 30px;
+      right: 0;
+      left: 0;
    }
    .footer__bottom {
       display: flex;
       flex-direction: column;
       text-align: center;
+      justify-content: center;
+      width: 100%;
    }
    .footer__heading {
-      margin: 0;
+      margin: 10px 0;
+      margin-left: 10px;
+   }
+   .footer__logo__box {
+      width: 100%;
+      max-width: 60px;
    }
    .footer__navbar__item + .footer__navbar__item {
       margin-left: 20px;

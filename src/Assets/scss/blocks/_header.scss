@@ -141,7 +141,6 @@
 }
 
 .header__bottom {
-   position: sticky;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -170,7 +169,53 @@
    text-transform: uppercase;        
    color: #FFFFFF;      
 }
-
+.navbar-and-social {
+   display: flex;
+   align-items: center;
+}
+.about_page .active__mobile__navbar {
+   background: linear-gradient(90deg, #3853a3, #593694 70%);
+}
+.gallery_page .active__mobile__navbar {
+   background: linear-gradient(90deg, #983B67, #983B67 70%);
+}
+.news_page .active__mobile__navbar {
+   background: linear-gradient(90deg, #43648E, #6F5D89 80%);
+}
+.contact_page .active__mobile__navbar {
+   background: linear-gradient(90deg, #5C0085, #300053 80%);
+}
+.active__mobile__navbar {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   top: 100%;
+   right: 0;
+   width: 100%;
+   max-width: 250px;
+   padding: 10px;
+   background-color: #820386;
+   z-index: 100;
+   border: 1px solid rgb(226, 212, 212);
+   border-top: none;
+   border-bottom-left-radius: 10px;
+}
+.active__mobile__navbar  .close-desktop__navbar {
+   display: block;
+}
+.active__mobile__navbar .navbar__list {
+   flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+}
+.active__mobile__navbar .navbar__item-link {
+   font-size: 2em;
+}
+.active__mobile__navbar .navbar__item + .navbar__item {
+   margin-left: 0;
+   margin-top: 20px;
+   
+}
 .navbar__list{
    display: flex;
    align-items: center;
@@ -257,6 +302,12 @@
 }
 .reponsev__navbar {
    display: none;
+}
+.navbar__btn__box {
+   display: none;
+}
+.active__btn {
+   display: block;
 }
 @media (max-width: 1300px) {
    body {
@@ -407,7 +458,7 @@
       max-width: 120px;
       background-size: 17px;
    }
-   .close-deskto__navbar {
+   .close-desktop__navbar {
       display: none;
    }
    
@@ -430,6 +481,13 @@
    .logo__box {
       width: 100%;
       max-width: 60px;
+   }
+   .active__mobile__navbar {
+      width: 100%;
+      max-width: 220px;
+   }
+   .active__mobile__navbar .navbar__item-link {
+      font-size: 1.8em;
    }
 }
 @media (max-width: 500px) {
@@ -485,5 +543,6 @@
       max-width: 110px;
       background-size: 14px;
    }
+   
    
 }

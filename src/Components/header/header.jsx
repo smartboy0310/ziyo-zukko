@@ -5,23 +5,22 @@ import Content from '../../Localization/Content';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
-
 import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
-import humburgerImg from '../../Assets/images/humburger.svg'
-
+import humburgerImg from '../../Assets/images/humburger.svg';
+import closeImg from '../../Assets/images/close.svg';
 
 const Header = () => {
-	
 	const router = useRouter();
-	const [openNavbar, setOpenNavbar] = useState(true)
-	const [checkBtn, setCheckBtn] = useState(true)
+		const [checkBtn, setCheckBtn] = useState(true);
 
 	const langValue = useRef();
 
 	const dispatch = useDispatch();
 
-	const { count: { lang }} = useSelector((state) => state);
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
 
 	function getLang() {
 		dispatch({ type: window.localStorage.getItem('lang') || 'uz' });
@@ -36,9 +35,12 @@ const Header = () => {
 	const { header: h } = Content[lang];
 
 	const clickBtn = () => {
-		setCheckBtn(!checkBtn)
+		setCheckBtn(!checkBtn);
+	};
+	const closeMobileNavbar = () => {
+		setCheckBtn(!checkBtn);
 	}
-	
+
 	return (
 		<>
 			<div className="container">
@@ -59,7 +61,7 @@ const Header = () => {
 
 					<div className="lang__box">
 						<ul className="lang__list active__lang">
-						<li
+							<li
 								className={
 									lang === 'uz'
 										? 'lang__item lang__item--active'
@@ -154,11 +156,15 @@ const Header = () => {
 						</Link>
 					</div>
 
-					<nav className="header__navbar close-deskto__navbar">
+					<div className={!checkBtn ? "navbar-and-social active__mobile__navbar" : "navbar-and-social"}>
+						
+					<div className="mobile__navbar__box">
+					<nav className="header__navbar close-desktop__navbar">
 						<ul className="navbar__list">
 							<li className="navbar__item">
 								<Link href="/">
 									<a
+										onClick={closeMobileNavbar}
 										className={`navbar__item-link ${
 											router.pathname == '/'
 												? 'navbar__item-link--active'
@@ -173,6 +179,7 @@ const Header = () => {
 							<li className="navbar__item">
 								<Link href="/about">
 									<a
+									onClick={closeMobileNavbar}
 										className={`navbar__item-link ${
 											router.pathname == '/'
 												? 'navbar__item-link--active'
@@ -187,6 +194,7 @@ const Header = () => {
 							<li className="navbar__item">
 								<Link href="/gallery">
 									<a
+									onClick={closeMobileNavbar}
 										className={`navbar__item-link ${
 											router.pathname == '/'
 												? 'navbar__item-link--active'
@@ -201,6 +209,7 @@ const Header = () => {
 							<li className="navbar__item">
 								<Link href="/news">
 									<a
+									onClick={closeMobileNavbar}
 										className={`navbar__item-link ${
 											router.pathname == '/'
 												? 'navbar__item-link--active'
@@ -216,6 +225,7 @@ const Header = () => {
 							<li className="navbar__item">
 								<Link href="/contact">
 									<a
+									onClick={closeMobileNavbar}
 										className={`navbar__item-link ${
 											router.pathname == '/'
 												? 'navbar__item-link--active'
@@ -229,7 +239,7 @@ const Header = () => {
 							</li>
 						</ul>
 					</nav>
-					<div className="header__social close-deskto__navbar">
+					<div className="header__social close-desktop__navbar">
 						<ul className="social__list">
 							<li className="social__item">
 								<a
@@ -260,34 +270,27 @@ const Header = () => {
 							</li>
 						</ul>
 					</div>
-					
-					
+					</div>
+					</div>
 					<div className="reponsev__navbar">
 						<div className="openNavar__btn" onClick={clickBtn}>
-								{
-									checkBtn ? 
-									<>
-										<div className="navbar__btn__box">
-										<Image 
-											src={humburgerImg}
-											alt = "Show navbar pic"
-										/>
-										</div>
-									</> 
-									:
-									<>
-									</>
-								}
+							<div className={checkBtn ? "navbar__btn__box active__btn" : "navbar__btn__box"}>
+								<Image
+									src={humburgerImg}
+									alt="Show navbar pic"
+								/>
+							</div>
+							<div className={!checkBtn ? "navbar__btn__box active__btn" : "navbar__btn__box"}>
+								<Image
+									src={closeImg}
+									alt="Show navbar pic"
+								/>
+							</div>
 						</div>
 					</div>
-					
-					
 				</div>
-				
 			</div>
-			<div className="header__line">
-					
-			</div>
+			<div className="header__line"></div>
 		</>
 	);
 };
