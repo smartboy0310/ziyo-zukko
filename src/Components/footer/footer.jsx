@@ -120,7 +120,7 @@ const Footer = () => {
 										href="https://www.facebook.com/"
 										target="_blank"
 									>
-										<div className="social__content"></div>
+										<div className="footer__social__content"></div>
 									</a>
 								</li>
 								<li className="footer__social__item">
@@ -129,7 +129,7 @@ const Footer = () => {
 										href="https://www.instagram.com/"
 										target="_blank"
 									>
-										<div className="social__content"></div>
+										<div className="footer__social__content"></div>
 									</a>
 								</li>
 								<li className="footer__social__item">
@@ -138,7 +138,7 @@ const Footer = () => {
 										href="https://web.telegram.org/"
 										target="_blank"
 									>
-										<div className="social__content"></div>
+										<div className="footer__social__content"></div>
 									</a>
 								</li>
 							</ul>
