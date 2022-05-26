@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Content from '../../Localization/Content';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
+
 import Logo from '../../Assets/images/logo.svg';
 import LocationImg from '../../Assets/images/map-icon.svg';
+import humburgerImg from '../../Assets/images/humburger.svg'
 
 
 const Header = () => {
+	
 	const router = useRouter();
+	const [openNavbar, setOpenNavbar] = useState(true)
+	const [checkBtn, setCheckBtn] = useState(true)
 
 	const langValue = useRef();
 
@@ -30,6 +35,10 @@ const Header = () => {
 
 	const { header: h } = Content[lang];
 
+	const clickBtn = () => {
+		setCheckBtn(!checkBtn)
+	}
+	
 	return (
 		<>
 			<div className="container">
@@ -49,8 +58,8 @@ const Header = () => {
 					</div>
 
 					<div className="lang__box">
-						<ul className="lang__list">
-							<li
+						<ul className="lang__list active__lang">
+						<li
 								className={
 									lang === 'uz'
 										? 'lang__item lang__item--active'
@@ -74,6 +83,34 @@ const Header = () => {
 								}}
 							>
 								Русский
+								<span className="under_line"></span>
+							</li>
+						</ul>
+						<ul className="lang__list mobile__lang">
+							<li
+								className={
+									lang === 'uz'
+										? 'lang__item lang__item--active'
+										: 'lang__item'
+								}
+								onClick={() => {
+									dispatch({ type: 'uz' });
+								}}
+							>
+								Uz
+								<span className="under_line"></span>
+							</li>
+							<li
+								className={
+									lang == 'ru'
+										? 'lang__item lang__item--active'
+										: 'lang__item'
+								}
+								onClick={() => {
+									dispatch({ type: 'ru' });
+								}}
+							>
+								Ру
 								<span className="under_line"></span>
 							</li>
 						</ul>
@@ -106,7 +143,7 @@ const Header = () => {
 									<Image
 										className="logo__img"
 										src={Logo}
-										alt="Ministry logo"
+										alt="School logo"
 										width={90}
 										height={90}
 										objectFit="cover"
@@ -117,7 +154,7 @@ const Header = () => {
 						</Link>
 					</div>
 
-					<nav className="header__navbar">
+					<nav className="header__navbar close-deskto__navbar">
 						<ul className="navbar__list">
 							<li className="navbar__item">
 								<Link href="/">
@@ -192,7 +229,7 @@ const Header = () => {
 							</li>
 						</ul>
 					</nav>
-					<div className="header__social">
+					<div className="header__social close-deskto__navbar">
 						<ul className="social__list">
 							<li className="social__item">
 								<a
@@ -223,6 +260,28 @@ const Header = () => {
 							</li>
 						</ul>
 					</div>
+					
+					
+					<div className="reponsev__navbar">
+						<div className="openNavar__btn" onClick={clickBtn}>
+								{
+									checkBtn ? 
+									<>
+										<div className="navbar__btn__box">
+										<Image 
+											src={humburgerImg}
+											alt = "Show navbar pic"
+										/>
+										</div>
+									</> 
+									:
+									<>
+									</>
+								}
+						</div>
+					</div>
+					
+					
 				</div>
 				
 			</div>
