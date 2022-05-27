@@ -53,7 +53,7 @@
 @media (max-width: 1270px) {
    .hero .container {
       height: 550px;
-     
+      
    }
    .hero__heading {
       font-size: 3.2em;
@@ -68,7 +68,7 @@
    .hero .container {
       background-size: 1100px;
       height: 500px;
-     
+      
    }
    .hero__heading {
       width: 480px;
@@ -156,10 +156,17 @@
       margin-bottom: 10px;
    }
 }
+@media (max-width: 700px) {
+   .hero .container {
+      height: 350px;
+      background-size: cover;
+      background-position-y: -50px;
+   }
+}
 @media (max-width: 666px) {
    .hero .container {
-      height: 370px;
-      background-size: contain;
+      height: 350px;
+      background-size: cover;
       background-position-y: -50px;
    }
    .hero__info {
@@ -191,7 +198,7 @@
 }
 @media (max-width: 555px) {
    .hero .container {
-      height: 370px;
+      height: 330px;
       background-size: contain;
       background-position-y: -30px;
    }
@@ -214,21 +221,40 @@
       
    }
 }
-@media (max-width: 444px) {
+
+@media (max-width: 500px) {
+   .hero .container {
+      height: 270px;
+   }
    .hero__info {
       position: absolute;
-      top: 20px;
+      top: 10px;
       left: 20px;
       
    }
+}
+
+@media (max-width: 444px) {
+   .hero .container {
+      width: 100%;
+      max-width: 444px;
+      height: 270px;
+   }
    .hero__heading {
       width: 170px;
-      font-size: 1.4em;
-      line-height: 1.1em;
-      margin-bottom: 5px;
+      font-size: 1.2em;
+      line-height: 1em;
+      margin-bottom: 3px;
+   }
+   .hero__discription {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+   }
+   .span {
+      height: 15px !important;
    }
    .hero__link {
-      padding: 5px 10px;
+      padding: 4px 7px;
       font-size: 1.1em;
       line-height: 1em;
       
@@ -263,8 +289,9 @@
 .homeabout__list {
    display: flex;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-evenly;
 }
+
 .homeabout__item {
    position: relative;
    width: 100%;
@@ -335,6 +362,216 @@
 .homeabout__item:nth-child(3) .item__heading{
    color: #054946
 }
+
+@media (max-width: 775px) {
+   .homeabout__info{  
+      position: relative;    
+      top: -20px;
+      padding-bottom: 50px;
+      padding-top: 0;
+     }
+     .homeabout__heading {
+      font-size: 2.7em;  
+      margin-bottom: 40px;
+   }
+   .homeabout__item {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      
+   }
+   .item__info {
+      max-width: 200px;
+   }
+   .item__heading {
+      font-size: 1.5em;
+   }
+   .item__count {
+      font-size: 1.5em;
+      line-height: 1.3em;
+   }
+   .homeabout__item:nth-child(1) {
+      background-image: url('../../images/school_baybay.jpg');
+      background-repeat: no-repeat;
+      background-size: 200px 200px;
+   }
+   .homeabout__item:nth-child(2) {
+      background-image: url('../../images/classroom.jpg');
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-size: 200px 200px;
+   }
+   .homeabout__item:nth-child(3) {
+      background-image: url('../../images/school_teach.jpg');
+      background-repeat: no-repeat;
+      background-size: 200px 200px;
+   }
+   
+}
+
+@media (max-width: 700px) {
+  .top__cloud {
+      top: 20px;
+   }
+   .homeabout__heading {
+      font-size: 2em;  
+      margin-bottom: 10px;    
+   }
+   .homeabout__item:nth-child(1) .item__info {
+      left: 0;
+   }
+   .homeabout__item:nth-child(3) .item__info {
+      left: 0;
+   }
+}
+@media (max-width: 630px) {
+   .homeabout__info{  
+      position: relative;    
+      top: -40px;
+      padding-bottom: 50px;
+      padding-top: 0;
+     }
+     .homeabout__heading {
+      font-size: 2em;
+      line-height: 1em;   
+      
+   }
+   .homeabout__item {
+      width: 100%;
+      max-width: 170px;
+      height: 170px;
+      
+   }
+   .item__info {
+      max-width: 170px;
+   }
+   .item__heading {
+      font-size: 1.5em;
+   }
+   .item__count {
+      font-size: 1.5em;
+      line-height: 1.3em;
+   }
+   .homeabout__item:nth-child(1) {
+      background-image: url('../../images/school_baybay.jpg');
+      background-repeat: no-repeat;
+      background-size: 170px 170px;
+   }
+   .homeabout__item:nth-child(2) {
+      background-image: url('../../images/classroom.jpg');
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-size: 170px 170px;
+   }
+   .homeabout__item:nth-child(3) {
+      background-image: url('../../images/school_teach.jpg');
+      background-repeat: no-repeat;
+      background-size: 170px 170px;
+   }
+}
+@media (max-width: 500px) {
+   .top__cloud {
+      position: absolute;
+      top: 65px !important;
+      height: 100px;
+   }
+   .homeabout__info{  
+      position: relative;  
+      top: -40px; 
+      padding-bottom: 50px;
+      padding-top: 0;
+      background-color: #ffff;
+     }
+     .homeabout__heading {
+      font-size: 1.6em;
+      line-height: 1em;   
+      
+   }
+   .homeabout__item {
+      width: 100%;
+      max-width: 140px;
+      height: 140px;
+      
+   }
+   .item__info {
+      max-width: 140px;
+   }
+   .item__heading {
+      font-size: 1.2em;
+   }
+   .item__count {
+      font-size: 1.2em;
+      line-height: 1.1em;
+   }
+   .homeabout__item:nth-child(1) {
+      background-image: url('../../images/school_baybay.jpg');
+      background-repeat: no-repeat;
+      background-size: 140px 140px;
+   }
+   .homeabout__item:nth-child(2) {
+      background-image: url('../../images/classroom.jpg');
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-size: 140px 140px;
+   }
+   .homeabout__item:nth-child(3) {
+      background-image: url('../../images/school_teach.jpg');
+      background-repeat: no-repeat;
+      background-size: 140px 140px;
+   }
+}
+@media (max-width: 444px) {
+   .top__cloud {
+      position: absolute;
+      top: 5px !important;
+      height: 100px;
+   }
+   .homeabout__info{  
+      position: relative;  
+      top: -40px; 
+      padding-bottom: 50px;
+      padding-top: 0;
+      background-color: #ffff;
+     }
+     .homeabout__heading {
+      font-size: 1.4em;
+      line-height: 1em;   
+      
+   }
+   .homeabout__item {
+      width: 100%;
+      max-width: 120px;
+      height: 120px;
+      
+   }
+   .item__info {
+      max-width: 120px;
+   }
+   .item__heading {
+      font-size: 1.2em;
+   }
+   .item__count {
+      font-size: 1.2em;
+      line-height: 1.1em;
+   }
+   .homeabout__item:nth-child(1) {
+      background-image: url('../../images/school_baybay.jpg');
+      background-repeat: no-repeat;
+      background-size: 120px 120px;
+   }
+   .homeabout__item:nth-child(2) {
+      background-image: url('../../images/classroom.jpg');
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-size: 120px 120px;
+   }
+   .homeabout__item:nth-child(3) {
+      background-image: url('../../images/school_teach.jpg');
+      background-repeat: no-repeat;
+      background-size: 120px 120px;
+   }
+}
+
 
 .home-ad {
    background-color: #e7ecec;
@@ -694,7 +931,7 @@
    background-image: url('../../images/home_new_bg.png');
    background-repeat: no-repeat;
    background-size: cover;
-
+   
    
 }
 .home-new__heading {
@@ -936,7 +1173,7 @@
    display: flex !important;
    flex-direction: column;
    align-items:  center !important;
-
+   
 }
 .partner__img {
    width: 100%;

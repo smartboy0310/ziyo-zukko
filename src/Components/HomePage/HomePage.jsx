@@ -15,8 +15,8 @@ const HomePage = () => {
   return (
     <>
       <HomeHero />
-      {/* <HomeAbout />
-      <HomeAd />
+      <HomeAbout />
+      {/* <HomeAd />
       <HomeChouse />
       <HomeAchievements />
       <HomeVideo />

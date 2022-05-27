@@ -106,6 +106,7 @@ function HomeGallery() {
 										alt="Photo gallery"
 										width={250}
 										height={300}
+										// loader = { () => ()}
 									/>
 									</div>
 								</div>
