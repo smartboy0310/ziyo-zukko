@@ -1317,22 +1317,23 @@
       background-size: contain;
    }
    .home__chouse__list {
-      top: 35px;
+      top: 40px;
       left: 10px;
       display: block;
    }
-   .home-chouse__item {
-      height: 50px !important;
+   .home__chouse__item + .home__chouse__item {
+     margin-top: 10px !important;
    }
    .chouse__title {
       margin-left: 5px;
       font-size: 1.2em;
-      line-height: 1.1em;   
+      line-height: 1em;   
    }
    .chouse__item__img,
    .chouse__img {
-      width: 43px !important;
-      height: 60px !important;
+      width: 45px !important;
+      height: 50px !important;
+      object-fit: cover;
    }
 }
 
