@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState } from 'react';
+import mobileBtn from '../../Assets/images/right_mobile.png'
 const data = [
 	{
 		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
@@ -38,7 +40,7 @@ function HomeAd() {
 				<h2 className="home-ad__heading">E'lon</h2>
 				<div className="home-ad__box">
 				<div className="back__btn" >
-				<svg onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg className = 'desktop__back-btn' onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g filter="url(#a)">
                         <path d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z" fill="#B4B4B4" /></g>
                      <path d="m24 40 9-9-9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -53,14 +55,23 @@ function HomeAd() {
                         </filter>
                      </defs>
                   </svg>
+						<Image 
+							onClick={back}
+							className='mobile__back-btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={42}
+							height = {52}
+							layout = 'intrinsic'
+						/>
 						</div>
 						<div className="home-ad__img">
 								<img
 									className="ad__img"
 									src={data[adIndex].img}
 									alt="new info"
-									maxwidth={300}
-									maxheight={400}
+									width={300}
+									height={400}
 								/>
 							</div>
 							<div className="home-ad__info">
@@ -86,7 +97,7 @@ function HomeAd() {
 							</div>
 					
 						<div className="next__btn">
-						<svg onClick={next} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg className = 'desktop__back-btn' onClick={next} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g filter="url(#a)">
                         <path d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z" fill="#B4B4B4" /></g>
                      <path d="m24 40 9-9-9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,6 +112,15 @@ function HomeAd() {
                         </filter>
                      </defs>
                   </svg>
+						<Image 
+							onClick={next}
+							className='mobile__back-btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={40}
+							height = {50}
+							layout = 'intrinsic'
+						/>
 
 						</div>
 				</div>
