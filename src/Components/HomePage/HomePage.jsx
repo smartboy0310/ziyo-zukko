@@ -18,8 +18,9 @@ const HomePage = () => {
       <HomeAbout />
       <HomeAd />      
       <HomeChouse />
-      {/*<HomeAchievements />
-      <HomeVideo />
+      <HomeAchievements />
+      
+      {/*<HomeVideo />
       <HomeGallery />
       <HomeNews />
       <HomePartner />
