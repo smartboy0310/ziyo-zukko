@@ -1,6 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import mobileBtn from '../../Assets/images/mobile__btn.svg'
+
 const data = [
 	{
 		name: 'Lorem ipsum dolor sit.',
@@ -84,6 +87,7 @@ function HomeAchievements() {
 				<div className="home-achievements__box">
 					<div className="achievements__back__btn">
 						<svg
+							className = 'desktop__back__btn' 
 							onClick={back}
 							width="56"
 							height="69"
@@ -104,6 +108,15 @@ function HomeAchievements() {
 								strokeLinejoin="round"
 							/>
 						</svg>
+						<Image 
+							onClick={back}
+							className='mobile__back__btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={42}
+							height = {52}
+							layout = 'intrinsic'
+						/>
 					</div>
 					<div className="home-achievements__img">
 						<img
@@ -161,6 +174,7 @@ function HomeAchievements() {
 					</div>
 					<div className="achievements__next__btn">
 						<svg
+							className = 'desktop__back__btn' 
 							onClick={next}
 							width="56"
 							height="69"
@@ -181,6 +195,15 @@ function HomeAchievements() {
 								strokeLinejoin="round"
 							/>
 						</svg>
+						<Image 
+							onClick={back}
+							className='mobile__back__btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={42}
+							height = {52}
+							layout = 'intrinsic'
+						/>
 					</div>
 				</div>
 				<button className="achievements__all-btn">
