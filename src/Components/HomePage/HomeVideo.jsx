@@ -48,8 +48,8 @@ function HomeVideo() {
 							onMouseUp={bigVideoBox}
 							className={
 								openVideo
-									? 'video__frame open__video'
-									: 'video__frame'
+									? 'video__iframe open__video'
+									: 'video__iframe'
 							}
 							width="400"
 							height="315"
@@ -65,8 +65,8 @@ function HomeVideo() {
 							onMouseUp={bigVideoBox}
 							className={
 								openVideo
-									? 'video__frame open__video'
-									: 'video__frame'
+									? 'video__iframe open__video'
+									: 'video__iframe'
 							}
 							width="400"
 							height="315"
@@ -77,13 +77,13 @@ function HomeVideo() {
 							allowFullScreen
 						></iframe>
 					</div>
-					<div className="video__box">
+					<div className="video__box close__video">
 						<iframe
 							onMouseUp={bigVideoBox}
 							className={
 								openVideo
-									? 'video__frame open__video'
-									: 'video__frame'
+									? 'video__iframe open__video'
+									: 'video__iframe'
 							}
 							width="400"
 							height="315"
@@ -95,9 +95,9 @@ function HomeVideo() {
 						></iframe>
 					</div>
 				</div>
-				<button className="gallery__all-btn">
+				<button className="gallery__all-btn ">
 					<Link href="/gallery">
-						<a className="gallery__link"> Koʻproq koʻrish </a>
+						<a className="gallery__link video__all-btn"> Koʻproq koʻrish </a>
 					</Link>
 				</button>
 
