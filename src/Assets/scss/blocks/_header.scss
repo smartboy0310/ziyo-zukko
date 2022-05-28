@@ -465,7 +465,12 @@
    .close-desktop__navbar {
       display: none;
    }
-   
+   .scroll__go-top {
+      bottom: 30px;
+      right: 15px;
+      
+      
+   }
 }
 @media (max-width: 775px) {
 .reponsev__navbar {
