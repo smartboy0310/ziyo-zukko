@@ -38,7 +38,7 @@ const Header = () => {
 		setCheckBtn(!checkBtn);
 	};
 	const closeMobileNavbar = () => {
-		setCheckBtn(!checkBtn);
+		setCheckBtn(true);
 	}
 
 	return (
