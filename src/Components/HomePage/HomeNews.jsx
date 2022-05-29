@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Image from 'next/image';
+import mobileBtn from '../../Assets/images/mobile__btn.svg'
 const data = [
 	{
 		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
@@ -10,7 +12,7 @@ const data = [
 	{
 		name: 'Lorem ipsum dolor sit',
 		title: 'Assalomu alaykum. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
-		img: 'https://via.placeholder.com/301X400',
+		img: 'https://via.placeholder.com/300X400',
 		create_at: '15.04.2022',
 	},
 ];
@@ -51,6 +53,7 @@ function HomeNews() {
 				<div className="home-new__box">
 					<div className="new__back__btn">
 						<svg
+							className = 'desktop__back__btn'
 							onClick={back}
 							width="56"
 							height="69"
@@ -103,7 +106,17 @@ function HomeNews() {
 									/>
 								</filter>
 							</defs>
+						
 						</svg>
+						<Image 
+							onClick={back}
+							className='mobile__back__btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={42}
+							height = {52}
+							layout = 'intrinsic'
+						/>
 					</div>
           <div className="home__new__info">
           <ul className="home-new__list">
@@ -113,8 +126,8 @@ function HomeNews() {
 									className="new__img"
 									src={data[newIndexOne].img}
 									alt="new info"
-									maxwidth={300}
-									maxheight={400}
+									width={300}
+									height={400}
 								/>
 							</div>
 							<div className="home-new__info">
@@ -142,7 +155,7 @@ function HomeNews() {
 						<li className="home-new__item">
 							<div className="home-new__img">
 								<img
-									className="ad__img"
+									className="new__img"
 									src={data[newIndexTwo].img}
 									alt="new info"
 									maxwidth={300}
@@ -172,14 +185,11 @@ function HomeNews() {
 							</div>
 						</li>
 					</ul>
-          <button className="gallery__all-btn">
-					<Link href="/news">
-						<a className="gallery__link"> Koʻproq koʻrish </a>
-					</Link>
-				</button>
+          
           </div>
 					<div className="new__next__btn">
 						<svg
+							className='desktop__back__btn'
 							onClick={next}
 							width="56"
 							height="69"
@@ -232,9 +242,23 @@ function HomeNews() {
 									/>
 								</filter>
 							</defs>
+							
 						</svg>
+						<Image 
+							onClick={next}
+							className='mobile__back__btn'
+							src={mobileBtn}
+							alt ='Back btn icon'
+							width={42}
+							height = {52}
+						/>
 					</div>
 				</div>
+				<button className="gallery__all-btn new__all-btn">
+					<Link href="/news">
+						<a className="gallery__link"> Koʻproq koʻrish </a>
+					</Link>
+				</button>
 			</div>
 		</section>
 	);

@@ -196,7 +196,7 @@ function HomeAchievements() {
 							/>
 						</svg>
 						<Image 
-							onClick={back}
+							onClick={next}
 							className='mobile__back__btn'
 							src={mobileBtn}
 							alt ='Back btn icon'
