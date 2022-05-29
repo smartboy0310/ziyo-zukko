@@ -22,31 +22,31 @@ const data = [
 	},
 	{
 		id: 2,
-		img: slideImg2,
+		img: slideImg1,
 	},
 	{
 		id: 3,
-		img: slideImg3,
+		img: slideImg1,
 	},
 	{
 		id: 4,
-		img: slideImg4,
+		img: slideImg1,
 	},
 	{
 		id: 5,
-		img: slideImg5,
+		img: slideImg1,
 	},
 	{
 		id: 6,
-		img: slideImg6,
+		img: slideImg1,
 	},
 	{
 		id: 7,
-		img: slideImg7,
+		img: slideImg1,
 	},
 	{
 		id: 8,
-		img: slideImg8,
+		img: slideImg1,
 	},
 ];
 
@@ -104,8 +104,8 @@ function HomeGallery() {
 										className="gallery__img"
 										src={e.img}
 										alt="Photo gallery"
-										width={250}
-										height={300}
+										width={270}
+										height={350}
 										// loader = { () => ()}
 									/>
 									</div>
@@ -119,84 +119,6 @@ function HomeGallery() {
 						<a className="gallery__link"> Koʻproq koʻrish </a>
 					</Link>
 				</button>
-				<div
-					className={
-						modalOpen
-							? 'home-gallery__modal active__gallery__modal'
-							: 'home-gallery__modal'
-					}
-				>
-					<div className="model__box">
-						<button
-							className="gallery__close__modal"
-							onClick={closeModal}
-						>
-							<Image
-								className="gallery__close__img"
-								src={closeImg}
-								alt="Close modal icon"
-								maxwidth={30}
-								maxheight={30}
-								objectFit="cover"
-							/>
-						</button>
-						<div className="gallery__back__btn">
-							<svg
-								onClick={back}
-								width="56"
-								height="69"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<g>
-									<path
-										d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z"
-										fill="#01A6F8"
-									/>
-								</g>
-								<path
-									d="m24 40 9-9-9-9"
-									stroke="#fff"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-							</svg>
-						</div>
-						<div className="home-modal__img">
-							<img
-								className="modal__img"
-								src={data[indexImg]}
-								alt="Photo gallery"
-								width={250}
-								height={300}
-							/>
-						</div>
-						<div className="gallery__next__btn">
-							<svg
-								onClick={next}
-								width="56"
-								height="69"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<g>
-									<path
-										d="M56 29.44c0-13.219-9.072-24.71-21.93-27.774L30.013.699C14.142-3.084-1.297 8.979.087 25.238c.152 1.788.226 3.762.239 5.844.109 17.156 13.53 32.065 30.641 30.848C45.071 60.928 56 49.193 56 35.052V29.44Z"
-										fill="#01A6F8"
-									/>
-								</g>
-								<path
-									d="m24 40 9-9-9-9"
-									stroke="#fff"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-							</svg>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 	);

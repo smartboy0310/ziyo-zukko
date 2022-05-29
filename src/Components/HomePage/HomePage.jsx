@@ -20,8 +20,8 @@ const HomePage = () => {
       <HomeChouse />
       <HomeAchievements />      
       <HomeVideo />
-      {/*<HomeGallery />
-      <HomeNews />
+      <HomeGallery />
+        {/*<HomeNews />
       <HomePartner />
       <HomeForm /> */}
     </>
