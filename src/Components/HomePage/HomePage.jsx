@@ -22,8 +22,8 @@ const HomePage = () => {
       <HomeVideo />
       <HomeGallery />
       <HomeNews />
-       {/*<HomePartner />
-      <HomeForm /> */}
+      <HomePartner />
+      <HomeForm />
     </>
   )
 }
