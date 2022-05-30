@@ -1,6 +1,6 @@
 .about-hero {     
    position: relative;   
-   background: linear-gradient(90deg, #304992 60%, #593694 50%);
+   background: linear-gradient(90deg, #304992, #593694 90%);
 }
 .about-hero .container {
    position: relative;
@@ -37,6 +37,283 @@
    text-align: justify;
 }
 
+@media (max-width:1340px) {
+   .about-hero__heading { 
+      width: 550px;
+      margin-bottom: 20px;
+      font-size: 3.5em;
+      line-height: 4rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 550px;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+   }
+   
+}
+@media (max-width:1240px) {
+   .about-hero__heading { 
+      width: 550px;
+      margin-bottom: 10px;
+      font-size: 3.5em;
+      line-height: 4rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 500px;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+   }
+   
+}
+@media (max-width:1140px) {
+   .about-hero .container {
+      height: 500px;
+   }
+   .about-hero__heading { 
+      width: 550px;
+      margin-bottom: 10px;
+      font-size: 3.3em;
+      line-height: 4rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 450px;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      
+   }
+   
+}
+
+@media (max-width:1140px) {
+   .about-hero .container {
+      height: 500px;
+   }
+   .about-hero__heading { 
+      width: 450px;
+      margin-bottom: 10px;
+      font-size: 3em;
+      line-height: 3rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 320px;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      
+   }
+   .about__top {
+      position: absolute;
+      top: -150px;
+      right: 0;
+      width: 100%;
+      height: 280px;
+   }
+   .about-who__info__box {
+      width: 100%;
+      max-width: 50%;
+      text-align: justify;
+      margin-right: 30px;
+      margin-left: 20px;
+   }
+   .info__title {
+      font-size: 2.2em !important;
+      line-height: 1.6em !important;
+   }
+   .info__discription {
+      font-size: 1.5em !important;
+      line-height: 1.4em !important;
+   }
+   .about-who__heading {
+      position: relative;
+      top: -20px;
+      margin-bottom: 0 !important;
+   }
+}
+
+@media (max-width: 989px) {
+   .about-hero .container {
+      height: 330px;
+   }
+   .about-hero__heading { 
+      width: 450px;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      line-height: 2.8rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 320px;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      
+   }
+   .about__top {
+      position: absolute;
+      top: -120px !important;
+      right: 0;
+      width: 100%;
+      height: 280px;
+   }
+   .about-who__info__box {
+      width: 100%;
+      max-width: 50%;
+      text-align: justify;
+      margin-right: 30px;
+      margin-left: 20px;
+   }
+   .info__title {
+      font-size: 2.2em !important;
+      line-height: 1.6em !important;
+   }
+   .info__discription {
+      font-size: 1.5em !important;
+      line-height: 1.4em !important;
+   }
+   .about-who__heading {
+      position: relative;
+      top: 0;
+      font-size: 2.6em !important;
+      margin-bottom: 10px !important;
+   }
+}
+ @media (max-width: 704px) {
+   .about-hero .container {
+      height: 300px;
+   }
+   .about-hero__heading { 
+      font-size: 2.2em;
+      line-height: 2.8rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 280px;
+      font-size: 1.1rem;
+      line-height: 1.2rem;
+      margin-bottom: 0;
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 20px;
+   }
+ }
+
+ @media (max-width: 640px) {
+   .about-hero .container {
+      height: 270px;
+   }
+   .about-hero__heading { 
+      font-size: 1.9em !important;
+      line-height: 2.5rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 230px;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: 0;
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 20px;
+   }
+ }
+
+ @media (max-width: 640px) {
+   .about-hero .container {
+      height: 280px;
+   }
+   .about-hero__heading { 
+      width: 100%;
+      max-width: 320px;
+      font-size: 2em;
+      line-height: 2rem;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 210px;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: 0;
+   }
+   .about-hero__info {
+      position: absolute;
+      top: 10px;
+   }
+ }
+ @media (max-width: 485px) {
+   .about-hero .container {
+      height: 250px;
+   }
+   .about-hero__heading { 
+      font-size: 1.5em !important;
+      line-height: 1.8rem !important;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 190px;
+      font-size: 0.9rem !important;
+      line-height: 1.1rem !important;
+      margin-bottom: 0;
+   }
+   
+ }
+
+ @media (max-width: 444px) {
+   .about-hero .container {
+      height: 230px;
+   }
+   .about-hero__heading { 
+      font-size: 1.3em !important;
+      line-height: 1rem !important;   
+    
+   }
+   .about-hero__discription {
+      width: 100%;
+      max-width: 160px;
+      font-size: 0.8rem !important;
+      line-height: 1rem !important;
+      margin-bottom: 0;
+   }
+   .about-hero__info {
+      position: absolute;
+      
+      left: 10px;
+   }
+ }
+
+
 .about-who{
    position: relative;
    background-color: #FFFFFF;
@@ -45,6 +322,7 @@
 .about-who .container{
    position: relative;
    text-align: center;
+   background-color: #FFFFFF;
 }
 .about__top {
    position: absolute;
@@ -71,7 +349,7 @@
 }
 .about-who__info__box {
    width: 100%;
-   max-width: 50%;
+   max-width: 600px;
    text-align: justify;
    margin-right: 30px;
    margin-left: 20px;
@@ -84,6 +362,197 @@
    font-size: 1.5em;
    line-height: 1.6em;
 }
+
+@media (max-width: 1200px) {
+   .about-who__info__box  {
+      width: 550px;
+   }
+}
+
+@media (max-width: 1000px) {
+   .about-who__info__box  {
+      width: 500px;
+   }
+   .info__title {
+      font-size: 2em !important;
+      line-height: 1.2em !important;
+   }
+   .info__discription {
+      font-size: 1.4em !important;
+      line-height: 1.4em !important;
+   }
+}
+@media (max-width: 990px) {
+   .about-who__heading {
+      font-size: 2.5em !important;
+   }
+   .info__title {
+      font-size: 1.8em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 10px;
+   }
+   .info__discription {
+      font-size: 1.4em !important;
+      line-height: 1.3em !important;
+   }
+
+   .about__cert {
+      width: 350px !important;
+   }
+}
+
+ @media (max-width: 775px){
+   .about-who__info__box  {
+      width: 480px !important;
+      margin-right: 10px;
+      margin-left: 10px;
+ } 
+ 
+ .about-who__heading {
+      font-size: 2.5em !important;
+   }
+   .info__title {
+      font-size: 1.6em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 10px;
+   }
+   .info__discription {
+      font-size: 1.2em !important;
+      line-height: 1.3em !important;
+   }
+
+   .about__cert {
+      width: 350px !important;
+   }
+}
+
+@media (max-width: 704px) {
+   .about__top {
+      top: -100px !important;
+      right: 0;
+      background-size: contain;
+   }
+   .about-who__info__box  {
+      width: 450px !important;
+      margin-right: 10px;
+      margin-left: 10px;
+ } 
+ .about-who__heading {
+      font-size: 2em !important;
+   }
+   .info__title {
+      font-size: 1.4em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 5px;
+   }
+   .info__discription {
+      font-size: 1.1em !important;
+      line-height: 1.2em !important;
+   }
+   .about__cert__img-box {
+      width: 420px !important;
+   }
+}
+
+@media (max-width: 640px) {
+   .about__top {
+      top: -80px !important;
+      right: 0;
+      background-size: contain;
+   }
+}
+
+@media (max-width: 631px) {
+   .about-who__info__box  {
+      width: 420px !important;
+      margin-right: 5px;
+      margin-left: 5px;
+ } 
+ .about-who__heading {
+      font-size: 2em !important;
+   }
+   .info__title {
+      font-size: 1.2em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 5px;
+   }
+   .info__discription {
+      font-size: 1.1em !important;
+      line-height: 1.1em !important;
+   }
+   .about__cert__img-box,
+   .about__cert {
+      width: 360px !important;
+   }
+}
+
+
+@media (max-width: 640px) {
+   .about__top {
+      top: -80px !important;
+      right: 0;
+      background-size: contain;
+   }
+}
+
+@media (max-width: 529px) {
+   .about-who__info__box  {
+      width: 360px !important;
+      margin-right: 5px;
+      margin-left: 5px;
+ } 
+ .about-who__heading {
+      font-size: 2em !important;
+   }
+   .info__title {
+      font-size: 1.1em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 5px;
+   }
+   .info__discription {
+      font-size: 1em !important;
+      line-height: 1.1em !important;
+   }
+   .about__cert__img-box,
+   .about__cert {
+      width: 360px !important;
+   }
+   .about__top {
+      top: -60px !important;
+      right: 0;
+      background-size: contain;
+   }
+}
+
+@media (max-width: 444px) {
+   .about-who__info__box  {
+      width: 330px !important;
+      margin-right: 5px;
+      margin-left: 5px;
+ } 
+ .about-who__heading {
+      font-size: 1.6em !important;
+   }
+   .info__title {
+      font-size: 1em !important;
+      line-height: 1.1em !important;
+      margin-bottom: 5px;
+   }
+   .info__discription {
+      font-size: 0.8em !important;
+      line-height: 1em !important;
+   }
+   .about__cert__img-box,
+   .about__cert {
+      width: 360px !important;
+   }
+   .about__top {
+      top: -60px !important;
+      right: 0;
+      background-size: contain;
+   }
+}
+
 
 
 .our-activity {

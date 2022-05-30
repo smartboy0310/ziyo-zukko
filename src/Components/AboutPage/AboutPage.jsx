@@ -10,9 +10,9 @@ function AboutPage() {
     <>
       <AboutHero />
       <AboutWhoWe />
-      <OurActivity />
+      {/* <OurActivity />
       <Management />
-      <Employees />
+      <Employees /> */}
     </>
   )
 }
