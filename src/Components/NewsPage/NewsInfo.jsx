@@ -216,7 +216,7 @@ function NewsInfo() {
 	return (
 		<>
 			<section className="news-info">
-				<div className="news-info__top"></div>
+				<div className="contact__top"></div>
 				<div className="container">
 					<h2 className="news-info__heading">Yangiliklar</h2>
 					<div className="news-info__box">
@@ -493,6 +493,24 @@ function NewsInfo() {
 										</div>
 										<h4 data-category-id = {3} className="category__item__heading" onClick={checkCategory}>
 											E'lonlar
+										</h4>
+									</li>
+									<li data-category-id = {4} className="news-info__category__item" onClick={checkCategory}>
+										<div className="category-active">
+											<div className="category-active__img">
+												{
+													selectCategory == 4 && (<Image 
+														className='category-active__active'
+														src={activeCategory}
+														width={10}
+														height={9}
+														layout='intrinsic'
+													/>)
+												}
+											</div>
+										</div>
+										<h4 data-category-id = {4} className="category__item__heading" onClick={checkCategory}>
+											Yutuqlarimiz
 										</h4>
 									</li>
 								</ul>

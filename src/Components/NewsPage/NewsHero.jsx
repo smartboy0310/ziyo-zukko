@@ -7,11 +7,10 @@ function NewsHero() {
          <div className="container">
          <div className="news-hero__info">
 						<h2 className="news-hero__heading">
-                     Yangiliklar
+                Yangiliklar
 						</h2>
 						<p className="news-hero__discription">
-							At vero eos et accusamus et iusto odio dignissimos
-							ducimus qui blanditiis praesentium
+							Eng so'ngi yangiliklarni biz bilan birgalikda ko'zatib boring
 						</p>
 					</div>
          </div>
