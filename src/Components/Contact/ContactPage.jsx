@@ -8,9 +8,9 @@ function ContactPage() {
   return (
     <>
       <ContactHero />
-       <ContactInfo />
+      <ContactInfo />
       <ContactLocation /> 
-     {/* <ContactForm />      */}
+      <ContactForm />     
     </>
   )
 }
