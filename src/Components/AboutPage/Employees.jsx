@@ -443,7 +443,7 @@ const data = [
 function Employees() {
 	const {setTechSingle } = useContext(Context);
 	const [page, setPage] = useState(0);
-	let pageLeng = Math.ceil((data.length - 1) / 10);
+	let pageLeng = Math.ceil((data.length - 1) / 12);
 
 	const pageIndex = [];
 	for (let i = 0; i < pageLeng; i++) [pageIndex.push(i)];
@@ -466,7 +466,7 @@ function Employees() {
 	const CheckPage = (e) => {
 		setPage(e.target.dataset.pageId - 0);
 	};
-	let pageData = data.slice((page - 0) * 10, (page + 1) * 10);
+	let pageData = data.slice((page - 0) * 12, (page + 1) * 12);
 	const SelectTech = (e) => {
 		const foundTechId = e.target.dataset.techId;
 		const foundTech = data.find((e) => e.id == foundTechId);
