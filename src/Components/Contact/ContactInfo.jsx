@@ -17,13 +17,14 @@ function ContactInfo() {
 				<div className="container">
 					<h2 className="about-who__heading">Bogʻlanish uchun</h2>
 					<div className="contact-info__box">
+						<div className="contact__img__box">
 						<Image
 							className="contact-info__image"
 							src={contactImg}
 							width={350}
 							height={300}
-              layout = 'intrinsic'
 						/>
+						</div>
 						<ul className="contact-info__list">
 							<li className="contact-info__item">
 								<a
