@@ -2,6 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import imgBoss from '../../Assets/images/direktor.jpg';
+
+
+
 function Management() {
 	return (
 		<section className="management">
@@ -12,7 +15,7 @@ function Management() {
 						<ul className="management__sub-list">
 							<li className="management__sub-item">
 							<Link href ="/about/management">
-									<a>
+									<a className='management__link'>
 									<Image
 									className="management__img"
 									src={imgBoss}

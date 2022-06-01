@@ -486,7 +486,7 @@ function Employees() {
 								className="employees__item"
 								
 							>
-								<Link href={`about/${e.id}`}>
+								<Link href={`about/teacher`}>
 									<a className="employees__link">
 										<Image
 											onClick={SelectTech}
