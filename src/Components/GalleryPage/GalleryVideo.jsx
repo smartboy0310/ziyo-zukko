@@ -39,7 +39,7 @@ const data = [
 	'https://via.placeholder.com/316X350',
 ];
 
-function GalleryBox() {
+function GalleryVideo() {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [indexImg, setIndexImg] = useState(0);
 	
@@ -80,14 +80,14 @@ function GalleryBox() {
 	};
 	return (
 		<>
-			 <h2 className="gallery-video__heading gallery-info__heading"> Foto lavhalar</h2>
+         <h2 className="gallery-video__heading gallery-info__heading"> Video lavhalar</h2>
 			<ul className="gallery-box__box">
 				{
             pageData &&
 					pageData.map((e, i) => (
 						<li 
 							key={i}
-							className="gallery-box__img-box"
+							className="gallery-box__img"
 							onMouseUp={openModal}
 						>
 							<img
@@ -186,4 +186,4 @@ function GalleryBox() {
 		</>
 	);
 }
-export default GalleryBox;
+export default GalleryVideo;
