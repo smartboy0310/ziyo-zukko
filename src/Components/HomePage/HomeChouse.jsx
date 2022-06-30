@@ -25,7 +25,7 @@ function HomeChouse() {
 								/>
 							</div>
 							<h3 className="chouse__title">
-								Maqsadli mahorat to'plami
+								Maqsadli mahorat toplami
 							</h3>
 						</li>
             <li className="home__chouse__item">

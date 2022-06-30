@@ -12,7 +12,7 @@ function AboutWhoWe() {
 				<div className="about-who__info">
 					<div className="about-who__info__box">
 						<h3 className="info__title">
-							Ziyo-Zukko ta'lim maskani
+							Ziyo-Zukko ta’lim maskani
 						</h3>
 						<p className="info__discription">
 							Toshkent Islom Universiteti ta’sischiligida tashkil
@@ -40,7 +40,6 @@ function AboutWhoWe() {
 						className="about__cert"
 						src={aboutCert}
 						alt="About me"
-						layout='intrinsic'
 					/>
 					</div>
 

@@ -37,7 +37,7 @@ function HomeAd() {
 	return (
 		<section className="home-ad">
 			<div className="container">
-				<h2 className="home-ad__heading">E'lon</h2>
+				<h2 className="home-ad__heading">E’lon</h2>
 				<div className="home-ad__box">
 				<div className="back__btn" >
 				<svg className = 'desktop__back-btn' onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">

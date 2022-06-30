@@ -49,7 +49,7 @@ function HomeNews() {
 	return (
 		<section className="home-new">
 			<div className="container">
-				<h2 className="home-new__heading">So'ngi yangliklar</h2>
+				<h2 className="home-new__heading">So’ngi yangliklar</h2>
 				<div className="home-new__box">
 					<div className="new__back__btn">
 						<svg

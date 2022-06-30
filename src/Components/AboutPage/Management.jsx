@@ -30,7 +30,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -50,7 +50,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -70,7 +70,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -144,7 +144,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -164,7 +164,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -184,7 +184,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -258,7 +258,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -278,7 +278,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"
@@ -298,7 +298,7 @@ function Management() {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="socail__icon"

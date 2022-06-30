@@ -492,7 +492,7 @@ function NewsInfo() {
 											</div>
 										</div>
 										<h4 data-category-id = {3} className="category__item__heading" onClick={checkCategory}>
-											E'lonlar
+											E’lonlar
 										</h4>
 									</li>
 									<li data-category-id = {4} className="news-info__category__item" onClick={checkCategory}>

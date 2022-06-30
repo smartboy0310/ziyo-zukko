@@ -41,7 +41,7 @@ function HomeVideo() {
 	return (
 		<section className="home-video">
 			<div className="container">
-				<h2 className="home-video__heading">Xalq ta'limi va Biz</h2>
+				<h2 className="home-video__heading">Xalq ta’limi va Biz</h2>
 				<div className="home__videos">
 					<div className="video__box">
 						<iframe

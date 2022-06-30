@@ -45,7 +45,7 @@ function ContactInfo() {
 							<li className="contact-info__item">
 								<a
 									href="https://2gis.uz/uz/tashkent/firm/70000001036919062"
-									target="_blank"
+									rel="noreferrer"
 									className="contact__address--link"
 								>
 									{hc.address}

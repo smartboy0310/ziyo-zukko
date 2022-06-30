@@ -10,7 +10,7 @@ function NewsHero() {
                 Yangiliklar
 						</h2>
 						<p className="news-hero__discription">
-							Eng so'ngi yangiliklarni biz bilan birgalikda ko'zatib boring
+							Eng so’ngi yangiliklarni biz bilan birgalikda ko’zatib boring
 						</p>
 					</div>
          </div>

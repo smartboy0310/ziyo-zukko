@@ -61,7 +61,7 @@ function HomePartner() {
 									className="home-partner__slider"
 									
 								>
-									<a className="home-partner__link" href="https://iiau.uz" target="_blank" >
+									<a className="home-partner__link" href="https://iiau.uz" rel="noreferrer" >
                            <Image
 										data-img-id={e.id}
 										className="partner__img"

@@ -6,7 +6,7 @@ function HomeForm() {
 			<div className="container">
 				<div className="home-form__info">
 					<h2 className="home-from__heading">
-						Farzandingiz haqida ma'lumot olmoqchmisiz
+						Farzandingiz haqida ma’lumot olmoqchmisiz
 					</h2>
 
 					<form className="home-form__box">

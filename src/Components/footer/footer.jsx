@@ -118,7 +118,7 @@ const Footer = () => {
 									<a
 										className="footer__social__link"
 										href="https://www.facebook.com/"
-										target="_blank"
+										rel="noreferrer"
 									>
 										<div className="footer__social__content"></div>
 									</a>
@@ -127,7 +127,7 @@ const Footer = () => {
 									<a
 										className="footer__social__link"
 										href="https://www.instagram.com/"
-										target="_blank"
+										rel="noreferrer"
 									>
 										<div className="footer__social__content"></div>
 									</a>
@@ -136,7 +136,7 @@ const Footer = () => {
 									<a
 										className="footer__social__link"
 										href="https://web.telegram.org/"
-										target="_blank"
+										rel="noreferrer"
 									>
 										<div className="footer__social__content"></div>
 									</a>

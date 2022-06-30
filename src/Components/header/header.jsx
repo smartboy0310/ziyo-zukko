@@ -11,7 +11,8 @@ import humburgerImg from '../../Assets/images/humburger.svg';
 import closeImg from '../../Assets/images/close.svg';
 
 const Header = () => {
-	const router = useRouter();
+	const router = useRouter()
+  
 		const [checkBtn, setCheckBtn] = useState(true);
 
 	const langValue = useRef();
@@ -71,7 +72,7 @@ const Header = () => {
 									dispatch({ type: 'uz' });
 								}}
 							>
-								O'zbekcha
+								O’zbekcha
 								<span className="under_line"></span>
 							</li>
 							<li
@@ -120,7 +121,7 @@ const Header = () => {
 					<div className="header__address">
 						<a
 							href="https://2gis.uz/uz/tashkent/firm/70000001036919062"
-							target="_blank"
+							rel="noreferrer"
 							className="header__address--link"
 						>
 							<div className="location__img">
@@ -245,7 +246,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://www.facebook.com/"
-									target="_blank"
+									rel="noreferrer"
 								>
 									<div className="social__content"></div>
 								</a>
@@ -254,7 +255,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://www.instagram.com/"
-									target="_blank"
+									rel="noreferrer"
 								>
 									<div className="social__content"></div>
 								</a>
@@ -263,7 +264,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://web.telegram.org/"
-									target="_blank"
+									rel="noreferrer"
 								>
 									<div className="social__content"></div>
 								</a>

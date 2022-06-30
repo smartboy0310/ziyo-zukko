@@ -486,7 +486,7 @@ function Employees() {
 								className="employees__item"
 								
 							>
-								<Link href={`about/teacher`}>
+								<Link href='about/teacher'>
 									<a className="employees__link">
 										<Image
 											onClick={SelectTech}
@@ -504,7 +504,7 @@ function Employees() {
 											<a
 												className="employees__social__link"
 												href={e.facebook_link}
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="employees__socail__icon"
@@ -524,7 +524,7 @@ function Employees() {
 											<a
 												className="employees__social__link"
 												href={e.telegram_link}
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="employees__socail__icon"
@@ -544,7 +544,7 @@ function Employees() {
 											<a
 												className="employees__social__link"
 												href={e.instagram_link}
-												target="_blank"
+												rel="noreferrer"
 											>
 												<svg
 													className="employees__socail__icon"
