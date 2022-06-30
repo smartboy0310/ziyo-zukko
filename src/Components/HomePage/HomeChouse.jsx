@@ -5,12 +5,12 @@ import chouseOne from '../../Assets/images/chouse_one.png';
 import chouseTwo from '../../Assets/images/chouse_two.png';
 import chouseThree from '../../Assets/images/chouse_three.png';
 import chouseFour from '../../Assets/images/chouse_four.png';
-function HomeChouse() {
+function HomeChouse({ localization }) {
 	return (
 		<section className="home-chouse">
 			<div className="container">
 				<h2 className="home-chouse__heading">
-					Nima uchun bizni tanlashadi
+					{localization.title}
 				</h2>
 				<div className="home-chouse__box">
 					<ul className="home__chouse__list">
@@ -25,7 +25,7 @@ function HomeChouse() {
 								/>
 							</div>
 							<h3 className="chouse__title">
-								Maqsadli mahorat toplami
+								{localization.one}
 							</h3>
 						</li>
             <li className="home__chouse__item">
@@ -39,7 +39,7 @@ function HomeChouse() {
 								/>
 							</div>
 							<h3 className="chouse__title">
-              Qoʻshimcha qiziqarli tadbirlar
+								{localization.two}
 							</h3>
 						</li>
             <li className="home__chouse__item">
@@ -53,7 +53,7 @@ function HomeChouse() {
 								/>
 							</div>
 							<h3 className="chouse__title">
-							Toʻliq kuzatish
+								{localization.three}
 							</h3>
 						</li>
             <li className="home__chouse__item">
@@ -67,7 +67,7 @@ function HomeChouse() {
 								/>
 							</div>
 							<h3 className="chouse__title">
-								Maxsus qoʻshimcha kurslar
+								{localization.four}
 							</h3>
 						</li>
 					</ul>

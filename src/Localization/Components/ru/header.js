@@ -1,27 +1,11 @@
 const header = {
-   for_blinders: 'версия для слабовидящих',
-   search: 'что вы ищите...',
    heading: "Ziyo-Zukko — негосударственное образовательное учреждение",
    address: "100011, г. Ташкент, улица Абдулла Кадыри, 11",
    home: "Главная", 
    gallery: "Фотогалерея",
    about: "O Hас",
    news: "Новости",
-   contact: "Контакты",
-   sub_list_one: {
-      legal_status: "Правовой статус",
-      charter: "Устав",
-      structure: "Структура",
-      management: "Руководство",      
-      open_data: "Открытые данные",
-      department: "Аппарат управленияt"
-   },
-   footer: {
-      address: "Наш адрес:",
-      address_title: "100041, Узбекистан г. Ташкент ул.Олимлар-64",
-      phone: "Телефон:",
-      faks: "Факс:"
-   }
+   contact: "Контакты"   
 };
 
 export default header;

@@ -50,7 +50,7 @@ const data = [
 	},
 ];
 
-function HomeGallery() {
+function HomeGallery({ localization }) {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [indexImg, setIndexImg] = useState(0);
 	const sizeImg = data.length - 1;
@@ -80,7 +80,7 @@ function HomeGallery() {
 		<section className="home-gallery">
 			<div className="container">
 				<h2 className="home-gallery__heading">
-					Bizning foto galereyamiz
+					{localization.title}
 				</h2>
 				
 				<div className="home-gallery__box">
@@ -116,7 +116,7 @@ function HomeGallery() {
 
 				<button className="gallery__all-btn">
 					<Link href="/gallery">
-						<a className="gallery__link"> Koʻproq koʻrish </a>
+						<a className="gallery__link"> {localization.button} </a>
 					</Link>
 				</button>
 			</div>

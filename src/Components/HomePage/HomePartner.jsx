@@ -38,13 +38,13 @@ const data = [
 		img: logoPartner,
 	},
 ];
-function HomePartner() {
+function HomePartner({ localization }) {
   return (
     <>
       <section className="home-partner">
          <div className="container">
             <h2 className="home-partner__heading">
-               Hamkorlarimiz
+              	{localization.title}
             </h2>
             <div className="home-partner__box">
                <Slider

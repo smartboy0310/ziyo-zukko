@@ -17,7 +17,7 @@ const data = [
 	},
 ];
 
-function HomeNews() {
+function HomeNews({localization}) {
 	const [newIndexOne, setNewIndexOne] = useState(0);
 	const [newIndexTwo, setNewIndexTwo] = useState(1);
   const dataSize = data.length - 1
@@ -49,7 +49,7 @@ function HomeNews() {
 	return (
 		<section className="home-new">
 			<div className="container">
-				<h2 className="home-new__heading">So’ngi yangliklar</h2>
+				<h2 className="home-new__heading">{localization.title}</h2>
 				<div className="home-new__box">
 					<div className="new__back__btn">
 						<svg
@@ -147,7 +147,7 @@ function HomeNews() {
 								</p>
 								<Link href="/news/single">
 									<a className="home-new__link">
-										batafsil...
+										{localization.button_more}
 									</a>
 								</Link>
 							</div>
@@ -179,7 +179,7 @@ function HomeNews() {
 								</p>
 								<Link href="/news/single">
 									<a className="home-new__link">
-										batafsil...
+										{localization.button_more}
 									</a>
 								</Link>
 							</div>
@@ -256,7 +256,7 @@ function HomeNews() {
 				</div>
 				<button className="gallery__all-btn new__all-btn">
 					<Link href="/news">
-						<a className="gallery__link"> Koʻproq koʻrish </a>
+						<a className="gallery__link"> {localization.button} </a>
 					</Link>
 				</button>
 			</div>

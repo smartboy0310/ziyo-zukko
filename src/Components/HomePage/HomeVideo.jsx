@@ -9,7 +9,7 @@ const data = [
 	'https://www.youtube.com/embed/WMh7ZEiO6A0',
 ];
 
-function HomeVideo() {
+function HomeVideo({ localization }) {
 	const [openVideo, setOpenVideo] = useState(false);
 
 	const [indexImg, setIndexImg] = useState(0);
@@ -41,7 +41,9 @@ function HomeVideo() {
 	return (
 		<section className="home-video">
 			<div className="container">
-				<h2 className="home-video__heading">Xalq ta’limi va Biz</h2>
+				<h2 className="home-video__heading">
+					{localization.title}
+				</h2>
 				<div className="home__videos">
 					<div className="video__box">
 						<iframe
@@ -97,7 +99,7 @@ function HomeVideo() {
 				</div>
 				<button className="gallery__all-btn ">
 					<Link href="/gallery">
-						<a className="gallery__link video__all-btn"> Koʻproq koʻrish </a>
+						<a className="gallery__link video__all-btn"> {localization.button} </a>
 					</Link>
 				</button>
 

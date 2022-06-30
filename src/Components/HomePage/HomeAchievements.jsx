@@ -37,7 +37,7 @@ const data = [
 	},
 ];
 
-function HomeAchievements() {
+function HomeAchievements({ localization }) {
 	const [indexWinOne, setIndexWinOne] = useState(0);
 	const [indexWinTwo, setIndexWinTwo] = useState(1);
 	const [indexWinThree, setIndexWinThree] = useState(2);
@@ -82,7 +82,7 @@ function HomeAchievements() {
 		<section className="home-achievements">
 			<div className="container">
 				<h2 className="home-achievements__heading">
-					Bizning yutuqlarimiz
+					{localization.title}
 				</h2>
 				<div className="home-achievements__box">
 					<div className="achievements__back__btn">
@@ -208,7 +208,7 @@ function HomeAchievements() {
 				</div>
 				<button className="achievements__all-btn">
 					<Link href="/news">
-						<a className="achievements__link"> Koʻproq koʻrish </a>
+						<a className="achievements__link"> {localization.button} </a>
 					</Link>
 				</button>
 			</div>

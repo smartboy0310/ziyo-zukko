@@ -1,44 +1,47 @@
 import React from 'react';
 
-function HomeForm() {
+function HomeForm( { localization }) {
 	return (
 		<section className="home-form">
 			<div className="container">
 				<div className="home-form__info">
 					<h2 className="home-from__heading">
-						Farzandingiz haqida ma’lumot olmoqchmisiz
+						{localization.title}
 					</h2>
 
 					<form className="home-form__box">
 						<h3 className="home-form__title">
-							Biz bilan bogʻlanish
+								{localization.subtitle}
 						</h3>
 						<input
 							name="name"
 							type="text"
 							className="form__input"
-							placeholder="Ismingiz"
+							required
+							placeholder={localization.name}
 						/>
 						<input
 							name="phone"
 							type="text"
 							className="form__input"
-							placeholder="Telefon raqamingiz"
+							required
+							placeholder={localization.phone}
 						/>
 						<input
 							name="class"
 							type="text"
 							className="form__input"
-							placeholder="Farzandingiz sinfi"
+							required
+							placeholder={localization.class}
 						/>
 						<textarea
 							className="form__message"
 							name="user_message"
 							cols="30"
 							rows="10"
-							placeholder="Izoh"
+							placeholder={localization.discription}
 						></textarea>
-						<button className="home-from__btn">Joʻnatish</button>
+						<button className="home-from__btn">{localization.button}</button>
 					</form>
 				</div>
 			</div>

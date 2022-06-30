@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import mobileBtn from '../../Assets/images/right_mobile.png'
 const data = [
 	{
@@ -17,7 +17,18 @@ const data = [
 	},
 ];
 
-function HomeAd() {
+function HomeAd({localization}) {
+
+// 	const [data, setData] = useState()
+
+// // 	useEffect(() => {
+// // 		fetch('https://school.my-portfolio.uz/post')
+// // 			 .then(res => res.json())
+// // 			 .then(data => lang == 'uz' ? setData(data.data.uz[0]) : setData(data.data.ru[0]))
+// // 			 .catch((e) => console.log(e))
+// //   }, [])
+// //   console.log(data);
+
 	const [adIndex, setAdIndex] = useState(0)
 	const next = () => {
 		if(adIndex == data.length -1) {
@@ -37,7 +48,7 @@ function HomeAd() {
 	return (
 		<section className="home-ad">
 			<div className="container">
-				<h2 className="home-ad__heading">E’lon</h2>
+				<h2 className="home-ad__heading">{localization.title}</h2>
 				<div className="home-ad__box">
 				<div className="back__btn" >
 				<svg className = 'desktop__back-btn' onClick={back} width="56" height="69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +102,7 @@ function HomeAd() {
 								</p>
 								<Link href="/news/single">
 									<a className="home-ad__link">
-										batafsil...
+										{localization.button}
 									</a>
 								</Link>
 							</div>
