@@ -1,38 +1,38 @@
 import React from 'react'
 
-function ContactForm() {
+function ContactForm({ localization }) {
   return (
    <section className="home-form">
    <div className="container">
       <div className="home-form__info">
          <h2 className="home-from__heading">
-            Taklif va mulohazalar uchun
+				{ localization.title }
          </h2>
 
          <form className="home-form__box">
 						<h3 className="home-form__title">
-							Biz bilan bogʻlanish
+							{ localization.subtitle }
 						</h3>
 						<input
 							name="name"
 							type="text"
 							className="form__input"
-							placeholder="Ismingiz"
+							placeholder={ localization.name }
 						/>
 						<input
 							name="phone"
 							type="text"
 							className="form__input"
-							placeholder="Telefon raqamingiz"
+							placeholder={ localization.phone }
 						/>
 						<textarea
 							className="form__message"
 							name="user_message"
 							cols="30"
 							rows="10"
-							placeholder="Izoh"
+							placeholder={ localization.discription }
 						></textarea>
-						<button className="home-from__btn">Joʻnatish</button>
+						<button className="home-from__btn">{ localization.button }</button>
 					</form>
       </div>
    </div>

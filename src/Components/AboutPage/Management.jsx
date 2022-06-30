@@ -5,10 +5,10 @@ import imgBoss from '../../Assets/images/direktor.jpg';
 
 
 
-function Management() {
+function Management({ localization }) {
 	return (
 		<section className="management">
-			<h2 className="management__heading">Rahbariyat</h2>
+			<h2 className="management__heading">{ localization }</h2>
 			<div className="container">
 				<ul className="management__list">
 					<li className="management__item">

@@ -1,16 +1,16 @@
 import React from 'react'
 
-function NewsHero() {
+function NewsHero({ localization }) {
   return (
     <>
       <section className="news-hero">
          <div className="container">
          <div className="news-hero__info">
 						<h2 className="news-hero__heading">
-                Yangiliklar
+                {localization.title}
 						</h2>
 						<p className="news-hero__discription">
-							Eng so’ngi yangiliklarni biz bilan birgalikda ko’zatib boring
+                {localization.discription}
 						</p>
 					</div>
          </div>

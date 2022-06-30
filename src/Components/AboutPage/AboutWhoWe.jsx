@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 import aboutCert from '../../Assets/images/about_certificate.jpg';
 
-function AboutWhoWe() {
+function AboutWhoWe({ localization }) {
 	return (
 		<section className="about-who">
 			<div className="about__top"></div>
 			<div className="container">
-				<h2 className="about-who__heading">Biz oʻzi kimmiz</h2>
+				<h2 className="about-who__heading">{localization}</h2>
 				<div className="about-who__info">
 					<div className="about-who__info__box">
 						<h3 className="info__title">

@@ -440,7 +440,7 @@ const data = [
 	},
 ];
 
-function Employees() {
+function Employees({ localization }) {
 	const {setTechSingle } = useContext(Context);
 	const [page, setPage] = useState(0);
 	let pageLeng = Math.ceil((data.length - 1) / 12);
@@ -475,7 +475,7 @@ function Employees() {
 
 	return (
 		<section className="employees">
-			<h2 className="employees__heading">O’qituvchilar va xodimlar</h2>
+			<h2 className="employees__heading">{ localization }</h2>
 			<div className="container">
 				<ul className="employees__list">
 					{pageData &&

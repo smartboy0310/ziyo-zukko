@@ -39,7 +39,7 @@ const data = [
 	'https://via.placeholder.com/316X350',
 ];
 
-function GalleryVideo() {
+function GalleryVideo({ lang }) {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [indexImg, setIndexImg] = useState(0);
 	
@@ -80,7 +80,7 @@ function GalleryVideo() {
 	};
 	return (
 		<>
-         <h2 className="gallery-video__heading gallery-info__heading"> Video lavhalar</h2>
+         <h2 className="gallery-video__heading gallery-info__heading"> {lang} </h2>
 			<ul className="gallery-box__box">
 				{
             pageData &&

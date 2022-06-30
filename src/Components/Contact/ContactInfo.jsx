@@ -4,7 +4,7 @@ import Content from '../../Localization/Content';
 import { useSelector } from 'react-redux';
 import contactImg from '../../Assets/images/contact_pic.png';
 
-function ContactInfo() {
+function ContactInfo({ localization }) {
 	const {
 		count: { lang },
 	} = useSelector((state) => state);
@@ -15,7 +15,7 @@ function ContactInfo() {
 			<section className="contact-info">
 				<div className="contact__top"></div>
 				<div className="container">
-					<h2 className="about-who__heading">Bogʻlanish uchun</h2>
+					<h2 className="about-who__heading">{localization}</h2>
 					<div className="contact-info__box">
 						<div className="contact__img__box">
 						<Image

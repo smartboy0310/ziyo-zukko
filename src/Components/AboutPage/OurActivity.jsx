@@ -11,12 +11,12 @@ const data = [
 	imgThree,
 	imgFour
 ];
-function OurActivity() {
+function OurActivity({ localization }) {
 	
 
 	return (
 		<section className="our-activity">
-			<h2 className="our-activity__heading">Bizning faoliyatimiz</h2>
+			<h2 className="our-activity__heading">{localization}</h2>
 
 			<div className="container">
 				<p className="our-activity__discription">

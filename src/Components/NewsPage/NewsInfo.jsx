@@ -176,7 +176,7 @@ const data = [
 	},
 ];
 
-function NewsInfo() {
+function NewsInfo({ localization }) {
 	const { newSingle, setNewSingle } = useContext(Context);
 	const [page, setPage] = useState(0);
 	const [selectCategory, setSelectCategory] = useState();
@@ -218,7 +218,7 @@ function NewsInfo() {
 			<section className="news-info">
 				<div className="contact__top"></div>
 				<div className="container">
-					<h2 className="news-info__heading">Yangiliklar</h2>
+					<h2 className="news-info__heading">{localization.title}</h2>
 					<div className="news-info__box">
 						<ul className="news-info__list">
 							{pageData &&
@@ -255,7 +255,7 @@ function NewsInfo() {
 												onClick={SelectNew}
 												data-new-id = {e.id}
 												className="news-info__link">
-													batafsil...
+													{localization.button}
 												</a>
 											</Link>
 										</div>
@@ -268,7 +268,7 @@ function NewsInfo() {
 									className="news-search__input"
 									type="text"
 									name="search-data"
-									placeholder="Qidirish..."
+									placeholder={localization.search}
 								/>
 								<button className="news-search__btn">
 									<span className="news-search__line"></span>
@@ -276,7 +276,7 @@ function NewsInfo() {
 							</form>
 							<div className="news-info__recent-posts">
 								<h3 className="news-info__recent-posts__heading">
-									Soʻnggi xabarlar
+									{localization.last_new}
 								</h3>
 								<ul className="recent-posts__list">
 									<li className="recent-posts__item">
@@ -438,7 +438,7 @@ function NewsInfo() {
 							</div>
 							<div className="news-info__category">
 								<h3 className="news-info__recent-posts__heading">
-									Kategoriyalar
+									{localization.category.title}
 								</h3>
 								<ul className="news-info__category__list">
 									<li data-category-id = {1} className="news-info__category__item" onClick={checkCategory}>
@@ -456,7 +456,7 @@ function NewsInfo() {
 											</div>
 										</div>
 										<h4 data-category-id = {1} className="category__item__heading" onClick={checkCategory}>
-											Yangiliklar
+											{localization.category.one}
 										</h4>
 									</li>
 									<li data-category-id = {2} className="news-info__category__item" onClick={checkCategory}>
@@ -474,7 +474,7 @@ function NewsInfo() {
 											</div>
 										</div>
 										<h4 data-category-id = {2} className="category__item__heading" onClick={checkCategory}>
-											Maqolalar
+											{localization.category.two}
 										</h4>
 									</li>
 									<li data-category-id = {3} className="news-info__category__item" onClick={checkCategory}>
@@ -492,7 +492,7 @@ function NewsInfo() {
 											</div>
 										</div>
 										<h4 data-category-id = {3} className="category__item__heading" onClick={checkCategory}>
-											E’lonlar
+											{localization.category.three}
 										</h4>
 									</li>
 									<li data-category-id = {4} className="news-info__category__item" onClick={checkCategory}>
@@ -510,7 +510,7 @@ function NewsInfo() {
 											</div>
 										</div>
 										<h4 data-category-id = {4} className="category__item__heading" onClick={checkCategory}>
-											Yutuqlarimiz
+											{localization.category.four}
 										</h4>
 									</li>
 								</ul>

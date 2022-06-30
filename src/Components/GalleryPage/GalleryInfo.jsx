@@ -5,14 +5,14 @@ import galleryImg from '../../Assets/images/gallery_pic.png'
 import GalleryBox from './GalleryBox'
 import GalleryVideo from './GalleryVideo'
 
-function GalleryInfo() {
+function GalleryInfo({ localization, photoLoc, videoLoc }) {
    
   return (
     <>
       <section className="gallery-info">
       <div className="contact__top"></div>
          <div className="container">
-         <h2 className="gallery-info__heading">Fotogalereya</h2>
+         <h2 className="gallery-info__heading">{ localization.title }</h2>
          <div className="gallery-info__box">
 						<div className="gallery-info__img__box">
                   <Image
@@ -26,28 +26,28 @@ function GalleryInfo() {
 						<ul className="gallery-info__list">
 							<li className="gallery-info__item">
                         <span className='gallery-info__title'>
-                           Darslar va sinf xonalar
+                           { localization.one }
                         </span>
 							</li>
 							<li className="gallery-info__item">
                         <span className='gallery-info__title'>
-                           Bayram va tadbirlar
+                           { localization.two }
                         </span>
 							</li>
 							<li className="gallery-info__item">
                         <span className='gallery-info__title'>
-                           Turli musobaqa va oʻyinlar
+                           { localization.three }
                         </span>
 							</li>
                      <li className="gallery-info__item">
                         <span className='gallery-info__title'>
-                           Hamma rasmlar
+                           { localization.four }
                         </span>
 							</li>
 						</ul>
 					</div>
-               <GalleryBox />
-               <GalleryVideo />
+               <GalleryBox lang = { photoLoc } />
+               <GalleryVideo lang = { videoLoc }/>
                
          </div>
       </section>
