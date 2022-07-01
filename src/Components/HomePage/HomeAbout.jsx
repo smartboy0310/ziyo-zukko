@@ -1,19 +1,25 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 
 import cloud from '../../Assets/images/cloud.png';
-const data = [500, 25, 50];
+
 function HomeAbout({localization}) {
 
-// 	const [data, setData] = useState()
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
 
-// 	useEffect(() => {
-// 		fetch('https://school.my-portfolio.uz/general')
-// 			 .then(res => res.json())
-// 			 .then(data => lang == 'uz' ? setData(data.data.uz[0]) : setData(data.data.ru[0]))
-// 			 .catch((e) => console.log(e))
-//   }, [])
-//   console.log(data);
+	const [data, setData] = useState()
+
+	useEffect(() => {
+		fetch('https://school.my-portfolio.uz/about')
+			 .then(res => res.json())
+			 .then(data => lang == 'uz' ? setData(data.data.uz) : setData(data.data.ru))
+			 .catch((e) => console.log(e))
+  }, [])
+  console.log(data);
 
 	return (
 		<section className="homeabout">
@@ -32,7 +38,7 @@ function HomeAbout({localization}) {
 					<ul className="homeabout__list">
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{`${data[0]} +`}</p>
+								<p className="item__count">{data[0].about_count}+</p>
 								<h3 className="item__heading">
 									{localization.students} 
 								</h3>
@@ -40,7 +46,7 @@ function HomeAbout({localization}) {
 						</li>
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{data[1]}</p>
+								<p className="item__count">{data[1].about_count}</p>
 								<h3 className="item__heading">
 									{localization.rooms} 
 								</h3>
@@ -48,7 +54,7 @@ function HomeAbout({localization}) {
 						</li>
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{data[2]}</p>
+								<p className="item__count">{data[2].about_count}</p>
 								<h3 className="item__heading">
 									{localization.teacher} 
 								</h3>
