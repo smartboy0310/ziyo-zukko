@@ -16,11 +16,10 @@ function HomeAbout({localization}) {
 	useEffect(() => {
 		fetch('https://school.my-portfolio.uz/about')
 			 .then(res => res.json())
-			 .then(data => lang == 'uz' ? setData(data.data.uz) : setData(data.data.ru))
+			 .then(data => lang == 'uz' ? setData(data?.data.uz) : setData(data?.data.ru))
 			 .catch((e) => console.log(e))
   }, [])
-  console.log(data);
-
+  
 	return (
 		<section className="homeabout">
 			<div className="container">
@@ -38,7 +37,7 @@ function HomeAbout({localization}) {
 					<ul className="homeabout__list">
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{data[0].about_count}+</p>
+								<p className="item__count">{data && data[0].about_count}+</p>
 								<h3 className="item__heading">
 									{localization.students} 
 								</h3>
@@ -46,7 +45,7 @@ function HomeAbout({localization}) {
 						</li>
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{data[1].about_count}</p>
+								<p className="item__count">{ data && data[1].about_count}</p>
 								<h3 className="item__heading">
 									{localization.rooms} 
 								</h3>
@@ -54,7 +53,7 @@ function HomeAbout({localization}) {
 						</li>
 						<li className="homeabout__item">
 							<div className="item__info">
-								<p className="item__count">{data[2].about_count}</p>
+								<p className="item__count">{data && data[2].about_count}</p>
 								<h3 className="item__heading">
 									{localization.teacher} 
 								</h3>
