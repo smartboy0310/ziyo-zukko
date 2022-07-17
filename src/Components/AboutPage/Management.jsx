@@ -23,6 +23,7 @@ function Management({ localization }) {
 									loader={myLoader}
 									className="management__img"
 									src={imgBoss}
+									alt='Management image'
 									width={500}
 									height={500}
 										/>
@@ -138,6 +139,7 @@ function Management({ localization }) {
 									loader={myLoader}
 									className="management__img"
 									src={'https://via.placeholder.com/300X400'}
+									alt='Management image'
 									width={500}
 									height={500}
 										/>
@@ -252,6 +254,7 @@ function Management({ localization }) {
 									<Image
 									loader={myLoader}
 									className="management__img"
+									alt='Managment image'
 									src={imgBoss}
 									width={500}
 									height={500}

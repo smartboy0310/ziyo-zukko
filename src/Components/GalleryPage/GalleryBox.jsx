@@ -116,6 +116,7 @@ function GalleryBox( { lang }) {
 									<Image
 										className="employees__btn__img back"
 										src={pageBtn}
+										alt='back btn icon'
 										width={20}
 										height={20}
 									/>
@@ -147,6 +148,7 @@ function GalleryBox( { lang }) {
 									<Image
 										className="employees__btn__img"
 										src={pageBtn}
+										alt='next btn icon'
 										width={20}
 										height={20}
 									/>

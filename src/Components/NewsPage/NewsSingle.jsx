@@ -231,6 +231,9 @@ function NewsSingle() {
 	const checkCategory = (e) => {
 		setSelectCategory(e.target.dataset.categoryId);
 	};
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<>
 			<NewsHero />
@@ -243,7 +246,8 @@ function NewsSingle() {
 								{foundSingleNew?.name}
 							</h2>
 							<div className="news-single__img-box">
-								<img
+								<Image
+									loader={myLoader}
 									className="news-single__img"
 									src={foundSingleNew?.img}
 									width={500}
@@ -273,7 +277,8 @@ function NewsSingle() {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box single-news__img">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[0].img}
 														alt="new info"
@@ -304,7 +309,8 @@ function NewsSingle() {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box single-news__img">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[1].img}
 														alt="new info"
@@ -335,7 +341,8 @@ function NewsSingle() {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box single-news__img">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[2].img}
 														alt="new info"
@@ -366,7 +373,8 @@ function NewsSingle() {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box single-news__img">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[3].img}
 														alt="new info"
@@ -397,7 +405,8 @@ function NewsSingle() {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box single-news__img">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[4].img}
 														alt="new info"
@@ -428,10 +437,8 @@ function NewsSingle() {
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</section>
-			
 		</>
 	);
 }

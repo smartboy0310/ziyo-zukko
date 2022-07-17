@@ -463,6 +463,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
+														alt='Category active icon'
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -489,6 +490,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
+														alt='Category active icon'
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -515,6 +517,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
+														alt='Category active icon'
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -541,6 +544,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
+														alt='Category active icon'
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -570,6 +574,7 @@ function NewsInfo({ localization }) {
 									<Image
 										className="employees__btn__img back"
 										src={pageBtn}
+										alt='back btn icon'
 										width={20}
 										height={20}
 									/>
@@ -601,6 +606,7 @@ function NewsInfo({ localization }) {
 									<Image
 										className="employees__btn__img"
 										src={pageBtn}
+										alt='next btn icon'
 										width={20}
 										height={20}
 									/>

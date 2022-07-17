@@ -21,6 +21,7 @@ function ContactInfo({ localization }) {
 						<Image
 							className="contact-info__image"
 							src={contactImg}
+							alt='Contact info image'
 							width={350}
 							height={300}
 						/>

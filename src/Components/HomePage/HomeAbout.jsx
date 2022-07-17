@@ -18,7 +18,7 @@ function HomeAbout({localization}) {
 			 .then(res => res.json())
 			 .then(data => lang == 'uz' ? setData(data?.data.uz) : setData(data?.data.ru))
 			 .catch((e) => console.log(e))
-  }, [])
+  }, [lang])
   
 	return (
 		<section className="homeabout">

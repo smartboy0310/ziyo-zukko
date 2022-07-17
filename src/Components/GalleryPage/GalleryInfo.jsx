@@ -18,6 +18,7 @@ function GalleryInfo({ localization, photoLoc, videoLoc }) {
                   <Image
 							className="gallery-info__image"
 							src={galleryImg}
+                     alt='Gallery info image'
 							width={400}
 							height={350}
                      objectFit='contain'

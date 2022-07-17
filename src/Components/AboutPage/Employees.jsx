@@ -498,6 +498,7 @@ function Employees({ localization }) {
 											data-tech-id={e.id}
 											className="employees__img"
 											src={e.image}
+											alt='Empoyess image'
 											width={250}
 											height={300}
 										/>
@@ -603,6 +604,7 @@ function Employees({ localization }) {
 							<button className="employees__pagenation__button">
 								<Image
 									className="employees__btn__img back"
+									alt='back btn icon'
 									src={pageBtn}
 									width={20}
 									height={20}
@@ -634,6 +636,7 @@ function Employees({ localization }) {
 							<button className="employees__pagenation__button">
 								<Image
 									className="employees__btn__img"
+									alt='next btn icon'
 									src={pageBtn}
 									width={20}
 									height={20}
