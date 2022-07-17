@@ -358,6 +358,9 @@
    line-height: 1.6em;
 }
 
+.about__cert {
+   border-radius: 15px;
+}
 @media (max-width: 1200px) {
    .about__top {
       position: absolute;
@@ -761,6 +764,12 @@
 .management__name {
    display: inline-block;
    margin-right: 15px ;
+   margin-bottom: 15px;
+   line-height: 1.2em;
+}
+.mana_span {
+   font-weight: 400;
+   
 }
 .social-set__box {
    position: absolute;
@@ -807,6 +816,51 @@
    height: 18px;
 }
 
+.management_phone {
+   display: flex;
+   align-items: center;  
+   margin-bottom: 15px;
+   font-size: 1.3em;
+}
+.management_phone__number {
+   margin: 0;
+   margin-left: 10px;
+   padding: 0;
+   font-style: normal;
+   font-weight: 400 ;
+   font-size: 1em;
+   line-height: 1em;
+   color: #000;
+}
+
+.management_email__address {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+   font-size: 1.3em;
+}
+.management_email{
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1em;
+   line-height: 1em;
+   color: #000;
+   margin-left: 15px;
+}
+.management_work__time {
+   display: flex;
+   align-items: center;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1em;
+   line-height: 1em;
+   color: #000;
+   margin-bottom: 20px;
+   font-size: 1.3em;
+}
+.management_time__info {
+   margin-left: 10px;
+}
 
 @media (max-width: 989px) {
    .management__heading {
@@ -824,6 +878,15 @@
    .management__sub-item:nth-child(2) {
       width: 100%;
       max-width: 400px
+   }
+   .management__name {
+      margin-bottom: 10px;
+      line-height: 1.2em;
+   }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 1.2em;
    }
 }
 
@@ -869,6 +932,17 @@
    .social-set__box:hover .show__social__icon {
       width: 17px;
       height: 17px;
+   }
+
+   .management__name {
+      margin-bottom: 8px;
+      line-height: 1.1em;
+   }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 1.1em;
+      margin-bottom: 10px;
    }
 }
 
@@ -942,6 +1016,16 @@
       width: 100%;
       max-width: 285px
    }
+   .management__name {
+      margin-bottom: 5px;
+      line-height: 1em;
+   }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 1em;
+      margin-bottom: 7px;
+   }
 }
 
 @media (max-width: 530px) {
@@ -981,6 +1065,12 @@
       width: 15px;
       height: 15px;
    }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+   }
 }
 
 @media (max-width: 510px) {
@@ -992,13 +1082,23 @@
 @media (max-width: 480px) {
    .management__discription {
       line-height: 1.2em;
+      text-align: left;
    }
    .management__sub-item:nth-child(2) {
       width: 100%;
       max-width: 230px
    }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 0.8em;
+      margin-bottom: 3px;
+   }
 }
 @media (max-width: 460px) {
+   .management__discription {
+      line-height: 1.1em;
+   }
    .management__sub-item:nth-child(2) {
       width: 100%;
       max-width: 210px
@@ -1048,7 +1148,17 @@
 @media (max-width: 415px) {
    .management__sub-item:nth-child(1) {
       width: 100%;
-      max-width: 140px
+      max-width: 150px
+   }
+   .management__name {
+      margin-bottom: 3px;
+      line-height: 1em;
+   }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 0.8em;
+      margin-bottom: 2px;
    }
 }
 
@@ -1066,13 +1176,23 @@
 @media (max-width: 380px) {
    .management__sub-item:nth-child(1) {
       width: 100%;
-      max-width: 130px
+      max-width: 140px
+   }
+   .management__name {
+      margin-bottom: 2px;
+      line-height: 0.9em;
+   }
+   .management_phone,   
+   .management_email__address,
+   .management_work__time {
+      font-size: 0.7em;
+      margin-bottom: 1px;
    }
 }
 @media (max-width: 370px) {
    .management__sub-item:nth-child(1) {
       width: 100%;
-      max-width: 125px
+      max-width: 130px
    }
 }
 
