@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useContext, useState } from 'react';
 import pageBtn from '../../Assets/images/page_btn.png';
 import { Context } from '../../Context/GlobalState';
-import activeCategory from '../../Assets/images/category_active.png'
+import activeCategory from '../../Assets/images/category_active.png';
 
 const data = [
 	{
@@ -210,9 +210,12 @@ function NewsInfo({ localization }) {
 		setNewSingle(foundNew.id);
 	};
 	const checkCategory = (e) => {
-		setSelectCategory(e.target.dataset.categoryId)
-	}
-	
+		setSelectCategory(e.target.dataset.categoryId);
+	};
+
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<>
 			<section className="news-info">
@@ -223,9 +226,10 @@ function NewsInfo({ localization }) {
 						<ul className="news-info__list">
 							{pageData &&
 								pageData.map((e, i) => (
-									<li className="news-info__item" key={i} >
+									<li className="news-info__item" key={i}>
 										<div className="news-info__img-box">
-											<img
+											<Image
+												loader={myLoader}
 												className="news-info__img"
 												src={e.img}
 												alt="new info"
@@ -233,9 +237,10 @@ function NewsInfo({ localization }) {
 												height={270}
 											/>
 										</div>
-										<div 
-											data-new-id = {e.id}
-											className="news-info__info">
+										<div
+											data-new-id={e.id}
+											className="news-info__info"
+										>
 											<h2 className="news-info__title">
 												{e.name}
 											</h2>
@@ -251,10 +256,11 @@ function NewsInfo({ localization }) {
 												{e.title}
 											</p>
 											<Link href="/news/single">
-												<a 
-												onClick={SelectNew}
-												data-new-id = {e.id}
-												className="news-info__link">
+												<a
+													onClick={SelectNew}
+													data-new-id={e.id}
+													className="news-info__link"
+												>
 													{localization.button}
 												</a>
 											</Link>
@@ -283,7 +289,8 @@ function NewsInfo({ localization }) {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[0].img}
 														alt="new info"
@@ -314,7 +321,8 @@ function NewsInfo({ localization }) {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[1].img}
 														alt="new info"
@@ -345,7 +353,8 @@ function NewsInfo({ localization }) {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[2].img}
 														alt="new info"
@@ -376,7 +385,8 @@ function NewsInfo({ localization }) {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[3].img}
 														alt="new info"
@@ -407,7 +417,8 @@ function NewsInfo({ localization }) {
 										<Link href="/news/single">
 											<a className="recent-posts__link">
 												<div className="recent-posts__img-box">
-													<img
+													<Image
+														loader={myLoader}
 														className="recent-posts__img"
 														src={data[4].img}
 														alt="new info"
@@ -441,75 +452,107 @@ function NewsInfo({ localization }) {
 									{localization.category.title}
 								</h3>
 								<ul className="news-info__category__list">
-									<li data-category-id = {1} className="news-info__category__item" onClick={checkCategory}>
+									<li
+										data-category-id={1}
+										className="news-info__category__item"
+										onClick={checkCategory}
+									>
 										<div className="category-active">
 											<div className="category-active__img">
-												{
-													selectCategory == 1 && (<Image 
-														className='category-active__active'
+												{selectCategory == 1 && (
+													<Image
+														className="category-active__active"
 														src={activeCategory}
 														width={10}
 														height={9}
-														layout='intrinsic'
-													/>)
-												}
+														layout="intrinsic"
+													/>
+												)}
 											</div>
 										</div>
-										<h4 data-category-id = {1} className="category__item__heading" onClick={checkCategory}>
+										<h4
+											data-category-id={1}
+											className="category__item__heading"
+											onClick={checkCategory}
+										>
 											{localization.category.one}
 										</h4>
 									</li>
-									<li data-category-id = {2} className="news-info__category__item" onClick={checkCategory}>
+									<li
+										data-category-id={2}
+										className="news-info__category__item"
+										onClick={checkCategory}
+									>
 										<div className="category-active">
 											<div className="category-active__img">
-												{
-													selectCategory == 2 && (<Image 
-														className='category-active__active'
+												{selectCategory == 2 && (
+													<Image
+														className="category-active__active"
 														src={activeCategory}
 														width={10}
 														height={9}
-														layout='intrinsic'
-													/>)
-												}
+														layout="intrinsic"
+													/>
+												)}
 											</div>
 										</div>
-										<h4 data-category-id = {2} className="category__item__heading" onClick={checkCategory}>
+										<h4
+											data-category-id={2}
+											className="category__item__heading"
+											onClick={checkCategory}
+										>
 											{localization.category.two}
 										</h4>
 									</li>
-									<li data-category-id = {3} className="news-info__category__item" onClick={checkCategory}>
+									<li
+										data-category-id={3}
+										className="news-info__category__item"
+										onClick={checkCategory}
+									>
 										<div className="category-active">
 											<div className="category-active__img">
-												{
-													selectCategory == 3 && (<Image 
-														className='category-active__active'
+												{selectCategory == 3 && (
+													<Image
+														className="category-active__active"
 														src={activeCategory}
 														width={10}
 														height={9}
-														layout='intrinsic'
-													/>)
-												}
+														layout="intrinsic"
+													/>
+												)}
 											</div>
 										</div>
-										<h4 data-category-id = {3} className="category__item__heading" onClick={checkCategory}>
+										<h4
+											data-category-id={3}
+											className="category__item__heading"
+											onClick={checkCategory}
+										>
 											{localization.category.three}
 										</h4>
 									</li>
-									<li data-category-id = {4} className="news-info__category__item" onClick={checkCategory}>
+									<li
+										data-category-id={4}
+										className="news-info__category__item"
+										onClick={checkCategory}
+									>
 										<div className="category-active">
 											<div className="category-active__img">
-												{
-													selectCategory == 4 && (<Image 
-														className='category-active__active'
+												{selectCategory == 4 && (
+													<Image
+														className="category-active__active"
 														src={activeCategory}
 														width={10}
 														height={9}
-														layout='intrinsic'
-													/>)
-												}
+														layout="intrinsic"
+													/>
+												)}
 											</div>
 										</div>
-										<h4 data-category-id = {4} className="category__item__heading" onClick={checkCategory}>
+										<h4
+											data-category-id={4}
+											className="category__item__heading"
+											onClick={checkCategory}
+										>
 											{localization.category.four}
 										</h4>
 									</li>

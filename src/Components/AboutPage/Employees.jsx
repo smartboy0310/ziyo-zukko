@@ -9,7 +9,7 @@ const data = [
 	{
 		id: 1,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -27,7 +27,7 @@ const data = [
 	{
 		id: 3,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -45,7 +45,7 @@ const data = [
 	{
 		id: 5,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -63,7 +63,7 @@ const data = [
 	{
 		id: 7,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -81,7 +81,7 @@ const data = [
 	{
 		id: 9,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -99,7 +99,7 @@ const data = [
 	{
 		id: 11,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -117,7 +117,7 @@ const data = [
 	{
 		id: 13,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -135,7 +135,7 @@ const data = [
 	{
 		id: 15,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -153,7 +153,7 @@ const data = [
 	{
 		id: 17,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -171,7 +171,7 @@ const data = [
 	{
 		id: 19,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -189,7 +189,7 @@ const data = [
 	{
 		id: 21,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -207,7 +207,7 @@ const data = [
 	{
 		id: 23,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -225,7 +225,7 @@ const data = [
 	{
 		id: 25,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -243,7 +243,7 @@ const data = [
 	{
 		id: 27,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -261,7 +261,7 @@ const data = [
 	{
 		id: 29,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -279,7 +279,7 @@ const data = [
 	{
 		id: 31,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -297,7 +297,7 @@ const data = [
 	{
 		id: 33,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -315,7 +315,7 @@ const data = [
 	{
 		id: 35,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -333,7 +333,7 @@ const data = [
 	{
 		id: 37,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -351,7 +351,7 @@ const data = [
 	{
 		id: 39,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -369,7 +369,7 @@ const data = [
 	{
 		id: 41,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -387,7 +387,7 @@ const data = [
 	{
 		id: 43,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Ingliz tili o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -405,7 +405,7 @@ const data = [
 	{
 		id: 45,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Tarbiyachi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -423,7 +423,7 @@ const data = [
 	{
 		id: 47,
 		name: 'Ismatova Nargiza Kamaritdinovna',
-		image: imgBoss,
+		image: 'https://via.placeholder.com/300X400',
 		rol: 'Matematika o’qituvchisi',
 		telegram_link: 'https://www.telegram.org/',
 		facebook_link: 'https://www.facebook.com/',
@@ -473,6 +473,10 @@ function Employees({ localization }) {
 		setTechSingle(foundTech)
 	};
 
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
+
 	return (
 		<section className="employees">
 			<h2 className="employees__heading">{ localization }</h2>
@@ -489,12 +493,13 @@ function Employees({ localization }) {
 								<Link href='about/teacher'>
 									<a className="employees__link">
 										<Image
+											loader={myLoader}
 											onClick={SelectTech}
 											data-tech-id={e.id}
 											className="employees__img"
 											src={e.image}
-											width={180}
-											height={200}
+											width={250}
+											height={300}
 										/>
 									</a>
 								</Link>

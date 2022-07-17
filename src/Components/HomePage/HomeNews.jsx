@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import mobileBtn from '../../Assets/images/mobile__btn.svg'
+import mobileBtn from '../../Assets/images/mobile__btn.svg';
 const data = [
 	{
 		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
@@ -17,17 +17,17 @@ const data = [
 	},
 ];
 
-function HomeNews({localization}) {
+function HomeNews({ localization }) {
 	const [newIndexOne, setNewIndexOne] = useState(0);
 	const [newIndexTwo, setNewIndexTwo] = useState(1);
-  const dataSize = data.length - 1
+	const dataSize = data.length - 1;
 	const next = () => {
 		if (newIndexOne == dataSize) {
 			setNewIndexOne(0);
 		} else {
 			setNewIndexOne(newIndexOne + 1);
 		}
-    if (newIndexTwo == dataSize) {
+		if (newIndexTwo == dataSize) {
 			setNewIndexTwo(0);
 		} else {
 			setNewIndexTwo(newIndexTwo + 1);
@@ -39,11 +39,15 @@ function HomeNews({localization}) {
 		} else {
 			setNewIndexOne(newIndexOne - 1);
 		}
-    if (newIndexTwo == 0) {
+		if (newIndexTwo == 0) {
 			setNewIndexTwo(dataSize);
 		} else {
 			setNewIndexTwo(newIndexTwo - 1);
 		}
+	};
+
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
 	};
 
 	return (
@@ -53,7 +57,7 @@ function HomeNews({localization}) {
 				<div className="home-new__box">
 					<div className="new__back__btn">
 						<svg
-							className = 'desktop__back__btn'
+							className="desktop__back__btn"
 							onClick={back}
 							width="56"
 							height="69"
@@ -106,90 +110,94 @@ function HomeNews({localization}) {
 									/>
 								</filter>
 							</defs>
-						
 						</svg>
-						<Image 
+						<Image
 							onClick={back}
-							className='mobile__back__btn'
+							className="mobile__back__btn"
 							src={mobileBtn}
-							alt ='Back btn icon'
+							alt="Back btn icon"
 							width={42}
-							height = {52}
-							layout = 'intrinsic'
+							height={52}
+							layout="intrinsic"
 						/>
 					</div>
-          <div className="home__new__info">
-          <ul className="home-new__list">
-						<li className="home-new__item">
-							<div className="home-new__img">
-								<img
-									className="new__img"
-									src={data[newIndexOne].img}
-									alt="new info"
-									width={300}
-									height={400}
-								/>
-							</div>
-							<div className="home-new__info">
-								<h2 className="home-new__title">
-									{data[newIndexOne].name}
-								</h2>
-								<div className="new__created">
-									<time
-										datatime={data[newIndexOne].create_at}
-										className="new__created__time"
-									>
-										{data[newIndexOne].create_at}
-									</time>
+					<div className="home__new__info">
+						<ul className="home-new__list">
+							<li className="home-new__item">
+								<div className="home-new__img">
+									<Image
+										loader={myLoader}
+										className="new__img"
+										src={data[newIndexOne].img}
+										alt="new info"
+										width={300}
+										height={400}
+									/>
 								</div>
-								<p className="new__discription">
-									{data[newIndexOne].title}
-								</p>
-								<Link href="/news/single">
-									<a className="home-new__link">
-										{localization.button_more}
-									</a>
-								</Link>
-							</div>
-						</li>
-						<li className="home-new__item">
-							<div className="home-new__img">
-								<img
-									className="new__img"
-									src={data[newIndexTwo].img}
-									alt="new info"
-									maxwidth={300}
-									maxheight={400}
-								/>
-							</div>
-							<div className="home-new__info">
-								<h2 className="home-new__title">
-									{data[newIndexTwo].name}
-								</h2>
-								<div className="new__created">
-									<time
-										datatime={data[newIndexTwo].create_at}
-										className="new__created__time"
-									>
-										{data[newIndexTwo].create_at}
-									</time>
+								<div className="home-new__info">
+									<h2 className="home-new__title">
+										{data[newIndexOne].name}
+									</h2>
+									<div className="new__created">
+										<time
+											datatime={
+												data[newIndexOne].create_at
+											}
+											className="new__created__time"
+										>
+											{data[newIndexOne].create_at}
+										</time>
+									</div>
+									<p className="new__discription">
+										{data[newIndexOne].title}
+									</p>
+									<Link href="/news/single">
+										<a className="home-new__link">
+											{localization.button_more}
+										</a>
+									</Link>
 								</div>
-								<p className="new__discription">
-									{data[newIndexTwo].title}
-								</p>
-								<Link href="/news/single">
-									<a className="home-new__link">
-										{localization.button_more}
-									</a>
-								</Link>
-							</div>
-						</li>
-					</ul>
-          
-          </div>
+							</li>
+							<li className="home-new__item">
+								<div className="home-new__img">
+								<Image
+										loader={myLoader}
+										className="new__img"
+										src={data[newIndexTwo].img}
+										alt="new info"
+										width={300}
+										height={400}
+									/>
+								</div>
+								<div className="home-new__info">
+									<h2 className="home-new__title">
+										{data[newIndexTwo].name}
+									</h2>
+									<div className="new__created">
+										<time
+											datatime={
+												data[newIndexTwo].create_at
+											}
+											className="new__created__time"
+										>
+											{data[newIndexTwo].create_at}
+										</time>
+									</div>
+									<p className="new__discription">
+										{data[newIndexTwo].title}
+									</p>
+									<Link href="/news/single">
+										<a className="home-new__link">
+											{localization.button_more}
+										</a>
+									</Link>
+								</div>
+							</li>
+						</ul>
+					</div>
 					<div className="new__next__btn">
 						<svg
-							className='desktop__back__btn'
+							className="desktop__back__btn"
 							onClick={next}
 							width="56"
 							height="69"
@@ -242,15 +250,14 @@ function HomeNews({localization}) {
 									/>
 								</filter>
 							</defs>
-							
 						</svg>
-						<Image 
+						<Image
 							onClick={next}
-							className='mobile__back__btn'
+							className="mobile__back__btn"
 							src={mobileBtn}
-							alt ='Back btn icon'
+							alt="Back btn icon"
 							width={42}
-							height = {52}
+							height={52}
 						/>
 					</div>
 				</div>

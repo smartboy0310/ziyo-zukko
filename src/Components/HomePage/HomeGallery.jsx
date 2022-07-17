@@ -18,7 +18,7 @@ import closeImg from '../../Assets/images/close_btn.svg';
 const data = [
 	{
 		id: 1,
-		img: slideImg1,
+		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 2,
@@ -26,7 +26,7 @@ const data = [
 	},
 	{
 		id: 3,
-		img: slideImg1,
+		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 4,
@@ -34,7 +34,7 @@ const data = [
 	},
 	{
 		id: 5,
-		img: slideImg1,
+		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 6,
@@ -42,7 +42,7 @@ const data = [
 	},
 	{
 		id: 7,
-		img: slideImg1,
+		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 8,
@@ -51,31 +51,10 @@ const data = [
 ];
 
 function HomeGallery({ localization }) {
-	const [modalOpen, setModalOpen] = useState(false);
-	const [indexImg, setIndexImg] = useState(0);
-	const sizeImg = data.length - 1;
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 
-	const next = () => {
-		if (indexImg == sizeImg) {
-			setIndexImg(0);
-		} else {
-			setIndexImg(indexImg + 1);
-		}
-	};
-	const back = () => {
-		if (indexImg == 0) {
-			setIndexImg(sizeImg);
-		} else {
-			setIndexImg(indexImg - 1);
-		}
-	};
-	const openModal = (e) => {
-		setModalOpen(true);
-		setIndexImg(e.target.dataset.imgId - 0);
-	};
-	const closeModal = () => {
-		setModalOpen(false);
-	};
 	return (
 		<section className="home-gallery">
 			<div className="container">
@@ -100,6 +79,7 @@ function HomeGallery({ localization }) {
 								>
 									<div className="home-gallery__img">
 									<Image
+										loader={myLoader}
 										data-img-id={e.id}
 										className="gallery__img"
 										src={e.img}

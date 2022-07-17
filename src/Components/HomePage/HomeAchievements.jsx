@@ -78,6 +78,9 @@ function HomeAchievements({ localization }) {
 			setIndexWinThree(indexWinThree - 1);
 		}
 	};
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`
+	 }
 	return (
 		<section className="home-achievements">
 			<div className="container">
@@ -119,13 +122,15 @@ function HomeAchievements({ localization }) {
 						/>
 					</div>
 					<div className="home-achievements__img">
-						<img
+						<Image
+							loader={myLoader}
 							data-img-id={indexWinOne}
 							className="achievements__img"
 							src={data[indexWinOne].img}
 							alt="Photo achievements"
-							maxwidth={300}
-							maxheight={400}
+							width={300}
+							height={400}
+							layout='fill'
 						/>
 						<div className="home-achievements__img__info">
 							<h3 className="home-achievements__img__heading">
@@ -137,13 +142,15 @@ function HomeAchievements({ localization }) {
 						</div>
 					</div>
 					<div className="home-achievements__img">
-						<img
+						<Image
+							loader={myLoader}						
 							data-img-id={indexWinTwo}
 							className="achievements__img"
 							src={data[indexWinTwo].img}
 							alt="Photo achievements"
-							maxwidth={300}
-							maxheight={400}
+							width={300}
+							height={400}
+							layout='fill'
 						/>
 						<div className="home-achievements__img__info">
 							<h3 className="home-achievements__img__heading">
@@ -155,13 +162,15 @@ function HomeAchievements({ localization }) {
 						</div>
 					</div>
 					<div className="home-achievements__img">
-						<img
+						<Image
+							loader={myLoader}
 							data-img-id={indexWinThree}
 							className="achievements__img"
 							src={data[indexWinThree].img}
 							alt="Photo achievements"
 							width={300}
 							height={400}
+							layout='fill'
 						/>
 						<div className="home-achievements__img__info">
 							<h3 className="home-achievements__img__heading">

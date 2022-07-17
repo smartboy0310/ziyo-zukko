@@ -6,6 +6,9 @@ import imgBoss from '../../Assets/images/direktor.jpg';
 
 
 function Management({ localization }) {
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<section className="management">
 			<h2 className="management__heading">{ localization }</h2>
@@ -17,6 +20,7 @@ function Management({ localization }) {
 							<Link href ="/about/management">
 									<a className='management__link'>
 									<Image
+									loader={myLoader}
 									className="management__img"
 									src={imgBoss}
 									width={500}
@@ -131,8 +135,9 @@ function Management({ localization }) {
 							<Link href ="/about/management">
 									<a>
 									<Image
+									loader={myLoader}
 									className="management__img"
-									src={imgBoss}
+									src={'https://via.placeholder.com/300X400'}
 									width={500}
 									height={500}
 										/>
@@ -245,6 +250,7 @@ function Management({ localization }) {
 								<Link href ="/about/management">
 									<a>
 									<Image
+									loader={myLoader}
 									className="management__img"
 									src={imgBoss}
 									width={500}

@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import imgOne  from '../../Assets/images/our_one.jpg'
-import imgTwo  from '../../Assets/images/our_two.jpg'
-import imgThree  from '../../Assets/images/our_three.jpg'
-import imgFour  from '../../Assets/images/our_four.jpg'
+import imgOne from '../../Assets/images/our_one.jpg';
+
+import imgThree from '../../Assets/images/our_three.jpg';
 
 const data = [
 	imgOne,
-	imgTwo,
+	'https://via.placeholder.com/300X400',
 	imgThree,
-	imgFour
+	'https://via.placeholder.com/300X400',
 ];
 function OurActivity({ localization }) {
-	
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 
 	return (
 		<section className="our-activity">
@@ -61,6 +62,7 @@ function OurActivity({ localization }) {
 						data.map((e, i) => (
 							<div key={i} className="our-activity__img-content">
 								<Image
+									loader={myLoader}
 									className="our-activity__img"
 									src={e}
 									alt="our activity info"

@@ -3386,6 +3386,7 @@
    width: 700px;
    height: 600px;
 }
+
 .home-partner .container {
    position: relative;
    text-align: center;
@@ -3405,6 +3406,11 @@
    align-items:  center !important;
    
 }
+
+.partner__img{
+   border-radius: 50%;
+}
+
 @media (max-width: 1300px) {
    .video__iframe {
       width: 380px;

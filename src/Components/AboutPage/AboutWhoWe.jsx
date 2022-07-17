@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import aboutCert from '../../Assets/images/about_certificate.jpg';
-
 function AboutWhoWe({ localization }) {
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<section className="about-who">
 			<div className="about__top"></div>
@@ -37,9 +38,12 @@ function AboutWhoWe({ localization }) {
 					</div>
 					<div className="about__cert__img-box">
 					<Image
+						loader={myLoader}
 						className="about__cert"
-						src={aboutCert}
+						src={'https://via.placeholder.com/300X400'}
 						alt="About me"
+						width={650}
+						height={450}
 					/>
 					</div>
 

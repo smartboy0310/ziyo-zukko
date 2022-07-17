@@ -78,9 +78,13 @@ function GalleryBox( { lang }) {
 	const closeModal = () => {
 		setModalOpen(false);
 	};
+
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<>
-			 <h2 className="gallery-video__heading gallery-info__heading"> {lang} </h2>
+			 <h2 className="gallery-info__heading"> {lang} </h2>
 			<ul className="gallery-box__box">
 				{
             pageData &&
@@ -90,7 +94,8 @@ function GalleryBox( { lang }) {
 							className="gallery-box__img-box"
 							onMouseUp={openModal}
 						>
-							<img
+							<Image
+								loader={myLoader}
 								data-img-id={i}
 								className="gallery-box__img"
 								src={e}
@@ -157,27 +162,16 @@ function GalleryBox( { lang }) {
 				}
 			>
 				<div className="model__box">
-					<button
-						className="gallery__close__modal"
-						onClick={closeModal}
-					>
-						<Image
-							className="gallery__close__img"
-							src={closeImg}
-							alt="Close modal icon"
-							maxwidth={30}
-							maxheight={30}
-							objectFit="cover"
-						/>
-					</button>
-					
 					<div className="home-modal__img">
-						<img
+						<Image
+							onClick={closeModal}
+							loader={myLoader}
 							className="modal__img"
 							src={data[indexImg]}
 							alt="Photo gallery"
-							width={400}
-							height={500}
+							width={600}
+							height={600}
+							layout='fixed'
 						/>
 					</div>
 					
