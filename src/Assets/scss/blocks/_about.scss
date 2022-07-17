@@ -1196,11 +1196,11 @@
    }
 }
 
-.employees {
+.employees, .employee-single__info__box {
    position: relative;
    text-align: center;
 }
-.employees__heading {
+.employees__heading, .employee-single__heading {
    font-size: 2.5em;
    line-height: 1em; 
    color: #333333;
@@ -1325,7 +1325,7 @@
 
 
 @media (max-width: 980px) {
-   .employees__heading {
+   .employees__heading, .employee-single__heading {
       font-size: 2.5em;
       margin: 20px 0;
    }
@@ -1395,7 +1395,7 @@
    }
 }
 @media (max-width: 704px) { 
-   .employees__heading {
+   .employees__heading, .employee-single__heading {
       font-size: 2em;
       margin: 20px 0;
    }
@@ -1411,4 +1411,47 @@
       grid-template-columns: repeat(2, auto);
       padding: 10px;
    }   
+}
+.social-set__box_single{
+   padding: 0 8px;
+}
+.single_about{
+   padding: 0 6px;
+}
+@media (max-width: 720px) {
+   .single_about{
+      padding: 0 4px;
+   }  
+   .social-set__box_single{
+      padding: 0 5px;
+   }
+}
+@media (max-width: 530px) {
+   .single_about{
+      padding: 0 3px;
+   }  
+   .social-set__box_single{
+      padding: 0 4px;
+   }
+}
+
+@media (max-width: 444px) {
+   .single_about{
+      padding: 0 2px;
+   }  
+   .social-set__box_single{
+      padding: 0 3px;
+   }
+}
+
+
+
+.employee-single__discription {
+   width: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
+   margin-bottom: 30px;
+   font-size: 1.4em;
+   line-height: 1.4em;
+   text-align: justify;
 }
