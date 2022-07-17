@@ -7,13 +7,13 @@ function EmployeeSingle() {
   return (
     <section className="employee-single">
        <div className="container">
-          {/* <img src={techSingle.image} alt="" />
+          <img src={techSingle?.image} alt="" />
             <h2>
                {techSingle.name}
             </h2>
 
-            <p>{techSingle.rol}</p>
-            <p>{techSingle.id} </p> */}
+            <p>{techSingle?.rol}</p>
+            <p>{techSingle?.id} </p>
        </div>
     </section>
   )

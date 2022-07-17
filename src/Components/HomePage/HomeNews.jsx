@@ -1,15 +1,18 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import mobileBtn from '../../Assets/images/mobile__btn.svg';
+import { Context } from '../../Context/GlobalState';
 const data = [
 	{
+		id: 2,
 		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
 		title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
 		img: 'https://via.placeholder.com/300X400',
 		create_at: '18.04.2022',
 	},
 	{
+		id: 1,
 		name: 'Lorem ipsum dolor sit',
 		title: 'Assalomu alaykum. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
 		img: 'https://via.placeholder.com/300X400',
@@ -20,6 +23,8 @@ const data = [
 function HomeNews({ localization }) {
 	const [newIndexOne, setNewIndexOne] = useState(0);
 	const [newIndexTwo, setNewIndexTwo] = useState(1);
+
+	const { newSingle, setNewSingle } = useContext(Context);
 	const dataSize = data.length - 1;
 	const next = () => {
 		if (newIndexOne == dataSize) {
@@ -44,6 +49,10 @@ function HomeNews({ localization }) {
 		} else {
 			setNewIndexTwo(newIndexTwo - 1);
 		}
+	};
+	const SelectNew = (e) => {
+		const foundNewId = e.target.dataset.newId;
+		setNewSingle(foundNewId);
 	};
 
 	const myLoader = ({ src, width, quality }) => {
@@ -151,8 +160,12 @@ function HomeNews({ localization }) {
 									<p className="new__discription">
 										{data[newIndexOne].title}
 									</p>
-									<Link href="/news/single">
-										<a className="home-new__link">
+									<Link href="/new/single">
+										<a
+											data-new-id={data[newIndexOne].id}
+											onClick={SelectNew}
+											className="home-new__link"
+										>
 											{localization.button_more}
 										</a>
 									</Link>
@@ -160,7 +173,7 @@ function HomeNews({ localization }) {
 							</li>
 							<li className="home-new__item">
 								<div className="home-new__img">
-								<Image
+									<Image
 										loader={myLoader}
 										className="new__img"
 										src={data[newIndexTwo].img}
@@ -186,8 +199,12 @@ function HomeNews({ localization }) {
 									<p className="new__discription">
 										{data[newIndexTwo].title}
 									</p>
-									<Link href="/news/single">
-										<a className="home-new__link">
+									<Link href="/new/single">
+										<a
+											data-new-id={data[newIndexTwo].id}
+											onClick={SelectNew}
+											className="home-new__link"
+										>
 											{localization.button_more}
 										</a>
 									</Link>

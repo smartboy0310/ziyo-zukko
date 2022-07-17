@@ -7,10 +7,10 @@ function NewsHero({ localization }) {
          <div className="container">
          <div className="news-hero__info">
 						<h2 className="news-hero__heading">
-                {localization.title}
+                {localization?.title}
 						</h2>
 						<p className="news-hero__discription">
-                {localization.discription}
+                {localization?.discription}
 						</p>
 					</div>
          </div>

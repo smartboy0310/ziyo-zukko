@@ -5,7 +5,7 @@ const Context = createContext(null);
 function Provider({ children }) {
 	
   const [techSingle, setTechSingle] = useState()
-  const [newSingle, setNewSingle] = useState(0)
+  const [newSingle, setNewSingle] = useState()
 
 	return (
 		<Context.Provider value = {{techSingle, setTechSingle, newSingle, setNewSingle} }>{children}</Context.Provider>

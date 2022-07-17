@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NewsPage from '../../src/Components/NewsPage/NewsPage';
+import NewsPage from '../src/Components/NewsPage/NewsPage';
 
 function News() {
 	return (

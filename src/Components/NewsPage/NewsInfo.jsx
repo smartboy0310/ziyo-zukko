@@ -203,11 +203,12 @@ function NewsInfo({ localization }) {
 	const CheckPage = (e) => {
 		setPage(e.target.dataset.pageId - 0);
 	};
+	let lastNew = data.slice(0, 5);
+	console.log(lastNew);
 	let pageData = data.slice((page - 0) * 5, (page + 1) * 5);
 	const SelectNew = (e) => {
 		const foundNewId = e.target.dataset.newId;
-		const foundNew = data.find((e) => e.id == foundNewId);
-		setNewSingle(foundNew.id);
+		setNewSingle(foundNewId);
 	};
 	const checkCategory = (e) => {
 		setSelectCategory(e.target.dataset.categoryId);
@@ -255,7 +256,7 @@ function NewsInfo({ localization }) {
 											<p className="news-info__discription">
 												{e.title}
 											</p>
-											<Link href="/news/single">
+											<Link href="/new/single">
 												<a
 													onClick={SelectNew}
 													data-new-id={e.id}
@@ -285,166 +286,48 @@ function NewsInfo({ localization }) {
 									{localization.last_new}
 								</h3>
 								<ul className="recent-posts__list">
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[0].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[0]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[0].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[0].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[1].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[1]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[1].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[1].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[2].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[2]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[2].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[2].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[3].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[3]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[3].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[3].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[4].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[4]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[4].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[4].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
+									{lastNew &&
+										lastNew.map((e, i) => (
+											<li key={i} className="recent-posts__item">
+												<Link href="/new/single">
+													<a 
+														onClick={SelectNew}
+														data-new-id={e.id}
+														className="recent-posts__link">
+														<div className="recent-posts__img-box">
+															<Image
+																loader={myLoader}
+																onClick={SelectNew}
+																data-new-id={e.id}
+																className="recent-posts__img"
+																src={e.img}
+																alt="new info"
+																width={120}
+																height={120}
+															/>
+														</div>
+														<div className="recent-posts__info">
+															<div className="recent-posts__created">
+																<time
+																	onClick={SelectNew}
+																	data-new-id={e.id}
+																	datatime={e.create_at}
+																	className="recent-posts__created__time"
+																>
+																	{e.create_at}
+																</time>
+															</div>
+															<h2 
+																onClick={SelectNew}
+																data-new-id={e.id}
+																className="recent-posts__title">
+																{e.name}
+															</h2>
+														</div>
+													</a>
+												</Link>
+											</li>
+										))}
 								</ul>
 							</div>
 							<div className="news-info__category">
@@ -463,7 +346,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
-														alt='Category active icon'
+														alt="Category active icon"
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -490,7 +373,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
-														alt='Category active icon'
+														alt="Category active icon"
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -517,7 +400,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
-														alt='Category active icon'
+														alt="Category active icon"
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -544,7 +427,7 @@ function NewsInfo({ localization }) {
 													<Image
 														className="category-active__active"
 														src={activeCategory}
-														alt='Category active icon'
+														alt="Category active icon"
 														width={10}
 														height={9}
 														layout="intrinsic"
@@ -574,7 +457,7 @@ function NewsInfo({ localization }) {
 									<Image
 										className="employees__btn__img back"
 										src={pageBtn}
-										alt='back btn icon'
+										alt="back btn icon"
 										width={20}
 										height={20}
 									/>
@@ -606,7 +489,7 @@ function NewsInfo({ localization }) {
 									<Image
 										className="employees__btn__img"
 										src={pageBtn}
-										alt='next btn icon'
+										alt="next btn icon"
 										width={20}
 										height={20}
 									/>

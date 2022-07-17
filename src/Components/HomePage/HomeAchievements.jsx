@@ -1,36 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import mobileBtn from '../../Assets/images/mobile__btn.svg'
+import mobileBtn from '../../Assets/images/mobile__btn.svg';
+import { Context } from '../../Context/GlobalState';
 
 const data = [
 	{
+		id: 1,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/300X400',
 	},
 	{
+		id: 2,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/301X400',
 	},
 	{
+		id: 3,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/302X400',
 	},
 	{
+		id: 4,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/303X400',
 	},
 	{
+		id: 5,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/304X400',
 	},
 	{
+		id: 6,
 		name: 'Lorem ipsum dolor sit.',
 		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem!',
 		img: 'https://via.placeholder.com/305X400',
@@ -41,7 +48,7 @@ function HomeAchievements({ localization }) {
 	const [indexWinOne, setIndexWinOne] = useState(0);
 	const [indexWinTwo, setIndexWinTwo] = useState(1);
 	const [indexWinThree, setIndexWinThree] = useState(2);
-
+	const { newSingle, setNewSingle } = useContext(Context);
 	const sizeImg = data.length - 1;
 
 	const next = () => {
@@ -78,9 +85,15 @@ function HomeAchievements({ localization }) {
 			setIndexWinThree(indexWinThree - 1);
 		}
 	};
+
+	const SelectNew = (e) => {
+		const foundNewId = e.target.dataset.newId;
+		setNewSingle(foundNewId);
+	};
+
 	const myLoader = ({ src, width, quality }) => {
-		return `${src}?w=${width}&q=${quality || 75}`
-	 }
+		return `${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<section className="home-achievements">
 			<div className="container">
@@ -90,7 +103,7 @@ function HomeAchievements({ localization }) {
 				<div className="home-achievements__box">
 					<div className="achievements__back__btn">
 						<svg
-							className = 'desktop__back__btn' 
+							className="desktop__back__btn"
 							onClick={back}
 							width="56"
 							height="69"
@@ -111,79 +124,133 @@ function HomeAchievements({ localization }) {
 								strokeLinejoin="round"
 							/>
 						</svg>
-						<Image 
+						<Image
 							onClick={back}
-							className='mobile__back__btn'
+							className="mobile__back__btn"
 							src={mobileBtn}
-							alt ='Back btn icon'
+							alt="Back btn icon"
 							width={42}
-							height = {52}
-							layout = 'intrinsic'
+							height={52}
+							layout="intrinsic"
 						/>
 					</div>
 					<div className="home-achievements__img">
-						<Image
-							loader={myLoader}
-							data-img-id={indexWinOne}
-							className="achievements__img"
-							src={data[indexWinOne].img}
-							alt="Photo achievements"
-							width={300}
-							height={400}
-							layout='fill'
-						/>
-						<div className="home-achievements__img__info">
-							<h3 className="home-achievements__img__heading">
-								{data[indexWinOne].name}
-							</h3>
-							<p className="home-achievements__img__discription">
-								{data[indexWinOne].title}
-							</p>
-						</div>
+						<Link href="new/single">
+							<a
+								onClick={SelectNew}
+								data-new-id={data[indexWinOne].id}
+								className="home-achivements__link-single"
+							>
+								<Image
+									onClick={SelectNew}
+									data-new-id={data[indexWinOne].id}
+									loader={myLoader}
+									data-img-id={indexWinOne}
+									className="achievements__img"
+									src={data[indexWinOne].img}
+									alt="Photo achievements"
+									width={300}
+									height={400}
+									layout="fill"
+								/>
+								<div className="home-achievements__img__info">
+									<h3
+										onClick={SelectNew}
+										data-new-id={data[indexWinOne].id}
+										className="home-achievements__img__heading"
+									>
+										{data[indexWinOne].name}
+									</h3>
+									<p
+										onClick={SelectNew}
+										data-new-id={data[indexWinOne].id}
+										className="home-achievements__img__discription"
+									>
+										{data[indexWinOne].title}
+									</p>
+								</div>
+							</a>
+						</Link>
 					</div>
 					<div className="home-achievements__img">
-						<Image
-							loader={myLoader}						
-							data-img-id={indexWinTwo}
-							className="achievements__img"
-							src={data[indexWinTwo].img}
-							alt="Photo achievements"
-							width={300}
-							height={400}
-							layout='fill'
-						/>
-						<div className="home-achievements__img__info">
-							<h3 className="home-achievements__img__heading">
-								{data[indexWinTwo].name}
-							</h3>
-							<p className="home-achievements__img__discription">
-								{data[indexWinTwo].title}
-							</p>
-						</div>
+					<Link href="new/single">
+							<a
+								onClick={SelectNew}
+								data-new-id={data[indexWinTwo].id}
+								className="home-achivements__link-single"
+							>
+								<Image
+									onClick={SelectNew}
+									data-new-id={data[indexWinTwo].id}
+									loader={myLoader}
+									data-img-id={indexWinTwo}
+									className="achievements__img"
+									src={data[indexWinTwo].img}
+									alt="Photo achievements"
+									width={300}
+									height={400}
+									layout="fill"
+								/>
+								<div className="home-achievements__img__info">
+									<h3
+										onClick={SelectNew}
+										data-new-id={data[indexWinTwo].id}
+										className="home-achievements__img__heading"
+									>
+										{data[indexWinTwo].name}
+									</h3>
+									<p
+										onClick={SelectNew}
+										data-new-id={data[indexWinTwo].id}
+										className="home-achievements__img__discription"
+									>
+										{data[indexWinTwo].title}
+									</p>
+								</div>
+							</a>
+						</Link>
 					</div>
 					<div className="home-achievements__img">
-						<Image
-							loader={myLoader}
-							data-img-id={indexWinThree}
-							className="achievements__img"
-							src={data[indexWinThree].img}
-							alt="Photo achievements"
-							width={300}
-							height={400}
-							layout='fill'
-						/>
-						<div className="home-achievements__img__info">
-							<h3 className="home-achievements__img__heading">
-								{data[indexWinThree].name}
-							</h3>
-							<p className="home-achievements__img__discription">
-								{data[indexWinThree].title}
-							</p>
-						</div>
+					<Link href="new/single">
+							<a
+								onClick={SelectNew}
+								data-new-id={data[indexWinThree].id}
+								className="home-achivements__link-single"
+							>
+								<Image
+									onClick={SelectNew}
+									data-new-id={data[indexWinThree].id}
+									loader={myLoader}
+									data-img-id={indexWinThree}
+									className="achievements__img"
+									src={data[indexWinThree].img}
+									alt="Photo achievements"
+									width={300}
+									height={400}
+									layout="fill"
+								/>
+								<div className="home-achievements__img__info">
+									<h3
+										onClick={SelectNew}
+										data-new-id={data[indexWinThree].id}
+										className="home-achievements__img__heading"
+									>
+										{data[indexWinThree].name}
+									</h3>
+									<p
+										onClick={SelectNew}
+										data-new-id={data[indexWinThree].id}
+										className="home-achievements__img__discription"
+									>
+										{data[indexWinThree].title}
+									</p>
+								</div>
+							</a>
+						</Link>
 					</div>
 					<div className="achievements__next__btn">
 						<svg
-							className = 'desktop__back__btn' 
+							className="desktop__back__btn"
 							onClick={next}
 							width="56"
 							height="69"
@@ -204,20 +271,23 @@ function HomeAchievements({ localization }) {
 								strokeLinejoin="round"
 							/>
 						</svg>
-						<Image 
+						<Image
 							onClick={next}
-							className='mobile__back__btn'
+							className="mobile__back__btn"
 							src={mobileBtn}
-							alt ='Back btn icon'
+							alt="Back btn icon"
 							width={42}
-							height = {52}
-							layout = 'intrinsic'
+							height={52}
+							layout="intrinsic"
 						/>
 					</div>
 				</div>
 				<button className="achievements__all-btn">
 					<Link href="/news">
-						<a className="achievements__link"> {localization.button} </a>
+						<a className="achievements__link">
+							{' '}
+							{localization.button}{' '}
+						</a>
 					</Link>
 				</button>
 			</div>

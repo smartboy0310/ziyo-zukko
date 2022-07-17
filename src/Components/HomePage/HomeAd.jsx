@@ -1,15 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import mobileBtn from '../../Assets/images/right_mobile.png';
+import { Context } from '../../Context/GlobalState';
 const data = [
 	{
+		id: 2,
 		name: 'Lorem ipsum dolor sit Lorem ipsum dolor sit',
 		title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
 		img: 'https://via.placeholder.com/300X400',
 		create_at: '18.04.2022',
 	},
 	{
+		id: 1,
 		name: 'Lorem ipsum dolor sit',
 		title: 'Assalomu alaykum. Non doloremque sint quo modi voluptatibus quas distinctio numquam doloribus excepturi vel.',
 		img: 'https://via.placeholder.com/300X400',
@@ -27,6 +30,7 @@ function HomeAd({ localization }) {
 	// // 			 .catch((e) => console.log(e))
 	// //   }, [])
 	// //   console.log(data);
+	const { newSingle, setNewSingle } = useContext(Context);
 
 	const [adIndex, setAdIndex] = useState(0);
 	const next = () => {
@@ -45,6 +49,11 @@ function HomeAd({ localization }) {
 	};
 	const myLoader = ({ src, width, quality }) => {
 		return `${src}?w=${width}&q=${quality || 75}`;
+	};
+
+	const SelectNew = (e) => {
+		const foundNewId = e.target.dataset.newId
+		setNewSingle(foundNewId);
 	};
 	return (
 		<section className="home-ad">
@@ -140,8 +149,12 @@ function HomeAd({ localization }) {
 						<p className="new__discription">
 							{data[adIndex].title}
 						</p>
-						<Link href="/news/single">
-							<a className="home-ad__link">
+						<Link href="/new/single">
+							<a
+								data-new-id={data[adIndex].id}
+								onClick={SelectNew}
+								className="home-ad__link"
+							>
 								{localization.button}
 							</a>
 						</Link>

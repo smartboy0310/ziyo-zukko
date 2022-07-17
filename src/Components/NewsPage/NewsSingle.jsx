@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import NewsHero from './NewsHero';
 import { Context } from '../../Context/GlobalState';
-import activeCategory from '../../Assets/images/category_active.png';
+import Content from '../../Localization/Content';
+
+
 
 import Link from 'next/link';
-import NewsSlider from './NewsSlider';
+
+import { useSelector } from 'react-redux';
 
 const data = [
 	{
@@ -225,18 +228,29 @@ const data = [
 ];
 function NewsSingle() {
 	const { newSingle, setNewSingle } = useContext(Context);
-	const [selectCategory, setSelectCategory] = useState();
+	
 	const foundSingleNew = data.find((e) => e.id == newSingle);
 	console.log(foundSingleNew);
-	const checkCategory = (e) => {
-		setSelectCategory(e.target.dataset.categoryId);
+	
+	let lastNew = data.slice(0, 5);
+	const SelectNew = (e) => {
+		const foundNewId = e.target.dataset.newId;
+		setNewSingle(foundNewId);
 	};
 	const myLoader = ({ src, width, quality }) => {
 		return `${src}?w=${width}&q=${quality || 75}`;
 	};
+
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
+
+	const { news } = Content[lang];
+	
+
 	return (
 		<>
-			<NewsHero />
+			<NewsHero localization={news.hero} />
 			<section className="news-single__info">
 				<div className="news-info__top"></div>
 				<div className="container">
@@ -273,166 +287,48 @@ function NewsSingle() {
 									Soʻnggi xabarlar
 								</h3>
 								<ul className="recent-posts__list">
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box single-news__img">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[0].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[0]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[0].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[0].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box single-news__img">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[1].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[1]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[1].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[1].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box single-news__img">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[2].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[2]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[2].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[2].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box single-news__img">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[3].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[3]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[3].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[3].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
-									<li className="recent-posts__item">
-										<Link href="/news/single">
-											<a className="recent-posts__link">
-												<div className="recent-posts__img-box single-news__img">
-													<Image
-														loader={myLoader}
-														className="recent-posts__img"
-														src={data[4].img}
-														alt="new info"
-														width={120}
-														height={120}
-													/>
-												</div>
-												<div className="recent-posts__info">
-													<div className="recent-posts__created">
-														<time
-															datatime={
-																data[4]
-																	.create_at
-															}
-															className="recent-posts__created__time"
-														>
-															{data[4].create_at}
-														</time>
-													</div>
-													<h2 className="recent-posts__title">
-														{data[4].name}
-													</h2>
-												</div>
-											</a>
-										</Link>
-									</li>
+								{lastNew &&
+										lastNew.map((e, i) => (
+											<li key={i} className="recent-posts__item">
+												<Link href="/new/single">
+													<a 
+														onClick={SelectNew}
+														data-new-id={e.id}
+														className="recent-posts__link">
+														<div className="recent-posts__img-box">
+															<Image
+																loader={myLoader}
+																onClick={SelectNew}
+																data-new-id={e.id}
+																className="recent-posts__img"
+																src={e.img}
+																alt="new info"
+																width={120}
+																height={120}
+															/>
+														</div>
+														<div className="recent-posts__info">
+															<div className="recent-posts__created">
+																<time
+																	onClick={SelectNew}
+																	data-new-id={e.id}
+																	datatime={e.create_at}
+																	className="recent-posts__created__time"
+																>
+																	{e.create_at}
+																</time>
+															</div>
+															<h2 
+																onClick={SelectNew}
+																data-new-id={e.id}
+																className="recent-posts__title">
+																{e.name}
+															</h2>
+														</div>
+													</a>
+												</Link>
+											</li>
+										))}
 								</ul>
 							</div>
 						</div>

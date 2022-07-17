@@ -490,7 +490,7 @@ function Employees({ localization }) {
 								className="employees__item"
 								
 							>
-								<Link href='about/teacher'>
+								<Link href='about/employee'>
 									<a className="employees__link">
 										<Image
 											loader={myLoader}
