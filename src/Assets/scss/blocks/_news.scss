@@ -236,7 +236,7 @@
    position: relative;
    display: flex;
    align-items: flex-start;
-   justify-content: space-between;
+   justify-content: space-evenly;
    margin-bottom: 20px;
 }
 .news-info__heading {
@@ -473,7 +473,6 @@
 }
 @media (max-width: 1121px) {
    .category-active__img {
-
       top: 1px;
       right: 3px;
    }
@@ -531,7 +530,7 @@
    .news-info__link {
       width: 100%;
       max-width: 100px;
-      padding: 5px 10px;
+      padding: 5px;
       font-size: 1.4em;
       font-weight: 1em;
    }
@@ -630,6 +629,11 @@
 }
 
 @media (max-width: 720px) {
+   .news-info__box {
+   
+      justify-content: space-between;
+   
+   }
    .news-info__heading {
       font-size: 2em;
    }
@@ -670,9 +674,9 @@
    }
    .news-info__link {
       width: 100%;
-      max-width: 80px;
-      padding: 5px;
-      font-size: 1.2em;
+      max-width: 90px;
+      padding: 3px;
+      font-size: 1.1em;
       font-weight: 1em;
    }
    
@@ -806,13 +810,7 @@
       line-height: 1em;
       margin-bottom: 5px; 
    }
-   .news-info__link {
-      width: 100%;
-      max-width: 70px;
-      padding: 3px;
-      font-size: 1.1em;
-      font-weight: 1em;
-   }
+   
    
    .news-info__search {
       width: 100%;
@@ -1074,7 +1072,7 @@
    }
    .news-info__link {
       width: 100%;
-      max-width: 60px;
+      max-width: 70px;
       padding: 1px;
       font-size: 0.9em;
       font-weight: 1em;
@@ -1175,7 +1173,7 @@
    }
    .news-info__link {
       width: 100%;
-      max-width: 55px;
+      max-width: 65px;
       padding: 1px;
       font-size: 0.8em;
       font-weight: 1em;
@@ -1296,14 +1294,6 @@
       line-height: 1em;
       margin-bottom: 3px; 
    }
-   .news-info__link {
-      width: 100%;
-      max-width: 55px;
-      padding: 1px;
-      font-size: 0.8em;
-      font-weight: 1em;
-      
-   }
    
    .news-info__search {
       width: 100%;
@@ -1411,7 +1401,7 @@
    }
    .news-info__link {
       width: 100%;
-      max-width: 55px;
+      max-width: 60px;
       padding: 0;
       font-size: 0.8em;
       font-weight: 1em;
@@ -1521,15 +1511,6 @@
       line-height: 1em;
       margin-bottom: 3px; 
    }
-   .news-info__link {
-      width: 100%;
-      max-width: 55px;
-      padding: 0;
-      font-size: 0.8em;
-      font-weight: 1em;
-      
-   }
-
    .news-info__search {
       width: 100%;
       max-width: 130px;

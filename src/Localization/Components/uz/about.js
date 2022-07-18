@@ -1,7 +1,7 @@
 const about = {
    hero: {
     title: "Biz va Bizning faoliyat",
-    discription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cupiditate maiores quaerat laboriosam ipsa! Eum quisquam necessitatibus quos voluptates quidem officia, earum possimus quibusdam a iste! Animi obcaecati pariatur incidunt!"
+    discription: "Bizda yuqori malakali va mahoratga ega bo‘lgan pedagoglar, psixologlar, defektolog-logopedlar, faoliyat yuritadi."
    },
    
    about: "Biz va Bizning faoliyat",

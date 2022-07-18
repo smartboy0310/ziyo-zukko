@@ -111,7 +111,7 @@
    }
    .about-hero__discription {
       width: 100%;
-      max-width: 320px;
+      max-width: 400px;
       font-size: 1.2rem;
       line-height: 1.2rem;
       
@@ -167,6 +167,7 @@
       max-width: 320px;
       font-size: 1.2rem;
       line-height: 1.2rem;
+      text-align: left;
       
    }
    .about-hero__info {
@@ -248,32 +249,15 @@
    }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 530px) {
    .about-hero .container {
-      height: 280px;
+      height: 250px;
    }
-   .about-hero__heading { 
-      width: 100%;
-      max-width: 320px;
-      font-size: 2em;
-      line-height: 2rem;   
-      
-   }
-   .about-hero__discription {
-      width: 100%;
-      max-width: 210px;
-      font-size: 1rem;
-      line-height: 1.2rem;
-      margin-bottom: 0;
-   }
-   .about-hero__info {
-      position: absolute;
-      top: 10px;
-   }
+   
 }
 @media (max-width: 485px) {
    .about-hero .container {
-      height: 250px;
+      height: 210px;
    }
    .about-hero__heading { 
       font-size: 1.5em !important;
@@ -292,7 +276,7 @@
 
 @media (max-width: 444px) {
    .about-hero .container {
-      height: 230px;
+      height: 190px;
    }
    .about-hero__heading { 
       font-size: 1.3em !important;
