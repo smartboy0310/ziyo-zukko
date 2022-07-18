@@ -264,8 +264,8 @@ function NewsSingle() {
 									loader={myLoader}
 									className="news-single__img"
 									src={foundSingleNew?.img}
-									width={500}
-									height={300}
+									width={800}
+									height={500}
 									alt="Single news pic"
 								/>
 							</div>
@@ -282,20 +282,20 @@ function NewsSingle() {
 							</p>
 						</div>
 						<div>
-							<div className="news-info__recent-posts">
+							<div className="news-info__recent-posts  news-info__recent-posts-single">
 								<h3 className="news-info__recent-posts__heading">
 									Soʻnggi xabarlar
 								</h3>
 								<ul className="recent-posts__list">
 								{lastNew &&
 										lastNew.map((e, i) => (
-											<li key={i} className="recent-posts__item">
+											<li key={i} className="recent-posts__item recent-posts__item-single">
 												<Link href="/new/single">
 													<a 
 														onClick={SelectNew}
 														data-new-id={e.id}
 														className="recent-posts__link">
-														<div className="recent-posts__img-box">
+														<div className=" recent-posts__img-box recent-posts__img-box-single">
 															<Image
 																loader={myLoader}
 																onClick={SelectNew}
@@ -307,7 +307,7 @@ function NewsSingle() {
 																height={120}
 															/>
 														</div>
-														<div className="recent-posts__info">
+														<div className="recent-posts__info recent-posts__info_single">
 															<div className="recent-posts__created">
 																<time
 																	onClick={SelectNew}
