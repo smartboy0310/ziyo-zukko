@@ -204,7 +204,7 @@ function NewsInfo({ localization }) {
 		setPage(e.target.dataset.pageId - 0);
 	};
 	let lastNew = data.slice(0, 5);
-	console.log(lastNew);
+	
 	let pageData = data.slice((page - 0) * 5, (page + 1) * 5);
 	const SelectNew = (e) => {
 		const foundNewId = e.target.dataset.newId;
