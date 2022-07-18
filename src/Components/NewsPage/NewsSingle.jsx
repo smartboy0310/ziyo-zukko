@@ -252,7 +252,7 @@ function NewsSingle() {
 		<>
 			<NewsHero localization={news.hero} />
 			<section className="news-single__info">
-				<div className="news-info__top"></div>
+				<div className="news-info__top-single"></div>
 				<div className="container">
 					<div className="single-news__box__top">
 						<div className="news-single__box">
