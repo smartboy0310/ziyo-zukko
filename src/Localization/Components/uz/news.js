@@ -13,7 +13,8 @@ const news = {
             one: "Yangiliklar",
             two: "Maqolalar",
             three: "E’lonlar",
-            four: "Yutuqlarimiz"
+            four: "Yutuqlarimiz",
+            five: "Barchasi"
         }
     }
 }

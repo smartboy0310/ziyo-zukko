@@ -443,6 +443,33 @@ function NewsInfo({ localization }) {
 											{localization.category.four}
 										</h4>
 									</li>
+									<li
+										data-category-id={5}
+										className="news-info__category__item"
+										onClick={checkCategory}
+									>
+										<div className="category-active">
+											<div className="category-active__img">
+												{selectCategory == 5 && (
+													<Image
+														className="category-active__active"
+														src={activeCategory}
+														alt="Category active icon"
+														width={10}
+														height={9}
+														layout="intrinsic"
+													/>
+												)}
+											</div>
+										</div>
+										<h4
+											data-category-id={5}
+											className="category__item__heading"
+											onClick={checkCategory}
+										>
+											{localization.category.five}
+										</h4>
+									</li>
 								</ul>
 							</div>
 						</div>
