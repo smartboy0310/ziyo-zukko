@@ -15,18 +15,18 @@ function EmployeeSingle() {
 		<>
       <section className="employee-single">
 			<div className="container">
-         <ul className="management__list">
+         <ul className="management__list management__list-single">
 					<li className="management__item">
 						<ul className="management__sub-list">
-							<li className="management__sub-item">
+							<li className="management__sub-item management__sub-item-single">
 								<div>
 									<div className="management__link">
 										<Image
 											loader={myLoader}
-											className="management__img"
+											className="management__img management__img-single"
 											src={'https://via.placeholder.com/300X400'}
 											alt="Management image"
-											width={500}
+											width={600}
 											height={500}
 										/>
 									</div>
@@ -114,7 +114,7 @@ function EmployeeSingle() {
 									</div>
 								</div>
 							</li>
-							<li className="management__sub-item">
+							<li className="management__sub-item ">
 								<p className="management__discription">
 									<strong className="management__name">
 										Direktor: Ismatova Nargiza

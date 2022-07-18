@@ -753,7 +753,7 @@
 .management__item:nth-child(2n) .management__sub-item:nth-child(1){
    order: 1;
 }
-.management__img {
+.management__img, .management__img-single {
    border-radius: 10px;
 }
 .management__discription {
@@ -1444,14 +1444,128 @@
    }
 }
 
-
-
+.management__list-single {
+   margin-top: 30px;
+}
+.management__sub-item-single {
+   width: 100%;
+   max-width: 45% !important;
+}
 .employee-single__discription {
    width: 100%;
-   max-width: 1000px;
+   max-width: 1250px;
    margin: 0 auto;
    margin-bottom: 30px;
-   font-size: 1.4em;
-   line-height: 1.4em;
+   font-size: 1.6em;
+   line-height: 1.5em;
    text-align: justify;
+}
+
+@media (max-width: 1300px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 1170px;
+      font-size: 1.5em;
+      line-height: 1.5em;
+   }
+}
+
+@media (max-width: 1200px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 1050px;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      text-align: justify;
+   }
+}
+
+@media (max-width: 1100px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 950px;
+      font-size: 1.5em;
+      line-height: 1.5em;
+   }
+}
+
+@media (max-width: 960px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 750px;
+      font-size: 1.4em;
+      line-height: 1.4em;
+   }
+}
+
+@media (max-width: 800px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 650px;
+   }
+   .management__sub-item-single {
+     margin-right: 20px;
+   }
+}
+
+@media (max-width: 700px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 550px;
+   }
+}
+
+@media (max-width: 590px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 500px;
+   }
+   .management__sub-item-single {
+      margin-right: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 450px;
+      font-size: 1.3em;
+      line-height: 1.4em;
+   }
+   .management__sub-item-single {
+      margin-right: 7px;
+    }
+}
+
+@media (max-width: 490px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 400px;
+      font-size: 1.2em;
+      line-height: 1.4em;
+   }
+   .management__sub-item-single {
+      margin-right: 5px;
+    }
+    
+}
+
+@media (max-width: 440px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 350px;
+      font-size: 1.1em;
+      line-height: 1.3em;
+   }
+   
+}
+
+@media (max-width: 390px) {
+   .employee-single__discription {
+      width: 100%;
+      max-width: 330px;
+      font-size: 1em;
+      line-height: 1.2em;
+   }
+   
 }
