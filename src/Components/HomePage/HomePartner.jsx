@@ -7,34 +7,42 @@ import logoPartner from '../../Assets/images/logo_partner.jpg';
 const data = [
 	{
 		id: 1,
+		link: 'https://iiau.uz',
 		img: logoPartner,
 	},
 	{
 		id: 2,
+		link: 'https://iiau.uz',
 		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 3,
+		link: 'https://iiau.uz',
 		img: logoPartner,
 	},
 	{
 		id: 4,
+		link: 'https://iiau.uz',
 		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 5,
+		link: 'https://iiau.uz',
 		img: logoPartner,
 	},
 	{
 		id: 6,
+		link: 'https://iiau.uz',
 		img: 'https://via.placeholder.com/300X400',
 	},
 	{
 		id: 7,
+		link: 'https://iiau.uz',
 		img: logoPartner,
 	},
 	{
 		id: 8,
+		link: 'https://iiau.uz',
 		img: 'https://via.placeholder.com/300X400',
 	},
 ];
@@ -65,8 +73,8 @@ function HomePartner({ localization }) {
 									>
 										<a
 											className="home-partner__link"
-											href="https://iiau.uz"
-											rel="noreferrer"
+											href={e.link}
+											target="example" rel="noopener"
 										>
 											<Image
 												loader={myLoader}

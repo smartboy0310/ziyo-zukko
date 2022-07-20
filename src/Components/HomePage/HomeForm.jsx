@@ -1,6 +1,41 @@
 import React from 'react';
+import { useAlert } from 'react-alert';
+import { useSelector } from 'react-redux';
 
 function HomeForm( { localization }) {
+	// const alert = useAlert();
+
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
+
+	const handleSubmit = (evt) => {
+		evt.preventDefault()
+		const { name, phone, class_number, user_message } = evt.target.elements
+		
+		fetch('https://school.my-portfolio.uz/appeals/' + lang, {
+			method: "POST",
+			body: JSON.stringify({
+				applicant_name: name.value, 
+				applicant_phone: phone.value, 
+				applicant_class: class_number.value, 
+				applicant_content: user_message.value
+			}),
+			headers: { "Content-Type": "application/json", },
+	  })
+			.then((res) => res.json())
+			.then((data) => {
+				 if (data) {
+					  if (data.status === 200) {
+							alert("So'rovingiz qabul qilindi!   Ваш запрос принят!");
+							console.log(data);
+					  } else {
+							alert(data.message);
+							console.log(data);
+					  }
+				 }
+			});
+	}
 	return (
 		<section className="home-form">
 			<div className="container">
@@ -9,7 +44,9 @@ function HomeForm( { localization }) {
 						{localization.title}
 					</h2>
 
-					<form className="home-form__box">
+					<form 
+					onSubmit = {handleSubmit}
+					className="home-form__box">
 						<h3 className="home-form__title">
 								{localization.subtitle}
 						</h3>
@@ -28,7 +65,7 @@ function HomeForm( { localization }) {
 							placeholder={localization.phone}
 						/>
 						<input
-							name="class"
+							name="class_number"
 							type="text"
 							className="form__input"
 							required

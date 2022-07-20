@@ -33,7 +33,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -53,7 +53,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -73,7 +73,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -179,7 +179,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -199,7 +199,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -219,7 +219,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -295,7 +295,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.facebook.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -315,7 +315,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.telegram.org/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"
@@ -335,7 +335,7 @@ function Management({ localization }) {
 											<a
 												className="management__social__link"
 												href="https://www.instagram.com/"
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="socail__icon"

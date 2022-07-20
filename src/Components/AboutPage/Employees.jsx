@@ -510,7 +510,7 @@ function Employees({ localization }) {
 											<a
 												className="employees__social__link"
 												href={e.facebook_link}
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="employees__socail__icon"
@@ -530,7 +530,7 @@ function Employees({ localization }) {
 											<a
 												className="employees__social__link"
 												href={e.telegram_link}
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="employees__socail__icon"
@@ -550,7 +550,7 @@ function Employees({ localization }) {
 											<a
 												className="employees__social__link"
 												href={e.instagram_link}
-												rel="noreferrer"
+												target="example" rel="noopener"
 											>
 												<svg
 													className="employees__socail__icon"

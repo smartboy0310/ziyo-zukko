@@ -121,7 +121,7 @@ const Header = () => {
 					<div className="header__address">
 						<a
 							href="https://2gis.uz/uz/tashkent/firm/70000001036919062"
-							rel="noreferrer"
+							target="example" rel="noopener"
 							className="header__address--link"
 						>
 							<div className="location__img">
@@ -246,7 +246,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://www.facebook.com/"
-									rel="noreferrer"
+									target="example" rel="noopener"
 								>
 									<div className="social__content"></div>
 								</a>
@@ -255,7 +255,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://www.instagram.com/"
-									rel="noreferrer"
+									target="example" rel="noopener"
 								>
 									<div className="social__content"></div>
 								</a>
@@ -264,7 +264,7 @@ const Header = () => {
 								<a
 									className="social__link"
 									href="https://web.telegram.org/"
-									rel="noreferrer"
+									target="example" rel="noopener"
 								>
 									<div className="social__content"></div>
 								</a>
