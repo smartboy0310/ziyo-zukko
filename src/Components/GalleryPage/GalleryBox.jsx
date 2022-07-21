@@ -157,25 +157,28 @@ function GalleryBox( { lang }) {
 						</ul>
 					</div>
 			<div
+				onClick={closeModal}
 				className={
 					modalOpen
 						? 'home-gallery__modal active__gallery__modal'
 						: 'home-gallery__modal'
 				}
 			>
-				<div className="model__box">
-					<div className="home-modal__img">
+				<div 
+					onClick={closeModal}
+					className="model__box">
+					
 						<Image
 							onClick={closeModal}
 							loader={myLoader}
-							className="modal__img"
+							className="modal__img modal__img-single"
 							src={data[indexImg]}
 							alt="Photo gallery"
-							width={600}
+							width={700}
 							height={600}
 							layout='fixed'
 						/>
-					</div>
+
 					
 				</div>
 			</div>

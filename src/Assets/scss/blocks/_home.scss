@@ -1624,56 +1624,6 @@
   
 }
 
-.home-gallery__modal {
-   position: fixed;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   display: none;
-   background-color: rgb(0, 0, 0, 0.9);
-   z-index: 5;
-}
-.active__gallery__modal {
-   display: block;
-}
-.model__box {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 100%;
-   max-width: 700px;
-   height: 600px;
-   margin: 30px auto;
-   padding: 25px 15px;
-}
-.home-modal__img, .modal__img {
-   display: inline-block;
-   width: 100%;
-   max-width: 520px;
-   margin: 20px 0;
-}
-.gallery__back__btn {
-   transform: rotateY(180deg);
-}
-.gallery__back__btn:hover path,
-.gallery__next__btn:hover path {
-   fill: #FE7EB1;
-   cursor: pointer;
-}
-
-
-.gallery__close__modal {
-   position: absolute;
-   top: 15px;
-   right: 395px;
-   width: 100%;
-   max-width: 45px;
-   height: 45px;
-   border: none;
-   border-radius: 45%;
-   cursor: pointer;
-}
 
 
 .home-achievements .container {

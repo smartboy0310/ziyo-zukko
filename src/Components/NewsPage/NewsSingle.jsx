@@ -280,6 +280,11 @@ function NewsSingle() {
 							<p className="new-single__discription">
 								{foundSingleNew?.discription}
 							</p>
+							<div className="new-single__created_by">
+								<strong className="new-single__author_name">
+										Muallif Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet.
+								</strong>
+							</div>
 						</div>
 						<div>
 							<div className="news-info__recent-posts  news-info__recent-posts-single">

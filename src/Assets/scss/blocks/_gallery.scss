@@ -783,3 +783,33 @@
       height: 170px;
    }
 }
+
+.home-gallery__modal {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   display: none;
+   background-color: rgb(0, 0, 0, 0.9);
+   z-index: 5;
+}
+.active__gallery__modal {
+   display: block;
+}
+.model__box {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 700px;
+   height: 600px;
+   margin: 30px auto;
+   padding: 25px 15px;
+}
+
+.modal__img{
+   border-radius: 15px;
+}
+
+   

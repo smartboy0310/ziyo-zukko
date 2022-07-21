@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import loc_img from '../../Assets/images/map_loc.png';
-import Link from 'next/link';
+
 function ContactLocation({ localization }) {
 	return (
 		<>
