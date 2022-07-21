@@ -47,8 +47,8 @@ function GalleryInfo({ localization, photoLoc, videoLoc }) {
 							</li>
 						</ul>
 					</div>
-               <GalleryBox lang = { photoLoc } />
-               <GalleryVideo lang = { videoLoc }/>
+               <GalleryBox langTitle = { photoLoc } />
+               <GalleryVideo langTitle = { videoLoc }/>
                
          </div>
       </section>

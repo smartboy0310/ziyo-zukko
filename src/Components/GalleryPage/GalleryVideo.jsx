@@ -1,50 +1,30 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import closeImg from '../../Assets/images/close_btn.svg';
 import pageBtn from '../../Assets/images/page_btn.png';
 
-const data = [
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-	'https://www.youtube.com/embed/02WiRlg4kc8',
-	'https://www.youtube.com/embed/yOhmuN7X8c8',
-	'https://www.youtube.com/embed/WMh7ZEiO6A0',
-];
+function GalleryVideo({ langTitle }) {
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
 
-function GalleryVideo({ lang }) {
-	
+	const [dataFetch, setDataFetch] = useState();
+	let data = [];
+	useEffect(() => {
+		fetch('https://school.my-portfolio.uz/video')
+			.then((res) => res.json())
+			.then((data) => setDataFetch(data.data))
+			.catch((e) => console.log(e));
+	}, []);
+	if (lang == 'uz') {
+		data = dataFetch?.uz;
+	} else {
+		data = dataFetch?.ru;
+	}
 
 	const [page, setPage] = useState(0);
-	let pageLeng = Math.ceil((data.length - 1) / 12);
+	let pageLeng = Math.ceil((data?.length - 1) / 12);
 
 	const pageIndex = [];
 	for (let i = 0; i < pageLeng; i++) [pageIndex.push(i)];
@@ -67,13 +47,13 @@ function GalleryVideo({ lang }) {
 	const CheckPage = (e) => {
 		setPage(e.target.dataset.pageId - 0);
 	};
-	let pageData = data.slice((page - 0) * 12, (page + 1) * 12);
+	let pageData = data?.slice((page - 0) * 12, (page + 1) * 12);
 
 	
 	return (
 		<>
 			<h2 className="gallery-video__heading gallery-info__heading">
-				{lang}
+				{langTitle}
 			</h2>
 			<ul className="gallery-box__box gallery_video">
 				{pageData &&
@@ -86,7 +66,7 @@ function GalleryVideo({ lang }) {
 								className={'gallery_video__iframe'}
 								width="250"
 								height="250"
-								src={e}
+								src={e.video_url}
 								title="YouTube video player"
 								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

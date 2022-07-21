@@ -19,7 +19,7 @@ function HomeAbout({localization}) {
 			 .then(data => setData(data.data))
 			 .catch((e) => console.log(e))
   }, [])
-  console.log(data);
+  
 	return (
 		<section className="homeabout">
 			<div className="container">

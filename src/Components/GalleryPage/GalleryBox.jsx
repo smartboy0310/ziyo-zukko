@@ -1,50 +1,36 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import closeImg from '../../Assets/images/close_btn.svg';
 import pageBtn from '../../Assets/images/page_btn.png';
 
-const data = [
-	'https://via.placeholder.com/301X350',
-	'https://via.placeholder.com/302X350',
-	'https://via.placeholder.com/303X350',
-	'https://via.placeholder.com/304X350',
-	'https://via.placeholder.com/305X350',
-	'https://via.placeholder.com/306X350',
-	'https://via.placeholder.com/307X350',
-	'https://via.placeholder.com/308X350',
-	'https://via.placeholder.com/309X350',
-	'https://via.placeholder.com/310X350',
-	'https://via.placeholder.com/311X350',
-	'https://via.placeholder.com/312X350',
-	'https://via.placeholder.com/313X350',
-	'https://via.placeholder.com/314X350',
-	'https://via.placeholder.com/315X350',
-	'https://via.placeholder.com/316X350',
-	'https://via.placeholder.com/301X350',
-	'https://via.placeholder.com/302X350',
-	'https://via.placeholder.com/303X350',
-	'https://via.placeholder.com/304X350',
-	'https://via.placeholder.com/305X350',
-	'https://via.placeholder.com/306X350',
-	'https://via.placeholder.com/307X350',
-	'https://via.placeholder.com/308X350',
-	'https://via.placeholder.com/309X350',
-	'https://via.placeholder.com/310X350',
-	'https://via.placeholder.com/311X350',
-	'https://via.placeholder.com/312X350',
-	'https://via.placeholder.com/313X350',
-	'https://via.placeholder.com/314X350',
-	'https://via.placeholder.com/315X350',
-	'https://via.placeholder.com/316X350',
-];
 
-function GalleryBox( { lang }) {
+
+function GalleryBox( { langTitle }) {
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
+
+	const [dataFetch, setDataFetch] = useState()
+	let data = []
+
+	useEffect(() => {
+		fetch('https://school.my-portfolio.uz/photo')
+			 .then(res => res.json())
+			 .then(data => setDataFetch(data.data))
+			 .catch((e) => console.log(e))
+  }, [])
+if(lang == 'uz' ) {
+	data = dataFetch?.uz
+}
+else {
+	data = dataFetch?.ru
+}
 	const [modalOpen, setModalOpen] = useState(false);
-	const [indexImg, setIndexImg] = useState(0);
+	const [indexImg, setIndexImg] = useState();
 	
    const [page, setPage] = useState(0);
-	let pageLeng = Math.ceil((data.length - 1) / 12);
+	let pageLeng = Math.ceil((data?.length - 1) / 12);
 
 	const pageIndex = [];
 	for (let i = 0; i < pageLeng; i++) [pageIndex.push(i)];
@@ -67,9 +53,9 @@ function GalleryBox( { lang }) {
 	const CheckPage = (e) => {
 		setPage(e.target.dataset.pageId - 0);
 	};
-	let pageData = data.slice((page - 0) * 12, (page + 1) * 12);
+	let pageData = data?.slice((page - 0) * 12, (page + 1) * 12);
 
-
+	console.log(pageData, data);
 
 	const openModal = (e) => {
 		setModalOpen(true);
@@ -82,9 +68,10 @@ function GalleryBox( { lang }) {
 	const myLoader = ({ src, width, quality }) => {
 		return `${src}?w=${width}&q=${quality || 75}`;
 	};
+	
 	return (
 		<>
-			 <h2 className="gallery-info__heading"> {lang} </h2>
+			 <h2 className="gallery-info__heading"> {langTitle} </h2>
 			<ul className="gallery-box__box">
 				{
             pageData &&
@@ -95,13 +82,14 @@ function GalleryBox( { lang }) {
 							onMouseUp={openModal}
 						>
 							<Image
-								loader={myLoader}
-								data-img-id={i}
+								loader={() => e.photo_url}
+								data-img-id={i + 1}
 								className="gallery-box__img"
-								src={e}
+								src={e.photo_url}
 								alt="Photo gallery"
 								width={250}
 								height={300}
+								layout='intrinsic'
 							/>
 						</li>
 					))}
@@ -168,17 +156,17 @@ function GalleryBox( { lang }) {
 					onClick={closeModal}
 					className="model__box">
 					
-						<Image
+						{
+							indexImg && <Image
 							onClick={closeModal}
-							loader={myLoader}
+							loader={() => pageData[indexImg - 1]?.photo_url}
 							className="modal__img modal__img-single"
-							src={data[indexImg]}
+							src={pageData[indexImg - 1]?.photo_url}
 							alt="Photo gallery"
 							width={700}
 							height={600}
-							layout='fixed'
 						/>
-
+}
 					
 				</div>
 			</div>

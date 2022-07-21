@@ -1,60 +1,36 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useSelector } from 'react-redux';
 
-import slideImg1 from '../../Assets/images/direktor.jpg'
-import slideImg2 from '../../Assets/images/form_kid.png'
-import slideImg3 from '../../Assets/images/home_kid.png'
-import slideImg4 from '../../Assets/images/home_girl.png'
-import slideImg5 from '../../Assets/images/direktor.jpg'
-import slideImg6 from '../../Assets/images/form_kid.png'
-import slideImg7 from '../../Assets/images/home_kid.png'
-import slideImg8 from '../../Assets/images/home_girl.png'
-import closeImg from '../../Assets/images/close_btn.svg';
 
-const data = [
-	{
-		id: 1,
-		img: 'https://via.placeholder.com/300X400',
-	},
-	{
-		id: 2,
-		img: slideImg1,
-	},
-	{
-		id: 3,
-		img: 'https://via.placeholder.com/300X400',
-	},
-	{
-		id: 4,
-		img: slideImg1,
-	},
-	{
-		id: 5,
-		img: 'https://via.placeholder.com/300X400',
-	},
-	{
-		id: 6,
-		img: slideImg1,
-	},
-	{
-		id: 7,
-		img: 'https://via.placeholder.com/300X400',
-	},
-	{
-		id: 8,
-		img: slideImg1,
-	},
-];
+
+
 
 function HomeGallery({ localization }) {
-	const myLoader = ({ src, width, quality }) => {
-		return `${src}?w=${width}&q=${quality || 75}`;
-	};
+	const {
+		count: { lang },
+	} = useSelector((state) => state);
 
+	const [dataFetch, setDataFetch] = useState()
+	let data = []
+	useEffect(() => {
+		fetch('https://school.my-portfolio.uz/photo')
+			 .then(res => res.json())
+			 .then(data => setDataFetch(data.data))
+			 .catch((e) => console.log(e))
+  }, [])
+if(lang == 'uz' ) {
+	data = dataFetch?.uz
+}
+else {
+	data = dataFetch?.ru
+}
+
+let pageData = data?.slice(0, 20);
 	return (
 		<section className="home-gallery">
 			<div className="container">
@@ -71,7 +47,7 @@ function HomeGallery({ localization }) {
 						slidesToShow={4}
 					>
 						{
-						data && data?.map((e, i) => (
+						pageData && pageData?.map((e, i) => (
 								<div
 									key={i}
 									className="home-gallery__slider"
@@ -79,14 +55,14 @@ function HomeGallery({ localization }) {
 								>
 									<div className="home-gallery__img">
 									<Image
-										loader={myLoader}
+										loader={() => e.photo_url}
 										data-img-id={e.id}
 										className="gallery__img"
-										src={e.img}
+										src={e.photo_url}
 										alt="Photo gallery"
 										width={270}
 										height={350}
-										// loader = { () => ()}
+										
 									/>
 									</div>
 								</div>
